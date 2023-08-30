@@ -1,0 +1,27 @@
+<h1>Liste des Messages</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Use PHP to loop through the messages and print their details -->
+        <?php foreach ($messages as $message) : ?>
+            <tr>
+                <td><?= $message['Message_ID'] ?></td>
+                <td><?= $message['User_ID'] ?></td>
+                <td><?= $message['Subject'] ?></td>
+                <td><?= $message['Message_datetime'] ?></td>
+                <td>
+                    <a href="index.php?route=view_message&id=<?= $message['Message_ID'] ?>">View</a>
+                    <a href="index.php?route=admin/messages&id=<?= $message['Message_ID'] ?>">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

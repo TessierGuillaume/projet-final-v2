@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="assets/style/css/manageUser.css">
+<h1>Manage Users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($users as $user) : ?>
+            <tr>
+                <td><?= $user['User_ID'] ?></td>
+                <td><?= $user['Email'] ?></td>
+                <td><?= $user['First_name'] ?></td>
+                <td><?= $user['Last_name'] ?></td>
+                <td>
+                    <a href="#" onclick="openModal('Edit', '<?= $user['User_ID'] ?>')">Edit</a>
+                    <a href="#" onclick="openModal('Delete', '<?= $user['User_ID'] ?>')">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<!-- Fenêtre modale -->
+<div id="modal">
+    <div id="modalContent">
+        <h1 id="modalTitle"></h1>
+        <p id="modalUserInfo"></p>
+        <form id="actionForm" action="" method="post">
+            <input type="hidden" name="confirm_action" value="1">
+            <button type="submit" id="confirmButton"></button>
+        </form>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+<script src="assets/js/manageUser.js"></script>

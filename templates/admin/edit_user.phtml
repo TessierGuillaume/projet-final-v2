@@ -1,0 +1,20 @@
+<h1>Edit User</h1>
+<form action="index.php?route=admin/edit_user&id=<?= $user->getId() ?>" method="post">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" value="<?= $user->getEmail() ?>" required>
+    <br>
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" id="first_name" value="<?= $user->getFirst_name() ?>" required>
+    <br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" id="last_name" value="<?= $user->getLast_name() ?>" required>
+    <br>
+    <label for="role">Role:</label>
+    <select name="role" id="role">
+        <option value="user" <?= $user->getRole()->getRoleName() == 'user' ? 'selected' : '' ?>>User</option>
+        <option value="admin" <?= $user->getRole()->getRoleName() == 'admin' ? 'selected' : '' ?>>Admin</option>
+        <!-- Add more roles if needed -->
+    </select>
+    <br>
+    <input type="submit" value="Update">
+</form>

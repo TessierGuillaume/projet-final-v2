@@ -1,0 +1,5 @@
+<h1>Appointment Details</h1>
+<p>User ID: <?= $appointment->getUserId() ?></p>
+<p>Service ID: <?= $appointment->getServiceId() ?></p>
+<p>Appointment Date and Time: <?= $appointment->getAppointmentDatetime() ?></p>
+<a href="/appointments/edit/<?= $appointment->getAppointmentId() ?>">Edit</a>

@@ -1,0 +1,29 @@
+<h1>Prendre un rendez-vous</h1>
+<form action="index.php?route=create_appointment" method="post">
+    <label for="service_choice">Choisissez le service :</label>
+    <select name="service_choice" id="service_choice">
+        <option value="1">Contrôle technique</option>
+        <option value="2">Contre-visite</option>
+    </select>
+    <br>
+    <label for="appointmentDate">Choisissez la date du rendez-vous :</label>
+    <input type="date" name="appointmentDate" id="appointmentDate" required min="2023-08-25">
+    <br>
+    <label for=" appointmentTime">Choisissez l'heure du rendez-vous :</label>
+    <select name="appointmentTime" id="appointmentTime">
+        <?php
+        $startTime = strtotime('08:00');
+        $endTime = strtotime('18:00');
+
+        while ($startTime < $endTime) {
+            $time = date('H:i', $startTime);
+            echo "<option value=\"$time\">" . date('H:i ', $startTime) . "</option>"; // Ajout de la conversion au format 12 heures (AM/PM)
+            $startTime += 45 * 60; // Ajoute 45 minutes
+        }
+        ?>
+    </select>
+    <br>
+    <input type="submit" value="Réserver le rendez-vous">
+</form>
+<a href="index.php?route=index_appointment">Retour à la liste des rendez-vous</a>
+<script src="assets/js/appointment.js"></script>

@@ -1,0 +1,12 @@
+<h1>Créer un Message</h1>
+<form action="index.php?route=create_message" method="post">
+    <input type="hidden" name="form-name" id="form-name" value="create-message">
+    <label for="subject">Sujet:</label>
+    <input type="text" id="subject" name="subject" required>
+    <br>
+    <label for="message_body">Message:</label>
+    <textarea id="message_body" name="message_body" rows="5" required></textarea>
+    <br>
+    <input type="submit" value="Créer">
+</form>
+<a href="index.php?route=index_message">Retour à la liste des messages</a>

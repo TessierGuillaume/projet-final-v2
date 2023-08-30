@@ -1,0 +1,12 @@
+<h1>Nos Services</h1>
+<nav>
+    <ul>
+        <?php foreach ($services as $service) : ?>
+            <li>
+                <h2><?= $service['Service_name'] ?></h2>
+                <p><?= $service['Service_description'] ?></p>
+                <p>Prix : <?= $service['Service_cost'] ?> €</p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</nav>
