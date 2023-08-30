@@ -3,16 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const containerEl = document.getElementById('external-events');
   const checkbox = document.getElementById('drop-remove');
 
-  new FullCalendar.Draggable(containerEl, {
-    itemSelector: '.fc-event',
-    eventData: function(eventEl) {
-      return {
-        title: eventEl.innerText
-      };
-    }
-  });
 
-  fetch('index.php?route=event_index', {})
+  fetch('event_index', {})
     .then(response => response.json())
     .then(eventList => {
 
@@ -20,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initialView: 'dayGridMonth',
         height: 650,
         locale: 'fr',
-        
+
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
@@ -37,14 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
         selectable: true,
         editable: true,
         nowIndicator: true,
-        droppable: true,
-        drop: function(info) {
-          if (checkbox && checkbox.checked) {
-            info.draggedEl.parentNode.removeChild(info.draggedEl);
-          }
-        },
+
         select: async function(start, end, allDay) {
-          
+
           const defaultStart = moment(start).set({ 'hour': 8, 'minute': 0, 'second': 0 });
           const defaultEnd = moment(start).set({ 'hour': 18, 'minute': 0, 'second': 0 });
 
@@ -83,19 +70,20 @@ document.addEventListener('DOMContentLoaded', function() {
               body: formData
             };
 
-            fetch('index.php?route=create_event', options)
+            fetch('create_event', options)
               .then(response => response.json())
               .then(data => {
                 if (data.status == 1) {
                   Swal.fire('Événement ajouté avec succès!', '', 'success');
-                  window.location.reload();  // Rafraîchir les événements après ajout
-                } else {
+                  window.location.reload(); // Rafraîchir les événements après ajout
+                }
+                else {
                   Swal.fire(data.error, '', 'error');
                 }
               })
               .catch(console.error);
           }
-        }, 
+        },
         dateClick: function(info) {
           const selectedDate = info.date;
           const defaultStart = moment(selectedDate).set({ 'hour': 8, 'minute': 0, 'second': 0 });
@@ -105,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const swalEndInput = document.getElementById('swalEnd');
           swalStartInput.value = defaultStart.format('YYYY-MM-DDTHH:mm:ss');
           swalEndInput.value = defaultEnd.format('YYYY-MM-DDTHH:mm:ss');
-          
+
           // ... Le reste de votre code ...
 
         },
@@ -119,14 +107,14 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           showEditForm(eventId);
         },
-        
+
 
         // ... Le reste de votre code ...
 
       });
 
       async function deleteEvent(eventId) {
-        const response = await fetch('index.php?route=delete_event&id=' + eventId, {
+        const response = await fetch('/projet-final-v2/delete_event&id=' + eventId, {
           method: 'DELETE'
         });
 
@@ -134,7 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
           const updatedEvents = await response.json();
           calendar.getEvents().forEach(event => event.remove()); // Supprimer tous les événements actuellement affichés
           calendar.addEventSource(updatedEvents); // Ajouter les événements mis à jour
-        } else {
+        }
+        else {
           alert('Erreur lors de la suppression de l\'événement');
         }
       }

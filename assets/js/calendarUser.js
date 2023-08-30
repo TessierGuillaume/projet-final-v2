@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar_user');
 
   async function fetchData() {
-    const response = await fetch('index.php?route=event_index_user', {});
+    const response = await fetch('event_index_user', {});
     return await response.json();
   }
 
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
         body: formData
       };
 
-      const response = await fetch('index.php?route=create_event_user', options);
-      await response.json(); 
+      const response = await fetch('create_event_user', options);
+      await response.json();
 
       Swal.fire({
         title: 'Événement ajouté avec succès!',
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
+
     function checkDayAvailability(dateStr) {
       const date = moment(dateStr);
       const dayOfWeek = date.day(); // 0 = dimanche, 6 = samedi
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
-      
+
       height: 650,
       locale: 'fr',
       headerToolbar: {
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
       editable: true,
       nowIndicator: true,
       droppable: true,
-      dayCellClassNames: function (dateInfo) {
+      dayCellClassNames: function(dateInfo) {
         const date = moment(dateInfo.date);
         const dayOfWeek = date.day(); // 0 = dimanche, 6 = samedi
         if (dayOfWeek === 0 || dayOfWeek === 6) {
@@ -111,69 +112,70 @@ document.addEventListener('DOMContentLoaded', function () {
         const timeSlots = getTimeSlotsForDate(date, eventList);
         return timeSlots.length === 0 ? ['day-full'] : ['day-available'];
       },
-      
-        dateClick: function (info) {
-          const selectedDate = moment(info.date);
-          const dayOfWeek = selectedDate.day(); // 0 = dimanche, 6 = samedi
 
-          // Vérifie si le jour est un samedi ou un dimanche
-          if (dayOfWeek === 0 || dayOfWeek === 6) {
-            Swal.fire('Erreur', 'Le contrôle technique est ouvert du lundi au vendredi de 8h00 à 18h00.', 'error');
-            return;}
-          const timeSlots = getTimeSlotsForDate(info.date, eventList);
-          const timeOptionsHTML = timeSlots.map(slot => {
-            const startTime = slot.start.format('HH:mm');
-            const endTime = slot.end.format('HH:mm');
-            return `<option value="${startTime}-${endTime}">${startTime}-${endTime}</option>`;
-          }).join('');
+      dateClick: function(info) {
+        const selectedDate = moment(info.date);
+        const dayOfWeek = selectedDate.day(); // 0 = dimanche, 6 = samedi
 
-          const currentDate = moment().startOf('day');
+        // Vérifie si le jour est un samedi ou un dimanche
+        if (dayOfWeek === 0 || dayOfWeek === 6) {
+          Swal.fire('Erreur', 'Le contrôle technique est ouvert du lundi au vendredi de 8h00 à 18h00.', 'error');
+          return;
+        }
+        const timeSlots = getTimeSlotsForDate(info.date, eventList);
+        const timeOptionsHTML = timeSlots.map(slot => {
+          const startTime = slot.start.format('HH:mm');
+          const endTime = slot.end.format('HH:mm');
+          return `<option value="${startTime}-${endTime}">${startTime}-${endTime}</option>`;
+        }).join('');
 
-          if (selectedDate.startOf('day').isBefore(currentDate)) {
-            Swal.fire('Erreur', 'Vous ne pouvez pas prendre un rendez-vous pour une date passée.', 'error');
-            return;
-          }
+        const currentDate = moment().startOf('day');
 
-          Swal.fire({
-            title: 'Prendre un rendez-vous',
-            html: `
+        if (selectedDate.startOf('day').isBefore(currentDate)) {
+          Swal.fire('Erreur', 'Vous ne pouvez pas prendre un rendez-vous pour une date passée.', 'error');
+          return;
+        }
+
+        Swal.fire({
+          title: 'Prendre un rendez-vous',
+          html: `
               <input id="swalTitle" class="swal2-input" placeholder="Nom et prénom">
               <select id="swalTimeSlot" class="swal2-input">${timeOptionsHTML}</select>
             `,
-            focusConfirm: false,
-            showCancelButton: true,
-            confirmButtonText: 'Soumettre',
-            preConfirm: () => {
-              const title = document.getElementById('swalTitle').value;
-              const timeSlot = document.getElementById('swalTimeSlot').value.split('-');
-              const chosenDate = selectedDate.format('YYYY-MM-DD');
-              return {
-                title: title,
-                start: `${chosenDate} ${timeSlot[0]}`,
-                end: `${chosenDate} ${timeSlot[1]}`,
-              };
-            }
-          }).then(async (result) => {
-            if (result.isConfirmed) {
-              const { title, start, end } = result.value;
+          focusConfirm: false,
+          showCancelButton: true,
+          confirmButtonText: 'Soumettre',
+          preConfirm: () => {
+            const title = document.getElementById('swalTitle').value;
+            const timeSlot = document.getElementById('swalTimeSlot').value.split('-');
+            const chosenDate = selectedDate.format('YYYY-MM-DD');
+            return {
+              title: title,
+              start: `${chosenDate} ${timeSlot[0]}`,
+              end: `${chosenDate} ${timeSlot[1]}`,
+            };
+          }
+        }).then(async(result) => {
+          if (result.isConfirmed) {
+            const { title, start, end } = result.value;
 
-              const formData = new FormData();
-              formData.append('start', start);
-              formData.append('end', end);
-              formData.append('title', title);
+            const formData = new FormData();
+            formData.append('start', start);
+            formData.append('end', end);
+            formData.append('title', title);
 
-              await createEvent(formData, start);
-            }
-          });
-        },
-        eventClick: function (info) {
-          info.jsEvent.preventDefault();
+            await createEvent(formData, start);
+          }
+        });
+      },
+      eventClick: function(info) {
+        info.jsEvent.preventDefault();
 
-          const eventId = info.event.id;
-          
-        }
-      });
+        const eventId = info.event.id;
 
-      calendar.render();
+      }
     });
+
+    calendar.render();
+  });
 });

@@ -1,6 +1,6 @@
 <main id="register">
     <h2>Création de compte</h2>
-    <form action="index.php?route=register" method="post">
+    <form action="/projet-final-v2/créer-un-compte" method="post">
         <p class="form-errors">
             <?php
             if (isset($data["errors"]))
@@ -48,7 +48,7 @@
         <script>
             alert('Merci pour votre inscription ! Vous serez redirigé vers la page de connexion.');
             setTimeout(function() {
-                window.location.href = 'index.php?route=login';
+                window.location.href = '/projet-final-v2/connexion';
             }, 1000); // Redirection après 1 secondes
         </script>
     <?php endif; ?>
