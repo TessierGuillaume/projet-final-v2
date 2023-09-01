@@ -1,3 +1,4 @@
+<main id="message-list">
 <h1>Liste des Messages</h1>
 <table>
     <thead>
@@ -18,10 +19,12 @@
                 <td><?= $message['Subject'] ?></td>
                 <td><?= $message['Message_datetime'] ?></td>
                 <td>
-                    <a href="index.php?route=view_message&id=<?= $message['Message_ID'] ?>">View</a>
-                    <a href="index.php?route=admin/messages&id=<?= $message['Message_ID'] ?>">Delete</a>
+                    <a href="/projet-final-v2/view_message&id=<?= $message['Message_ID'] ?>">View</a>
+                    <a href="/projet-final-v2//messages&id=<?= $message['Message_ID'] ?>">Delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+</main>
+<script type="text/javascript" src="assets/js/listeMessages.js"></script>

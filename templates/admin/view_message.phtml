@@ -1,6 +1,10 @@
+<main id="view-message">
 <h1>Message</h1>
 <h2>Sujet: <?= $message['Subject']; ?></h2>
 <p><?= $message['Message_body']; ?></p>
-<a href="index.php?route=edit_message&id=<?= $message['Message_ID']; ?>">Éditer</a>
-<a href="index.php?route=delete_message&id=<?= $message['Message_ID']; ?>">Supprimer</a>
-<a href="index.php?route=index_message">Retour à la liste des messages</a>
+<a href="/projet-final-v2/edit_message&id=<?= $message['Message_ID']; ?>">Éditer</a>
+<a href="/projet-final-v2/delete_message&id=<?= $message['Message_ID']; ?>">Supprimer</a>
+<a href="/projet-final-v2/index_message">Retour à la liste des messages</a>
+</main>
+
+<script type="text/javascript" src="assets/js/affichageMessages.js"></script>
