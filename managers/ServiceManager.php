@@ -2,16 +2,13 @@
 
 class ServiceManager extends AbstractManager
 {
-
-
-
     public function getAllServices()
     {
         // Écrire la requête SQL pour récupérer tous les services
-        $sql = "SELECT * FROM Services";
+        $sql = "SELECT * FROM service";
 
         // Préparer la requête
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->db->prepare($sql);
 
         // Exécuter la requête
         $stmt->execute();
@@ -21,33 +18,34 @@ class ServiceManager extends AbstractManager
 
         return $services;
     }
+
     public function getTechnicalControlService()
     {
-        $query = $this->db->prepare("SELECT * FROM services WHERE service_name = 'Technical Control'");
+        $query = $this->db->prepare("SELECT * FROM service WHERE Service_name = 'Technical Control'");
         $query->execute();
 
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return new Service(
-            $result['serviceId'],
-            $result['serviceName'],
-            $result['serviceDescription'],
-            $result['serviceCost']
+            $result['Service_Id'],
+            $result['Service_Name'],
+            $result['Service_Description'],
+            $result['Service_Cost']
         );
     }
 
     public function getReinspectionService()
     {
-        $query = $this->db->prepare("SELECT * FROM services WHERE service_name = 'Reinspection'");
+        $query = $this->db->prepare("SELECT * FROM service WHERE Service_name = 'Reinspection'");
         $query->execute();
 
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return new Service(
-            $result['serviceId'],
-            $result['serviceName'],
-            $result['serviceDescription'],
-            $result['serviceCost']
+            $result['Service_Id'],
+            $result['Service_Name'],
+            $result['Service_Description'],
+            $result['Service_Cost']
         );
     }
 }

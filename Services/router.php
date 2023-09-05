@@ -101,6 +101,8 @@ public function checkRoute($route): void
         $this->eventController->getEventsUser();
     } elseif ($routeParts[0] === 'event_index_user') {
         $this->eventController->getEventsIndexForUser();
+    }elseif ($routeParts[0] === 'services') {
+        $this->serviceController->showServicesPage();
     } else {
         $this->homepageController->index();
     }

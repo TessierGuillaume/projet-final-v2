@@ -15,7 +15,7 @@ class HomepageController extends AbstractController
         $services = $serviceManager->getAllServices();
 
         // Transmettre les services à la vue
-        $this->render('public/services.phtml', ['services' => $services]);
+        $this->render('public/services/services.phtml', ['services' => $services]);
     }
 
     public function contact()
@@ -35,7 +35,7 @@ class HomepageController extends AbstractController
                 $messageManager->createMessage($user_id, $name, $email, $message_body);
 
                 // Rediriger vers une page de confirmation ou de remerciement
-                header('Location: index.php?route=contact_thank_you');
+                header('Location:/projet-final-v2/contact_thank_you');
                 exit();
             }
         } else {

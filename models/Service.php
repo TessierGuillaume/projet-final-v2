@@ -1,52 +1,56 @@
 <?php
 class Service
 {
-    private ?int $serviceId;
-    private string $serviceName;
-    private ?string $serviceDescription;
-    private float $serviceCost;
+    private ?int $Service_ID;
+    private string $Service_name;
+    private ?string $Service_description;
+    private float $Service_cost;
 
-    public function __construct(?int $serviceId, string $serviceName, ?string $serviceDescription, float $serviceCost)
+    public function __construct(?int $Service_ID, string $Service_name, ?string $Service_description, float $Service_cost)
     {
-        $this->serviceId = $serviceId;
-        $this->serviceName = $serviceName;
-        $this->serviceDescription = $serviceDescription;
-        $this->serviceCost = $serviceCost;
-    }
-    public function getServiceId(): int
-    {
-        return $this->serviceId;
-    }
-    public function setServiceId(int $serviceId): void
-    {
-        $this->serviceId = $serviceId;
+        $this->Service_ID = $Service_ID;
+        $this->Service_name = $Service_name;
+        $this->Service_description = $Service_description;
+        $this->Service_cost = $Service_cost;
     }
 
-    public function getServiceName(): string
+    public function getService_ID(): ?int
     {
-        return $this->serviceName;
-    }
-    public function setServiceName(string $serviceName): void
-    {
-        $this->serviceName = $serviceName;
+        return $this->Service_ID;
     }
 
-    public function getServiceDescription(): ?string
+    public function setService_ID(?int $Service_ID): void
     {
-        return $this->serviceDescription;
-    }
-    public function setServiceDescription(?string $serviceDescription): void
-    {
-        $this->serviceDescription = $serviceDescription;
+        $this->Service_ID = $Service_ID;
     }
 
-    public function getServiceCost(): float
+    public function getService_name(): string
     {
-        return $this->serviceCost;
+        return $this->Service_name;
     }
-    public function setServiceCost(float $serviceCost): void
+
+    public function setService_name(string $Service_name): void
     {
-        $this->serviceCost = $serviceCost;
+        $this->Service_name = $Service_name;
     }
-    // Getters et setters ici...
+
+    public function getService_description(): ?string
+    {
+        return $this->Service_description;
+    }
+
+    public function setService_description(?string $Service_description): void
+    {
+        $this->Service_description = $Service_description;
+    }
+
+    public function getService_cost(): float
+    {
+        return $this->Service_cost;
+    }
+
+    public function setService_cost(float $Service_cost): void
+    {
+        $this->Service_cost = $Service_cost;
+    }
 }

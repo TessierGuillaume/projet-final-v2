@@ -28,7 +28,7 @@ class UserController extends AbstractController
                             $user = $this->manager->createUser(new User($email, $password, $Last_name, $First_name, $userRole));
 
                             if ($user) { // Vérification si l'utilisateur a été créé avec succès
-                                $_SESSION["user"] = $user->getId();
+                                $_SESSION["user_id"] = $user->getId();
                                 $this->render("public/register/register.phtml", ["registered" => true]);
                                 return; // Important: Arrêter l'exécution ici
                             }
@@ -51,37 +51,36 @@ class UserController extends AbstractController
     }
 
 
-    public function login(): void
-    {
-        if (isset($_POST["form-name"]) && $_POST["form-name"] === "login") {
-            $email = htmlspecialchars($_POST["login-email"]);
-            $password = $_POST["login-password"];
+   public function login(): void
+{
+    if (isset($_POST["form-name"]) && $_POST["form-name"] === "login") {
+        $email = htmlspecialchars($_POST["login-email"]);
+        $password = $_POST["login-password"];
 
-            $user = $this->manager->getUserByEmail($email); // Suppose que cette méthode récupère également le rôle
+        $user = $this->manager->getUserByEmail($email);
 
-            if ($user !== null) {
-                if (password_verify($password, $user->getPassword())) {
-                    $_SESSION["user"] = $user->getId();
-                    $_SESSION["role"] = $user->getRole()->getRoleName(); // Ajoutez cette ligne
-                    $_SESSION["user_id"] = $user->getId(); // Ajoutez cette ligne
+        if ($user !== null) {
+            if (password_verify($password, $user->getPassword())) {
+                $_SESSION["user_id"] = $user->getId();
+                $_SESSION["role"] = $user->getRole()->getRoleName();
 
-
-                    // Vérifiez si l'utilisateur est un administrateur
-                    if ($user->getRole()->getRoleName() === 'admin') {
-                        header("Location: index.php?route=dashboard");
-                    } else {
-                        $this->renderUserHeader();
-                    }
+                if ($user->getRole()->getRoleName() === 'admin') {
+                    header("Location: /projet-final-v2/dashboard");
                 } else {
-                    $this->render("public/login/login.phtml", ["errors" => ["Identifiants incorrects"]]);
+                    header("Location: /projet-final-v2/accueil");  // Redirige vers la page d'accueil
                 }
+                exit(); // Important pour arrêter l'exécution du script
             } else {
-                $this->render("public/login/login.phtml", ["errors" => ["Aucun compte avec cet email"]]);
+                $this->render("public/login/login.phtml", ["errors" => ["Identifiants incorrects"]]);
             }
         } else {
-            $this->render("public/login/login.phtml", []);
+            $this->render("public/login/login.phtml", ["errors" => ["Aucun compte avec cet email"]]);
         }
+    } else {
+        $this->render("public/login/login.phtml", []);
     }
+}
+
 
 
     private function renderUserHeader(): void
@@ -99,7 +98,7 @@ class UserController extends AbstractController
     {
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user_id'])) {
-            header('Location: index.php?route=login');
+            header('Location: /projet-final-v2/login');
             exit();
         }
 
@@ -122,7 +121,7 @@ class UserController extends AbstractController
             // Mettez à jour l'utilisateur dans la base de données
             $this->manager->updateUser($user);
 
-            header('Location: index.php?route=profile_user');
+            header('Location: /projet-final-v2/profile_user');
             exit();
         } else {
             $user = $this->manager->getUserById($userId);
