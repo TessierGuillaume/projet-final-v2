@@ -16,6 +16,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -437,6 +440,218 @@ html {
     display: none;
   }
   #headerUser .navbar-mobile {
+    display: block;
+  }
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#headerVisitor .banniere-titre {
+  margin-bottom: 1em;
+}
+#headerVisitor .navbar-mobile {
+  display: none;
+  align-items: center;
+}
+#headerVisitor .navbar-mobile i.fas.fa-bars {
+  position: fixed;
+  z-index: 999;
+  top: 1em;
+  right: 1em;
+  font-size: 3rem;
+  color: #FFAA11;
+}
+#headerVisitor .navbar-mobile .modal {
+  transition: top 0.9s;
+  background-color: #D3D3D3;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 3;
+}
+#headerVisitor .navbar-mobile .move-icon {
+  transform: translateY(180px);
+  transition: transform 1.1s ease-out;
+}
+#headerVisitor .navbar-mobile .navbar-mobile-list {
+  display: flex;
+  height: 60vh;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  right: 6em;
+  top: 3em;
+}
+#headerVisitor .navbar-mobile .navbar-mobile-list a {
+  font-size: 3em;
+  font-weight: 800;
+  color: #FFAA11;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+#headerVisitor .navbar-mobile .navbar-mobile-list a:hover {
+  color: #FFAA11;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+#headerVisitor .navbar-mobile .change-modal {
+  top: 0;
+}
+#headerVisitor .social-icons-mobile {
+  display: flex;
+  position: relative;
+  top: 10em;
+  z-index: 3;
+}
+#headerVisitor .social-icons-mobile a {
+  margin: 20px;
+}
+#headerVisitor .social-icons-mobile i {
+  transition: all 0.5s ease;
+  top: -80px;
+  position: relative;
+  text-align: start;
+}
+@media screen and (min-width: 801px) {
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a,
+  #headerVisitor .navbar-mobile ul li.logo a,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a,
+  #headerVisitor .navbar-desktop ul li.logo a {
+    letter-spacing: -1px;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span.drive,
+  #headerVisitor .navbar-mobile ul li.logo a span.drive,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
+  #headerVisitor .navbar-desktop ul li.logo a span.drive {
+    color: #0B5EBF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span,
+  #headerVisitor .navbar-mobile ul li.logo a span,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span,
+  #headerVisitor .navbar-desktop ul li.logo a span {
+    color: #0BBF64;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span.control,
+  #headerVisitor .navbar-mobile ul li.logo a span.control,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
+  #headerVisitor .navbar-desktop ul li.logo a span.control {
+    color: #FFAA11;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span,
+  #headerVisitor .navbar-mobile ul li.logo a span,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span,
+  #headerVisitor .navbar-desktop ul li.logo a span {
+    position: relative;
+    right: -100%;
+    opacity: 0;
+    animation: slide-in 1s ease-out forwards;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span.drive,
+  #headerVisitor .navbar-mobile ul li.logo a span.drive,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
+  #headerVisitor .navbar-desktop ul li.logo a span.drive {
+    animation-delay: 1s;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span:nth-child(2),
+  #headerVisitor .navbar-mobile ul li.logo a span:nth-child(2),
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span:nth-child(2),
+  #headerVisitor .navbar-desktop ul li.logo a span:nth-child(2) {
+    animation-delay: 2s;
+  }
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span.control,
+  #headerVisitor .navbar-mobile ul li.logo a span.control,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
+  #headerVisitor .navbar-desktop ul li.logo a span.control {
+    animation-delay: 3s;
+  }
+  @keyframes slide-in {
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  #headerVisitor .navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    background-color: #D3D3D3;
+    height: 10em;
+    align-items: center;
+  }
+  #headerVisitor .navbar-desktop ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  #headerVisitor .navbar-desktop li {
+    position: relative;
+    z-index: 1;
+  }
+  #headerVisitor .navbar-desktop .indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 0;
+    background-color: #0BBF64;
+    transition: all 0.5s ease;
+  }
+  #headerVisitor .navbar-desktop a {
+    color: #0B5EBF;
+    font-weight: 700;
+    font-size: 3em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  #headerVisitor .navbar-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  #headerVisitor .navbar-desktop {
+    display: none;
+  }
+  #headerVisitor .navbar-mobile {
     display: block;
   }
 }

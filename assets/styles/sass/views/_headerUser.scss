@@ -88,6 +88,8 @@
     }
 
     @media screen and (min-width: 801px) {
+
+
         .navbar-desktop {
             display: flex;
             justify-content: space-between;
@@ -133,12 +135,7 @@
                 font-size: 3em;
 
 
-                transition: color 0.3s ease, background-color 0.3s ease; // &:hover {
-                //     color: $color-blue;
-                //     background-color: $color-orange;
-                //     padding: 1rem;
-                //     border-radius: 1rem;
-                // }
+                transition: color 0.3s ease, background-color 0.3s ease; 
             }
 
 
