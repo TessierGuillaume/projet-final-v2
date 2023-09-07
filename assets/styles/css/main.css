@@ -19,6 +19,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -559,10 +568,10 @@ html {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
-  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span,
-  #headerVisitor .navbar-mobile ul li.logo a span,
-  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span,
-  #headerVisitor .navbar-desktop ul li.logo a span {
+  #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a span.safe,
+  #headerVisitor .navbar-mobile ul li.logo a span.safe,
+  #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.safe,
+  #headerVisitor .navbar-desktop ul li.logo a span.safe {
     color: #0BBF64;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
@@ -1119,6 +1128,457 @@ html {
 #footer .footer-social a {
   margin: 0 0.5em;
   font-size: 1.5em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../../images/loupe-car1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+#login .wrapper {
+  width: 520px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  border-radius: 10px;
+  padding: 30px 40px;
+  font-family: "Oswald", sans-serif;
+}
+#login .wrapper h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+}
+#login .wrapper .input-box {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin-top: 20px;
+  font-size: 2em;
+  text-align: left;
+}
+#login .wrapper .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+#login .wrapper .input-box .hidden {
+  display: none;
+}
+#login .wrapper .input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+#login .wrapper .input-box .icon ion-icon {
+  font-size: inherit;
+}
+#login .wrapper .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 1.3em;
+  color: #fff;
+  padding: 20px 40px 20px 80px;
+}
+#login .wrapper .input-box input::placeholder {
+  color: #fff;
+}
+#login .wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8em;
+  margin: 15px 5px 15px;
+}
+#login .wrapper .remember-forgot label input {
+  font-size: 1.8em;
+  margin-right: 3px;
+}
+#login .wrapper .remember-forgot a {
+  color: #FFF;
+  text-decoration: none;
+}
+#login .wrapper .remember-forgot a:hover {
+  color: #0B5EBF;
+}
+#login .wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #FFAA11;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #FFF;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+#login .wrapper .btn:hover {
+  color: #0B5EBF;
+  background-color: #0BBF64;
+}
+#login .wrapper .register-link {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 20px 0 15px;
+  color: #FFF;
+  text-decoration: underline;
+}
+#login .wrapper .register-link p a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+#login .wrapper .register-link p:hover {
+  text-decoration: underline;
+  color: #0B5EBF;
+}
+
+.remember-forgot label:hover {
+  color: #0B5EBF;
+}
+
+@media (min-width: 600px) {
+  #login .wrapper .input-box .icon {
+    font-size: 1.8em;
+  }
+  #login .wrapper .input-box input {
+    padding-left: 85px;
+  }
+}
+@media (min-width: 900px) {
+  #login .wrapper .input-box .icon {
+    font-size: 2em;
+  }
+  #login .wrapper .input-box input {
+    padding-left: 90px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+#register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../../images/loupe-car1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+#register .wrapper {
+  width: 50%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+#register .wrapper h2 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#register .wrapper .input-box {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  font-size: 1.8em;
+}
+#register .wrapper .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+#register .wrapper .input-box .hidden {
+  display: none;
+}
+#register .wrapper .input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+#register .wrapper .input-box .icon ion-icon {
+  font-size: inherit;
+}
+#register .wrapper .input-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 1.3em;
+  color: #FFF;
+  padding: 20px 40px 20px 80px;
+}
+#register .wrapper .input-box input::placeholder {
+  color: #FFF;
+}
+#register .wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  margin: 15px 5px 15px;
+}
+#register .wrapper .remember-forgot label input {
+  accent-color: #0B5EBF;
+  margin-right: 3px;
+  transform: scale(1.5);
+}
+#register .wrapper .remember-forgot a {
+  color: #FFF;
+  text-decoration: none;
+}
+#register .wrapper .remember-forgot a:hover {
+  text-decoration: underline;
+  color: #0B5EBF;
+}
+#register .wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #FFAA11;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #FFF;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+#register .wrapper .btn:hover {
+  color: #0B5EBF;
+  background-color: #0BBF64;
+}
+#register .wrapper .register-link {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 20px 0 15px;
+  color: #FFF;
+  text-decoration: underline;
+}
+#register .wrapper .register-link p a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+#register .wrapper .register-link p a:hover {
+  text-decoration: underline;
+  color: #0B5EBF;
+}
+
+@media (min-width: 600px) {
+  #wrapper .form-box .input-box .icon {
+    font-size: 1.8em;
+  }
+  #wrapper .form-box .input-box input {
+    padding-left: 85px;
+  }
+}
+@media (min-width: 900px) {
+  #wrapper .form-box .input-box .icon {
+    font-size: 2em;
+  }
+  #wrapper .form-box .input-box input {
+    padding-left: 90px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+#createMessage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  color: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#createMessage form h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#createMessage form fieldset {
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+  position: relative;
+}
+#createMessage form fieldset label {
+  font-size: 1.5em;
+}
+#createMessage form fieldset input,
+#createMessage form fieldset textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.5em;
+  color: #FFF;
+  background: transparent;
+  margin-top: 10px;
+}
+#createMessage form fieldset input[type=submit] {
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  background: #FFAA11;
+  color: #FFF;
+  font-size: 1.8em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#createMessage form fieldset input[type=submit]:hover {
+  background-color: #0BBF64;
+  color: #0B5EBF;
+}
+#createMessage a {
+  color: #FFF;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+#createMessage a:hover {
+  color: #0B5EBF;
+}
+@media (min-width: 600px) {
+  #createMessage form {
+    width: 50%;
+  }
+  #createMessage form fieldset label {
+    font-size: 1.8em;
+  }
+  #createMessage form fieldset input,
+  #createMessage form fieldset textarea {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 900px) {
+  #createMessage form {
+    width: 40%;
+  }
+  #createMessage form fieldset label {
+    font-size: 2em;
+  }
+  #createMessage form fieldset input,
+  #createMessage form fieldset textarea {
+    font-size: 2em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

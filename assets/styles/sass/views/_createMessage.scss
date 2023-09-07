@@ -1,0 +1,106 @@
+@import '../general/_vars.scss';
+@import '../general/style.scss';
+@import '../general/typography.scss';
+
+
+#createMessage {
+
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: transparent;
+        color: $color-white;
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        fieldset {
+            width: 100%;
+            border: none;
+            margin-bottom: 20px;
+            position: relative;
+
+            label {
+                font-size: 1.5em;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                border: 2px solid rgba(255, 255, 255, .2);
+                font-size: 1.5em;
+                color: $color-white;
+                background: transparent;
+                margin-top: 10px;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                border: none;
+                border-radius: 40px;
+                background: $color-orange;
+                color: $color-white;
+                font-size: 1.8em;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-green;
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+
+    a {
+        color: $color-white;
+        text-decoration: underline;
+        font-size: 1.5em;
+
+        &:hover {
+            color: $color-blue;
+        }
+    }
+
+    @media (min-width: 600px) {
+        form {
+            width: 50%;
+        }
+
+        form fieldset label {
+            font-size: 1.8em;
+        }
+
+        form fieldset input,
+        form fieldset textarea {
+            font-size: 1.8em;
+        }
+    }
+
+    @media (min-width: 900px) {
+        form {
+            width: 40%;
+        }
+
+        form fieldset label {
+            font-size: 2em;
+        }
+
+        form fieldset input,
+        form fieldset textarea {
+            font-size: 2em;
+        }
+    }
+}
