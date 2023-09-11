@@ -28,6 +28,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +60,137 @@ h6 {
 button,
 .cta {
   font-family: "Oswald", sans-serif;
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#headerAdmin h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 3em;
+}
+#headerAdmin .navbar-mobile {
+  display: flex;
+  align-items: center;
+}
+#headerAdmin .navbar-mobile i.fas.fa-bars {
+  position: fixed;
+  z-index: 999;
+  top: 1em;
+  right: 1em;
+  font-size: 3rem;
+  color: #FFAA11;
+}
+#headerAdmin .navbar-mobile .modal {
+  transition: top 0.9s;
+  background-color: #D3D3D3;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 3;
+}
+#headerAdmin .navbar-mobile .modal.change-modal {
+  top: 0;
+}
+#headerAdmin .navbar-mobile .modal .navbar-mobile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  height: 60vh;
+  position: relative;
+  top: 3em;
+}
+#headerAdmin .navbar-mobile .modal .navbar-mobile-list a {
+  font-size: 3em;
+  margin-bottom: 1em;
+  color: #FFAA11;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+#headerAdmin .navbar-mobile .modal .navbar-mobile-list a:hover {
+  background-color: #FFF;
+  border-radius: 1rem;
+  color: #0B5EBF;
+}
+#headerAdmin .navbar-desktop {
+  display: none;
+  justify-content: space-between;
+  background-color: #D3D3D3;
+  padding: 1em;
+  align-items: center;
+  height: 10em;
+}
+#headerAdmin .navbar-desktop ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#headerAdmin .navbar-desktop ul li {
+  position: relative;
+}
+#headerAdmin .navbar-desktop ul li a {
+  color: #0B5EBF;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+#headerAdmin .navbar-desktop ul li a:hover {
+  background-color: #D3D3D3;
+  color: #FFAA11;
+}
+#headerAdmin .navbar-desktop ul .indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #0BBF64;
+  transition: all 0.5s ease;
+}
+@media screen and (min-width: 801px) {
+  #headerAdmin .navbar-mobile {
+    display: none;
+  }
+  #headerAdmin .navbar-desktop {
+    display: flex;
+  }
 }
 
 body,
@@ -392,7 +526,7 @@ html {
 #headerUser .social-icons-mobile {
   display: flex;
   position: relative;
-  top: 10em;
+  top: 15em;
   z-index: 3;
 }
 #headerUser .social-icons-mobile a {
@@ -404,7 +538,88 @@ html {
   position: relative;
   text-align: start;
 }
+#headerUser ul li.logo a {
+  letter-spacing: -1px;
+}
+#headerUser ul li.logo a span.drive {
+  color: #0B5EBF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerUser ul li.logo a span.safe {
+  color: #0BBF64;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerUser ul li.logo a span.control {
+  color: #FFAA11;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
 @media screen and (min-width: 801px) {
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a,
+  #headerUser .navbar-mobile ul li.logo a,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a,
+  #headerUser .navbar-desktop ul li.logo a {
+    letter-spacing: -1px;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span.drive,
+  #headerUser .navbar-mobile ul li.logo a span.drive,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
+  #headerUser .navbar-desktop ul li.logo a span.drive {
+    color: #0B5EBF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span.safe,
+  #headerUser .navbar-mobile ul li.logo a span.safe,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.safe,
+  #headerUser .navbar-desktop ul li.logo a span.safe {
+    color: #0BBF64;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span.control,
+  #headerUser .navbar-mobile ul li.logo a span.control,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
+  #headerUser .navbar-desktop ul li.logo a span.control {
+    color: #FFAA11;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span,
+  #headerUser .navbar-mobile ul li.logo a span,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span,
+  #headerUser .navbar-desktop ul li.logo a span {
+    position: relative;
+    right: -100%;
+    opacity: 0;
+    animation: slide-in 1s ease-out forwards;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span.drive,
+  #headerUser .navbar-mobile ul li.logo a span.drive,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
+  #headerUser .navbar-desktop ul li.logo a span.drive {
+    animation-delay: 1s;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span:nth-child(2),
+  #headerUser .navbar-mobile ul li.logo a span:nth-child(2),
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span:nth-child(2),
+  #headerUser .navbar-desktop ul li.logo a span:nth-child(2) {
+    animation-delay: 2s;
+  }
+  #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a span.control,
+  #headerUser .navbar-mobile ul li.logo a span.control,
+  #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
+  #headerUser .navbar-desktop ul li.logo a span.control {
+    animation-delay: 3s;
+  }
+  @keyframes slide-in {
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
   #headerUser .navbar-desktop {
     display: flex;
     justify-content: space-between;
@@ -552,6 +767,24 @@ html {
   top: -80px;
   position: relative;
   text-align: start;
+}
+#headerVisitor l li.logo a {
+  letter-spacing: -1px;
+}
+#headerVisitor l li.logo a span.drive {
+  color: #0B5EBF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerVisitor l li.logo a span.safe {
+  color: #0BBF64;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerVisitor l li.logo a span.control {
+  color: #FFAA11;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
 }
 @media screen and (min-width: 801px) {
   #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a,
@@ -1166,7 +1399,7 @@ button,
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("../../images/loupe-car1.png");
+  background-image: url("../../images/background-road.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center left;
@@ -1338,7 +1571,7 @@ button,
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("../../images/loupe-car1.png");
+  background-image: url("../../images/background-road.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center left;
@@ -1498,6 +1731,52 @@ button,
   font-family: "Oswald", sans-serif;
 }
 
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#createMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../images/background-road2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  text-align: center;
+}
+#createMessage h1,
+#createMessage p {
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  width: auto;
+  text-align: center;
+}
+#createMessage h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: #FFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 2px black;
+}
+#createMessage blockquote {
+  padding: 10px;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 2px black;
+  color: #FFF;
+}
+#createMessage p {
+  margin-bottom: 20px;
+}
 #createMessage form {
   display: flex;
   flex-direction: column;
@@ -1506,13 +1785,9 @@ button,
   color: #FFF;
   padding: 20px;
   border-radius: 10px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-#createMessage form h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 300px;
 }
 #createMessage form fieldset {
   width: 100%;
@@ -1521,7 +1796,9 @@ button,
   position: relative;
 }
 #createMessage form fieldset label {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  display: block;
+  margin-bottom: 10px;
 }
 #createMessage form fieldset input,
 #createMessage form fieldset textarea {
@@ -1540,7 +1817,7 @@ button,
   border-radius: 40px;
   background: #FFAA11;
   color: #FFF;
-  font-size: 1.8em;
+  font-size: 1.5em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -1556,21 +1833,41 @@ button,
 #createMessage a:hover {
   color: #0B5EBF;
 }
+
 @media (min-width: 600px) {
+  #createMessage h1 {
+    font-size: 2.5em;
+  }
+  #createMessage p {
+    font-size: 1.8em;
+  }
   #createMessage form {
-    width: 50%;
+    max-width: 400px;
   }
   #createMessage form fieldset label {
     font-size: 1.8em;
   }
   #createMessage form fieldset input,
   #createMessage form fieldset textarea {
+    font-size: 1.8em;
+  }
+  #createMessage form fieldset input[type=submit] {
+    font-size: 1.8em;
+  }
+  #createMessage a {
     font-size: 1.8em;
   }
 }
 @media (min-width: 900px) {
+  #createMessage h1 {
+    font-size: 3em;
+  }
+  #createMessage p {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
   #createMessage form {
-    width: 40%;
+    max-width: 500px;
   }
   #createMessage form fieldset label {
     font-size: 2em;
@@ -1578,6 +1875,61 @@ button,
   #createMessage form fieldset input,
   #createMessage form fieldset textarea {
     font-size: 2em;
+  }
+}
+#messageslist {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+#messageslist table {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  overflow-x: auto;
+  background-color: #D3D3D3;
+  border-collapse: collapse;
+}
+#messageslist table th,
+#messageslist table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #FFAA11;
+  vertical-align: middle;
+  font-size: 2em;
+  font-weight: bold;
+}
+#messageslist table th {
+  background-color: #0B5EBF;
+  color: #FFF;
+}
+#messageslist table tr:nth-child(even) {
+  background-color: #0BBF64;
+  color: #FFF;
+}
+#messageslist table tr:nth-child(odd) {
+  background-color: #D3D3D3;
+  color: #FFF;
+}
+#messageslist table a {
+  color: #0B5EBF;
+  border: 1px solid #0B5EBF;
+  padding: 5px;
+  border-radius: 5px;
+}
+#messageslist table a:hover {
+  background-color: #FFAA11;
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  #messageslist table {
+    display: table;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #messageslist table {
+    display: table;
   }
 }
 

@@ -1,4 +1,4 @@
-<main id="message-list">
+<main id="messageslist">
 <h1>Liste des Messages</h1>
 <table>
     <thead>
@@ -19,8 +19,8 @@
                 <td><?= $message['Subject'] ?></td>
                 <td><?= $message['Message_datetime'] ?></td>
                 <td>
-                    <a href="/projet-final-v2/view_message&id=<?= $message['Message_ID'] ?>">View</a>
-                    <a href="/projet-final-v2//messages&id=<?= $message['Message_ID'] ?>">Delete</a>
+                    <a href="/projet-final-v2/view_message&id=<?= $message['Message_ID'] ?>">Voir</a>
+                    <a href="/projet-final-v2//messages&id=<?= $message['Message_ID'] ?>">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

@@ -2,10 +2,61 @@
 @import '../general/style.scss';
 @import '../general/typography.scss';
 
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
 
 #createMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("../../images/background-road2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+
+    h1,
+    p {
+        background: transparent;
+        padding: 10px;
+        border-radius: 10px;
+
+        width: auto;
+        text-align: center;
 
 
+
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        background-color: transparent;
+        color: $color-white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+        text-shadow: 2px 2px 2px black;
+    }
+    blockquote {
+
+        padding: 10px;
+        border-radius: 10px;
+        font-style: italic;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 2px black;
+        color: $color-white;
+
+    }
+
+    p {
+
+        margin-bottom: 20px;
+    }
 
     form {
         display: flex;
@@ -15,14 +66,9 @@
         color: $color-white;
         padding: 20px;
         border-radius: 10px;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+        width: 100%;
+        max-width: 300px;
 
         fieldset {
             width: 100%;
@@ -31,7 +77,9 @@
             position: relative;
 
             label {
-                font-size: 1.5em;
+                font-size: 1.8em;
+                display: block;
+                margin-bottom: 10px;
             }
 
             input,
@@ -52,7 +100,7 @@
                 border-radius: 40px;
                 background: $color-orange;
                 color: $color-white;
-                font-size: 1.8em;
+                font-size: 1.5em;
                 box-shadow: 0 0 10px rgba(0, 0, 0, .1);
                 cursor: pointer;
 
@@ -73,34 +121,67 @@
             color: $color-blue;
         }
     }
+}
 
-    @media (min-width: 600px) {
-        form {
-            width: 50%;
+@media (min-width: 600px) {
+    #createMessage {
+        h1 {
+            font-size: 2.5em;
         }
 
-        form fieldset label {
+        p {
             font-size: 1.8em;
         }
 
-        form fieldset input,
-        form fieldset textarea {
+        form {
+            max-width: 400px;
+
+            fieldset {
+                label {
+                    font-size: 1.8em;
+                }
+
+                input,
+                textarea {
+                    font-size: 1.8em;
+                }
+
+                input[type="submit"] {
+                    font-size: 1.8em;
+                }
+            }
+        }
+
+        a {
             font-size: 1.8em;
         }
     }
+}
 
-    @media (min-width: 900px) {
+@media (min-width: 900px) {
+    #createMessage {
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
         form {
-            width: 40%;
-        }
+            max-width: 500px;
 
-        form fieldset label {
-            font-size: 2em;
-        }
+            fieldset {
+                label {
+                    font-size: 2em;
+                }
 
-        form fieldset input,
-        form fieldset textarea {
-            font-size: 2em;
+                input,
+                textarea {
+                    font-size: 2em;
+                }
+            }
         }
     }
 }

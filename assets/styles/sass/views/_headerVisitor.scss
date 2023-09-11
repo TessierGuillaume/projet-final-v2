@@ -86,6 +86,29 @@
             text-align: start;
         }
     }
+    
+    l {
+        li.logo {
+            a {
+                letter-spacing: -1px;
+                span.drive {
+                    color: $color-blue;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+                span.safe {
+                    color: $color-green;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+                span.control {
+                    color: $color-orange;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+            }
+        }
+    }
 
     @media screen and (min-width: 801px) {
 

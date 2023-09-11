@@ -72,7 +72,7 @@
     .social-icons-mobile {
         display: flex;
         position: relative;
-        top: 10em;
+        top: 15em;
         z-index: 3;
 
         a {
@@ -87,8 +87,83 @@
         }
     }
 
-    @media screen and (min-width: 801px) {
+    ul {
+        li.logo {
+            a {
+                letter-spacing: -1px;
+                span.drive {
+                    color: $color-blue;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+                span.safe {
+                    color: $color-green;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+                span.control {
+                    color: $color-orange;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+            }
+        }
+    }
 
+    @media screen and (min-width: 801px) {
+        .navbar-mobile,
+        .navbar-desktop {
+            ul.navbar-mobile-list,
+            ul {
+                li.logo {
+                    a {
+                        letter-spacing: -1px;
+                        span.drive {
+                            color: $color-blue; // Couleur pour "Drive"
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            margin-right: -2px;
+                        }
+                        span.safe {
+                            color: $color-green;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            margin-right: -2px;
+
+                        }
+                        span.control {
+                            color: $color-orange; // Couleur pour "Control"
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            margin-right: -2px;
+                        }
+
+                        span {
+                            position: relative; // Position relative pour le déplacement
+                            right: -100%; // Position initiale à l'extérieur du cadre
+                            opacity: 0; // Rendre initialement transparent
+                            // Animation
+                            animation: slide-in 1s ease-out forwards;
+                        }
+
+                        span.drive {
+                            animation-delay: 1s; // Délai de 1 seconde pour "Drive"
+                        }
+
+                        span:nth-child(2) {
+                            animation-delay: 2s; // Délai de 2 secondes pour "Safe"
+                        }
+
+                        span.control {
+                            animation-delay: 3s; // Délai de 3 secondes pour "Control"
+                        }
+                    }
+                }
+            }
+        } // Définition de l'animation
+        @keyframes slide-in {
+            to {
+                right: 0; // Position finale
+                opacity: 1; // Rendre complètement visible
+            }
+        }
 
         .navbar-desktop {
             display: flex;
@@ -135,7 +210,7 @@
                 font-size: 3em;
 
 
-                transition: color 0.3s ease, background-color 0.3s ease; 
+                transition: color 0.3s ease, background-color 0.3s ease;
             }
 
 
