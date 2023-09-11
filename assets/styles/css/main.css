@@ -34,6 +34,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -2002,9 +2005,8 @@ html {
   text-decoration: underline;
   color: #0B5EBF;
   border-radius: 5px;
-  font-size: 1.8em;
+  font-size: 1.5em;
   text-align: center;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
 }
 #messageView h2 .content,
 #messageView p .content {
@@ -2082,6 +2084,135 @@ html {
     text-align: center;
   }
   #messageView form fieldset button {
+    font-size: 1.5em;
+  }
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#messagesEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 1em;
+  background-color: #D3D3D3;
+}
+#messagesEdit h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #0B5EBF;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0.5em;
+  border: 1px solid #0B5EBF;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
+  background-color: #D3D3D3;
+}
+#messagesEdit form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#messagesEdit form fieldset {
+  width: 90%;
+  border: 1px solid #0B5EBF;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
+  background-color: #D3D3D3;
+  padding: 1em;
+  margin: 0.5em 0;
+}
+#messagesEdit form fieldset label {
+  margin-bottom: 0.5em;
+  color: #0B5EBF;
+  font-size: 1.8em;
+}
+#messagesEdit form fieldset input,
+#messagesEdit form fieldset textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #0B5EBF;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+#messagesEdit form fieldset input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  padding: 0.5em 2em;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #FFAA11;
+  color: #0B5EBF;
+}
+#messagesEdit form fieldset input[type=submit]:hover {
+  background-color: #0BBF64;
+}
+#messagesEdit a {
+  margin-top: 1em;
+  color: #0B5EBF;
+  text-decoration: none;
+  font-size: 2em;
+  text-decoration: underline;
+}
+#messagesEdit a:hover {
+  color: #0BBF64;
+}
+@media screen and (min-width: 481px) {
+  #messagesEdit h1 {
+    font-size: 2.5em;
+  }
+  #messagesEdit form fieldset input,
+  #messagesEdit form fieldset textarea {
+    font-size: 1.2em;
+  }
+  #messagesEdit form fieldset input[type=submit] {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 769px) {
+  #messagesEdit h1 {
+    font-size: 3em;
+  }
+  #messagesEdit form fieldset input,
+  #messagesEdit form fieldset textarea {
+    font-size: 1.5em;
+  }
+  #messagesEdit form fieldset input[type=submit] {
     font-size: 1.5em;
   }
 }

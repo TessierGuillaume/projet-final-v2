@@ -1,7 +1,7 @@
 
 <main id="messagesEdit">
 <h1>Éditer le Message</h1>
-<form action="index.php?route=update_message&id=<?= $message['Message_ID']; ?>" method="post">
+<form action="/projet-final-v2/update_message&id=<?= $message['Message_ID']; ?>" method="post">
     <fieldset>
         <label for="subject">Sujet:</label>
         <input type="text" id="subject" name="subject" value="<?= $message['Subject']; ?>" required>
@@ -14,5 +14,6 @@
         <input type="submit" value="Mettre à jour">
     </fieldset>
 </form>
+<a href="/projet-final-v2/messages">Retour à la liste des messages</a>
 </main>
-<a href="index.php?route=index_message">Retour à la liste des messages</a>
+
