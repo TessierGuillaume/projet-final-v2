@@ -1074,180 +1074,63 @@ html {
   /* 1rem = 10px*/
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+#services {
+  background-color: #D3D3D3;
+  text-align: center;
+  padding: 20px;
 }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+#services h2,
+#services h3 {
+  display: inline-block;
+  color: #0B5EBF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0.5em;
+  margin: 1em;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #0B5EBF;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
 }
-
-body {
-  line-height: 1;
+#services h1 {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #0B5EBF;
+  font-weight: bold;
+  font-size: 2.1em;
+  padding: 0.5em;
+  font-family: "Lato", sans-serif;
+  border: 1px solid #0B5EBF;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
 }
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-#main-content button,
-#main-content .cta {
-  font-family: "Oswald", sans-serif;
-}
-#main-content #main-content {
-  padding: 10px;
-}
-#main-content section {
+#services section {
   margin-bottom: 20px;
   position: relative;
   background-color: rgba(211, 211, 211, 0.3);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
+  text-align: center;
 }
-#main-content section h1 {
-  color: #0B5EBF;
+#services section p,
+#services section ul {
+  text-align: left;
+  padding: 1em;
+  font-size: 1.8em;
+  font-family: "Lexend", sans-serif, sans-serif;
 }
-#main-content section h2 {
-  color: #0B5EBF;
-}
-#main-content section h3 {
-  color: #0B5EBF;
-}
-#main-content section p,
-#main-content section ul {
-  text-align: justify;
-}
-#main-content section ul {
+#services section ul {
   list-style: disc inside;
+  padding: 0.5em;
 }
-#main-content section ul li {
+#services section ul li {
   margin-bottom: 5px;
+  padding: 0.5em;
 }
-#main-content button,
-#main-content .cta {
+#services button,
+#services .cta {
   background-color: #FFAA11;
   color: #FFF;
   padding: 5px 10px;
@@ -1255,33 +1138,29 @@ a {
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  #main-content #main-content {
-    padding: 20px;
-    background-color: #0BBF64;
+  #services h1,
+  #services h2,
+  #services h3 {
+    font-size: 2em;
   }
-  #main-content h1,
-  #main-content h2,
-  #main-content h3 {
+  #services h1 {
     margin: 20px 0;
   }
-  #main-content h1 {
-    text-align: center;
-    font-size: 1.8em;
-    font-family: "Lato", sans-serif;
-    margin: 30px 0;
-    font-weight: bold;
-    color: #0B5EBF;
-  }
-  #main-content section {
+  #services section {
     margin-bottom: 40px;
   }
-  #main-content ul li {
+  #services p,
+  #services ul {
+    font-size: 1.2em;
+  }
+  #services ul li {
     margin-bottom: 10px;
   }
-  #main-content button,
-  #main-content .cta {
+  #services button,
+  #services .cta {
     padding: 10px 20px;
   }
 }
@@ -1408,7 +1287,16 @@ button,
   background-image: url("../../images/background-road.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: center;
+  animation: backgroundGrow 20s infinite alternate;
+}
+@keyframes backgroundGrow {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 130% 130%;
+  }
 }
 #login .wrapper {
   width: 520px;
@@ -1581,6 +1469,15 @@ button,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center left;
+  animation: backgroundGrow 20s infinite alternate;
+}
+@keyframes backgroundGrow {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 130% 130%;
+  }
 }
 #register .wrapper {
   width: 50%;
@@ -2136,7 +2033,7 @@ html {
   font-size: 2em;
   padding: 0.5em;
   border: 1px solid #0B5EBF;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
   background-color: #D3D3D3;
 }

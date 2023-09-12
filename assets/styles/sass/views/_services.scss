@@ -1,48 +1,68 @@
 @import '../general/_typography.scss';
 @import '../general/_vars.scss';
 @import '../general/style.scss';
-@import '_reset.scss';
+
+#services {
+    background-color: $color-grey;
+    text-align: center;
+    padding: 20px;
 
 
-#main-content {
+    h2,
+    h3 {
+        display: inline-block;
+        color: $color-blue;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2em;
+        padding: 0.5em;
+        margin: 1em;
+        font-family: $font-title;
+        border: 1px solid $color-blue;
+        border-radius: 5px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+        -3px -3px 6px rgba(255, 255, 255, 0.3);
+    }
 
-   
-    button,
-    .cta {
-        font-family: $font-button;
-    } // Conteneur principal
-    #main-content {
-        padding: 10px;
-    } // Sections
+    h1 {
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 0.5em;
+        color: $color-blue;
+        font-weight: bold;
+        font-size: 2.1em;
+        padding: 0.5em;
+        font-family: $font-title;
+        border: 1px solid $color-blue;
+        border-radius: 5px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+        -3px -3px 6px rgba(255, 255, 255, 0.3);
+
+    }
+
     section {
         margin-bottom: 20px;
         position: relative;
         background-color: rgba($color-grey, 0.3);
         padding: 20px;
-        border-radius: 8px;
-
-        h1 {
-            color: $color-blue;
-        }
-
-        h2 {
-            color: $color-blue;
-        }
-
-        h3 {
-            color: $color-blue;
-        }
-
+        border-radius: 5px;
+        text-align: center;
         p,
         ul {
-            text-align: justify;
+            text-align: left;
+            padding: 1em;
+            font-size: 1.8em;
+            font-family: $font-body, sans-serif;
         }
 
         ul {
             list-style: disc inside;
+            padding: 0.5em;
 
             li {
                 margin-bottom: 5px;
+                padding: 0.5em;
+
             }
         }
     } // Boutons et liens
@@ -55,31 +75,26 @@
         border-radius: 4px;
         cursor: pointer;
         text-transform: uppercase;
+        text-align: center; // Centrer le texte des boutons et des appels à l'action
     } // Responsivité pour les écrans plus grands
     @media (min-width: 768px) {
-        #main-content {
-            padding: 20px;
-            background-color: $color-green;
-        }
-
         h1,
         h2,
         h3 {
-            margin: 20px 0;
+            font-size: 2em; // Augmenter la taille de la police pour les titres sur les écrans plus grands
         }
 
         h1 {
-            text-align: center;
-            font-size: 1.8em;
-            font-family: $font-title;
-            margin: 30px 0;
-            font-weight: bold;
-            color: $color-blue;
+            margin: 20px 0;
         }
-
 
         section {
             margin-bottom: 40px;
+        }
+
+        p,
+        ul {
+            font-size: 1.2em; // Augmenter la taille de la police pour les paragraphes et les listes sur les écrans plus grands
         }
 
         ul li {
