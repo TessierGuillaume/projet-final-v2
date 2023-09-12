@@ -94,40 +94,45 @@ class UserController extends AbstractController
         $users = $this->manager->getAllUsers();
         $this->render("admin/users.phtml", ["users" => $users]);
     }
-    public function updateUserProfile()
-    {
-        // Vérifier si l'utilisateur est connecté
-        if (!isset($_SESSION['user_id'])) {
-            header('Location: /projet-final-v2/login');
-            exit();
-        }
-
-        $userId = $_SESSION['user_id']; // ID de l'utilisateur connecté
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = htmlspecialchars($_POST['email']);
-            $firstName = htmlspecialchars($_POST['first_name']);
-            $lastName = htmlspecialchars($_POST['last_name']);
-
-            // Récupérez l'utilisateur actuel (y compris le rôle, si nécessaire)
-            $user = $this->manager->getUserById($userId);
-            $this->render('public/users/profile_user.phtml', ['user' => $user]);
-
-            // Mettez à jour les informations de l'utilisateur
-            $user->setEmail($email);
-            $user->setFirst_name($firstName);
-            $user->setLast_name($lastName);
-
-            // Mettez à jour l'utilisateur dans la base de données
-            $this->manager->updateUser($user);
-
-            header('Location: /projet-final-v2/profile_user');
-            exit();
-        } else {
-            $user = $this->manager->getUserById($userId);
-            $this->render('public/users/profile_user.phtml', ['user' => $user]);
-        }
+   public function updateUserProfile()
+{
+    // Vérifier si l'utilisateur est connecté
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: /projet-final-v2/login');
+        exit();
     }
+
+    $userId = $_SESSION['user_id']; // ID de l'utilisateur connecté
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $email = htmlspecialchars($_POST['email']);
+        $firstName = htmlspecialchars($_POST['first_name']);
+        $lastName = htmlspecialchars($_POST['last_name']);
+
+        // Récupérez l'utilisateur actuel (y compris le rôle, si nécessaire)
+        $user = $this->manager->getUserById($userId);
+        
+        // Mettez à jour les informations de l'utilisateur
+        $user->setEmail($email);
+        $user->setFirst_name($firstName);
+        $user->setLast_name($lastName);
+
+        // Mettez à jour l'utilisateur dans la base de données
+        $updated = $this->manager->updateUser($user);
+
+        if ($updated) { 
+            $_SESSION['message'] = 'Votre profil a été mis à jour avec succès.';
+        } else {
+            $_SESSION['message'] = 'Une erreur est survenue lors de la mise à jour du profil.';
+        }
+
+        header('Location: /projet-final-v2/update_profile');
+        exit();
+    } else {
+        $user = $this->manager->getUserById($userId);
+        $this->render('public/users/profile_user.phtml', ['user' => $user]);
+    }
+}
 
 
 

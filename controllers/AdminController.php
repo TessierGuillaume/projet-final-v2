@@ -33,32 +33,33 @@ class AdminController extends AbstractController
     }
 
     // Fonction pour modifier un utilisateur (comme exemple)
-    public function editUser($id)
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = htmlspecialchars($_POST['email']);
-            $firstName = htmlspecialchars($_POST['first_name']);
-            $lastName = htmlspecialchars($_POST['last_name']);
-            $roleName = htmlspecialchars($_POST['role']);
+ public function editUser(int $id)
+{
+    $user = $this->userManager->getUserById($id);
 
-            // Obtenez l'objet de rôle à partir du nom
-            $roleManager = new RoleManager();
-            $role = $roleManager->getRoleByName($roleName);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $email = htmlspecialchars($_POST['email']);
+        $firstName = htmlspecialchars($_POST['first_name']);
+        $lastName = htmlspecialchars($_POST['last_name']);
+        $roleName = htmlspecialchars($_POST['role']);
 
-            // Créez un objet utilisateur
-            $user = new User($email, '', $lastName, $firstName, $role);
-            $user->setId($id);
+        // Obtenez l'objet de rôle à partir du nom
+        $roleManager = new RoleManager();
+        $role = $roleManager->getRoleByName($roleName);
 
-            // Mettez à jour l'utilisateur
-            $this->userManager->updateUser($user);
+        $user->setEmail($email);
+        $user->setFirst_name($firstName); // mise à jour pour utiliser la méthode correcte
+        $user->setLast_name($lastName);   // mise à jour pour utiliser la méthode correcte
+        $user->setRole($role);
 
-            header('Location: index.php?route=dashboard');
-            exit();
-        } else {
-            $user = $this->userManager->getUserById($id);
-            $this->render('admin/edit_user.phtml', ['user' => $user]); // Assurez-vous que le fichier de template s'appelle "edit_user.phtml"
-        }
+        $this->userManager->updateUser($user);
+
+        header('Location: /projet-final-v2/admin/edit_user?id=' . $id);
+        exit();
+    } else {
+        $this->render('admin/edit_user.phtml', ['user' => $user]);
     }
+}
 
 
     public function deleteUser(int $userId): void

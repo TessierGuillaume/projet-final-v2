@@ -39,7 +39,7 @@ class MessageController extends AbstractController
         $subject = htmlspecialchars($_POST['subject']);
         $message_body = htmlspecialchars($_POST['message_body']);
         $this->messageManager->createMessage($user_id, $subject, $message_body);
-        header('Location: index.php?route=index_message'); // Rediriger vers la liste des messages
+        header('Location: /projet-final-v2/index_message'); // Rediriger vers la liste des messages
         exit();
     }
 
@@ -55,7 +55,7 @@ class MessageController extends AbstractController
             $subject = htmlspecialchars($_POST['subject']);
             $message_body = htmlspecialchars($_POST['message_body']);
             $this->messageManager->updateMessage($id, $subject, $message_body);
-            header("Location: index.php?route=index_message");
+            header("Location: /projet-final-v2/index_message");
         } else {
             // Vous pouvez rediriger vers une page d'erreur ou afficher un message d'erreur ici
             echo "Les données nécessaires pour la mise à jour sont manquantes.";
@@ -67,7 +67,7 @@ class MessageController extends AbstractController
     public function deleteMessage($id)
     {
         $this->messageManager->deleteMessage($id);
-        header('Location: index.php?route=delete_message');
+        header('Location: /projet-final-v2/delete_message');
         exit();
     }
 

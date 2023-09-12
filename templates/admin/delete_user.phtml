@@ -3,8 +3,8 @@
     Name: <?= $user['first_name'] ?> <?= $user['last_name'] ?><br>
     Email: <?= $user['email'] ?>
 </p>
-<form action="index.php?route=admin/delete_user&id=<?= $user['User_ID'] ?>" method="post">
+<form action="/projet-final-v2/admin/delete_user&id=<?= $user['User_ID'] ?>" method="post">
     <input type="hidden" name="confirm_delete" value="1">
     <button type="submit">Yes, Delete</button>
 </form>
-<a href="index.php?route=admin/users">No, Go Back</a>
+<a href="/projet-final-v2/users">No, Go Back</a>
