@@ -1,0 +1,49 @@
+
+<main id="login">
+    <div class="wrapper">
+    <h2>Connexion</h2>
+    <form action="/projet-final-v2/connexion" method="post">
+        <p class="form-errors">
+           <?php
+                if (isset($data["errors"]))
+                    echo $data["errors"][0];
+                ?>
+        </p>
+        <input type="hidden" name="form-name" id="form-name" value="login" />
+        <fieldset class="input-box">
+    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+    <input type="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" name="login-email" id="login-email" />
+    <label for="login-email">
+        Email
+    </label>
+</fieldset>
+<fieldset class="input-box">
+    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+    <input type="password" name="login-password" id="login-password" minlength="12" required />
+    <label for="login-password">
+        Mot de passe
+    </label>
+</fieldset>
+        <fieldset>
+            <div class="remember-forgot">
+            <label for="checkbox">
+                <input type="checkbox">
+            Se souvenir de moi</label>
+            <a href="#">Mot de passe oublié ?</a>
+        </div>
+            <button type="submit" class="btn">
+                Se connecter
+            </button>
+        </fieldset>
+        <fieldset>
+        <a class="register-link" href="/projet-final-v2/créer-un-compte"><p>Pas encore de compte ? Créez-en un</p></a>
+    </fieldset>
+    </form> 
+    </div>
+</main>
+
+
+
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/connexion.js"></script>

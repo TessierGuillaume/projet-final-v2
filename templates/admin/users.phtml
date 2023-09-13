@@ -1,0 +1,29 @@
+<main id="userList">
+<h1>Gestion des utilisateurs</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($users as $user) : ?>
+            <tr>
+                <td><?= $user['User_ID'] ?></td>
+                <td><?= $user['Email'] ?></td>
+                <td><?= $user['First_name'] ?></td>
+                <td><?= $user['Last_name'] ?></td>
+                <td>
+                    <a href="/projet-final-v2/admin/edit_user?id=<?= $user['User_ID'] ?>">Modifier</a>
+                    <a href="/projet-final-v2/admin/delete_user?id=<?= $user['User_ID'] ?>">Supprimer</a>
+
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+</main>

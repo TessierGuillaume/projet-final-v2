@@ -1,0 +1,29 @@
+<main id="messageView">
+<h1>Modifier ou supprimer un message.</h1>
+<h2><span class="label">Titre du message :</span> <span class="content"><?= $message['Subject']; ?></span></h2>
+<h2><span class="label">Message :</span> <span class="content"><?= $message['Message_body']; ?></span></h2>
+<div class="form-container">
+<form action="/projet-final-v2/edit_message&id=<?= $message['Message_ID']; ?>" method="POST">
+    <fieldset>
+        <legend>Modifier le message</legend>
+        <button type="submit">Éditer</button>
+    </fieldset>
+</form>
+
+<form action="/projet-final-v2/delete_message&id=<?= $message['Message_ID']; ?>" method="POST">
+    <fieldset>
+        <legend>Supprimer le message</legend>
+        <button type="submit">Supprimer</button>
+    </fieldset>
+</form>
+
+<form action="/projet-final-v2/index_message" method="GET">
+    <fieldset>
+        <legend>Retour à la liste des messages</legend>
+        <button type="submit">Liste</button>
+    </fieldset>
+</form>
+</div>
+</main>
+
+<script type="text/javascript" src="assets/js/affichageMessages.js"></script>

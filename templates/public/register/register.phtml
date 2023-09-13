@@ -1,0 +1,107 @@
+<!--<main id="register">-->
+<!--    <h2>Création de compte</h2>-->
+<!--    <form action="/projet-final-v2/créer-un-compte" method="post">-->
+<!--        <p class="form-errors">-->
+            <?php
+            if (isset($data["errors"]))
+                echo $data["errors"][0];
+            ?>
+<!--        </p>-->
+<!--        <input type="hidden" name="form-name" id="form-name" value="register" />-->
+<!--        <fieldset>-->
+<!--            <label for="register-firstName">-->
+<!--                prénom-->
+<!--            </label>-->
+<!--            <input type="text" name="register-firstName" id="register-firstName" />-->
+<!--        </fieldset>-->
+<!--        <fieldset>-->
+<!--            <label for="register-lastName">-->
+<!--                nom-->
+<!--            </label>-->
+<!--            <input type="text" name="register-lastName" id="register-lastName" />-->
+<!--        </fieldset>-->
+<!--        <fieldset>-->
+<!--            <label for="register-email">-->
+<!--                Email-->
+<!--            </label>-->
+<!--            <input type="email" name="register-email" id="register-email" />-->
+<!--        </fieldset>-->
+<!--        <fieldset>-->
+<!--            <label for="register-password">-->
+<!--                Mot de passe-->
+<!--            </label>-->
+<!--            <input type="password" name="register-password" id="register-password" minlength="12" required />-->
+<!--        </fieldset>-->
+<!--        <fieldset>-->
+<!--            <label for="register-confirm-password">-->
+<!--                Confirmer le Mot de passe-->
+<!--            </label>-->
+<!--            <input type="password" name="register-confirm-password" id="register-confirm-password" minlength="12" required />-->
+<!--        </fieldset>-->
+<!--        <fieldset>-->
+<!--            <button type="submit">-->
+<!--                Créer un compte-->
+<!--            </button>-->
+<!--        </fieldset>-->
+<!--    </form>-->
+<!--    
+<!--</main>-->
+
+
+<main id="register" >
+    <div class="wrapper">
+        <h2>Création de compte</h2>
+        <form action="/projet-final-v2/créer-un-compte" method="post">
+            <p class="form-errors">
+                <?php
+                if (isset($data["errors"]))
+                    echo $data["errors"][0];
+                ?>
+            </p>
+            <input type="hidden" name="form-name" id="form-name" value="register" />
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" name="register-firstName" id="register-firstName" required>
+                <label for="register-firstName">Prénom</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" name="register-lastName" id="register-lastName" required>
+                <label for="register-lastName">Nom</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" name="register-email" id="register-email" required>
+                <label for="register-email">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="register-password" id="register-password" minlength="12" required>
+                <label for="register-password">Mot de passe</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="register-confirm-password" id="register-confirm-password" minlength="12" required>
+                <label for="register-confirm-password">Confirmer le mot de passe</label>
+            </div>
+            <div class="remember-forgot">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms">
+                    J'accepte les termes et conditions
+                </label>
+            </div>
+            <button type="submit" class="btn">Créer un compte</button>
+        </form>
+        <?php if (isset($data['registered']) && $data['registered'] === true) : ?>
+            <script>
+                alert('Merci pour votre inscription ! Vous serez redirigé vers la page de connexion.');
+                setTimeout(function() {
+                    window.location.href = '/projet-final-v2/connexion';
+                }, 1000);
+            </script>
+        <?php endif; ?>
+    </div>
+</main>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/connexion.js"></script>

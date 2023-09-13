@@ -1,0 +1,21 @@
+@import '../general/_vars.scss';
+#planing-user {
+    .weekend {
+        background-color: $color-orange !important;
+    }
+    .day-full {
+        background-color: $color-blue !important; // Choisissez la couleur que vous souhaitez
+    }
+    .day-available {
+        background-color: $color-green;
+    }
+    .fc-day {
+        font-size: 18px;
+        /* Change la taille du texte */
+        font-family: 'Arial';
+        /* Change la police */
+        color: $color-blue;
+        /* Change la couleur du texte */
+    }
+
+}

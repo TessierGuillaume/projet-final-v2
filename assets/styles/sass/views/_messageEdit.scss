@@ -1,0 +1,125 @@
+@import '../general/_typography.scss';
+@import '../general/_vars.scss';
+@import '../general/style.scss';
+
+#messagesEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 1em;
+    background-color: $color-grey;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        color: $color-blue;
+        font-weight: bold;
+        font-size: 2em;
+        padding: 0.5em;
+        border: 1px solid $color-blue;
+        border-radius: 5px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+        -3px -3px 6px rgba(255, 255, 255, 0.3);
+        background-color: $color-grey;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        fieldset {
+            width: 90%;
+            border: 1px solid $color-blue;
+            border-radius: 5px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+            -3px -3px 6px rgba(255, 255, 255, 0.3);
+            background-color: $color-grey;
+            padding: 1em;
+            margin: 0.5em 0;
+
+            label {
+                margin-bottom: 0.5em;
+                color: $color-blue;
+                font-size: 1.8em;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 0.5em;
+                border-radius: 5px;
+                border: 1px solid $color-blue;
+                margin-bottom: 1em;
+                font-size: 1.8em;
+            }
+
+            input[type="submit"] {
+                display: block;
+                margin: 0 auto;
+                width: auto;
+                padding: 0.5em 2em;
+                border-radius: 5px;
+                font-weight: bold;
+                background-color: $color-orange;
+                color: $color-blue;
+
+
+                &:hover {
+                    background-color: $color-green;
+                }
+            }
+        }
+    }
+
+    a {
+        margin-top: 1em;
+        color: $color-blue;
+        text-decoration: none;
+        font-size: 2em;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color-green;
+        }
+    } // Styles pour tablettes et desktops
+    @media screen and (min-width: 481px) {
+        h1 {
+            font-size: 2.5em;
+        }
+
+        form {
+            fieldset {
+                input,
+                textarea {
+                    font-size: 1.2em;
+                }
+
+                input[type="submit"] {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    } // Styles pour desktop
+    @media screen and (min-width: 769px) {
+        h1 {
+            font-size: 3em;
+        }
+
+        form {
+            fieldset {
+                input,
+                textarea {
+                    font-size: 1.5em;
+                }
+
+                input[type="submit"] {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}

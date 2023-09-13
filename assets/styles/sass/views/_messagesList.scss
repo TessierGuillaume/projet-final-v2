@@ -1,0 +1,64 @@
+@import '../general/_vars.scss';
+
+#messageslist {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    margin: 0; // Enlever les marges
+    padding: 0; // Enlever les paddings
+    table {
+        width: 100%;
+        min-height: 100%;
+        display: block;
+        overflow-x: auto;
+        background-color: $color-grey;
+        border-collapse: collapse; // Ajouté pour fusionner les bordures
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid $color-orange;
+            vertical-align: middle;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: $color-blue;
+            color: $color-white;
+        }
+
+        tr:nth-child(even) {
+            background-color: $color-green;
+            color: $color-white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: $color-grey; // Ajouté pour différencier les lignes impaires
+            color: $color-white;
+        }
+        a {
+             color: $color-blue; 
+            border: 1px solid $color-blue; // Ajout d'un cadre autour des liens
+            padding: 5px; // Ajout d'un padding pour espacer le texte du cadre
+            border-radius: 5px;
+            &:hover {
+                background-color: $color-orange; // Applique un fond orange au survol
+            }
+        }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+        // Mode tablette
+        table {
+            display: table;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        // Mode desktop
+        table {
+            display: table;
+        }
+    }
+}

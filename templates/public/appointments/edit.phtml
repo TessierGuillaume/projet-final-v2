@@ -1,0 +1,12 @@
+<form action="index.php?route=edit_appointment<?= $appointment->getAppointmentId() ?>" method="post">
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="userId" value="<?= $appointment->getUserId() ?>" required>
+
+    <label for="serviceId">Service ID:</label>
+    <input type="text" id="serviceId" name="serviceId" value="<?= $appointment->getServiceId() ?>" required>
+
+    <label for="appointmentDatetime">Appointment Date and Time:</label>
+    <input type="datetime-local" id="appointmentDatetime" name="appointmentDatetime" value="<?= $appointment->getAppointmentDatetime() ?>" required>
+
+    <input type="submit" value="Edit Appointment">
+</form>
