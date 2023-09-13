@@ -1,7 +1,0 @@
-<IfModule mod_rewrite.c>  
-RewriteEngine on  
-RewriteCond %{REQUEST_FILENAME} !-f  
-RewriteCond %{REQUEST_FILENAME} !-d  
-
-RewriteRule ^(.*)$ /projet-final-v2/index.php?path=$1 [NC,L,QSA]
-</IfModule>

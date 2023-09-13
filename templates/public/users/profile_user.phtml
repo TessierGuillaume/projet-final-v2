@@ -1,8 +1,0 @@
-<h1>Modifier le profil</h1>
-<h1>Profil de <?= $user->getFirst_name() ?> <?= $user->getLast_name() ?></h1>
-<form action="index.php?route=update_profile" method="post">
-    Nom: <input type="text" name="first_name" value="<?= $user->getFirst_name() ?>"><br>
-    Prénom: <input type="text" name="last_name" value="<?= $user->getLast_name() ?>"><br>
-    Email: <input type="email" name="email" value="<?= $user->getEmail() ?>"><br>
-    <input type="submit" value="Mettre à jour">
-</form>
