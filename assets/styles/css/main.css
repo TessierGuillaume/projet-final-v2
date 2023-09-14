@@ -821,15 +821,16 @@ html {
 }
 #headerUser .navbar-mobile {
   display: none;
-  align-items: center;
 }
 #headerUser .navbar-mobile i.fas.fa-bars {
   position: fixed;
   z-index: 999;
   top: 1em;
-  right: 1em;
-  font-size: 3rem;
+  right: 1.8em;
+  font-size: 8vw;
   color: #FFAA11;
+  min-width: 40px;
+  min-height: 40px;
 }
 #headerUser .navbar-mobile .modal {
   transition: top 0.9s;
@@ -841,6 +842,9 @@ html {
   width: 100%;
   opacity: 0.9;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #headerUser .navbar-mobile .move-icon {
   transform: translateY(180px);
@@ -851,10 +855,8 @@ html {
   height: 60vh;
   position: relative;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: space-around;
-  right: 6em;
-  top: 3em;
 }
 #headerUser .navbar-mobile .navbar-mobile-list a {
   font-size: 3em;
@@ -2652,7 +2654,33 @@ html {
   text-align: center;
   background-color: #0B5EBF;
   color: #FFF;
-  font-size: 1em;
+  font-size: 1.8em;
+}
+#userList form {
+  display: flex;
+  justify-content: center;
+  background-color: #D3D3D3;
+}
+#userList form input[type=text] {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px #FFAA11;
+  border: 1px solid #0B5EBF;
+  font-size: 2em;
+  color: #0B5EBF;
+  font-weight: bold;
+}
+#userList form button {
+  padding: 0.8em;
+  border: none;
+  background-color: #FFAA11;
+  font-size: 1.5em;
+  color: #0B5EBF;
+  cursor: pointer;
+  font-weight: bold;
+}
+#userList form button:hover {
+  background-color: #0BBF64;
 }
 #userList table {
   width: 100%;
@@ -2734,7 +2762,7 @@ html {
   #userList table th,
   #userList table td {
     padding: 1em;
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
   #userList table a {
     padding: 0.8em;

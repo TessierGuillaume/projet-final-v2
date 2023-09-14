@@ -111,4 +111,25 @@ class UserManager extends AbstractManager
         $stmt->bindValue(':id', $user->getId(), PDO::PARAM_INT);
         return $stmt->execute();
     }
+    
+    public function updateUser(User $user): bool
+    {
+        $sql = "UPDATE user SET Email = :email, Last_name = :lastName, First_name = :firstName, Role_ID = :roleId WHERE User_ID = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':email', $user->getEmail(), PDO::PARAM_STR);
+        $stmt->bindValue(':lastName', $user->getLast_name(), PDO::PARAM_STR);
+        $stmt->bindValue(':firstName', $user->getFirst_name(), PDO::PARAM_STR);
+        $stmt->bindValue(':roleId', $user->getRole()->getRoleId(), PDO::PARAM_INT);
+        $stmt->bindValue(':id', $user->getId(), PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+    
+  public function searchUsers(string $search): array
+{
+    $search = "%$search%";
+    $stmt = $this->db->prepare("SELECT * FROM user WHERE First_name LIKE ? OR Last_name LIKE ? OR Email LIKE ?");
+    $stmt->execute([$search, $search, $search]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
 }

@@ -10,15 +10,19 @@
     }
     .navbar-mobile {
         display: none;
-        align-items: center;
+
+
+
 
         i.fas.fa-bars {
             position: fixed;
             z-index: 999;
             top: 1em;
-            right: 1em;
-            font-size: 3rem;
+            right: 1.8em;
+            font-size: 8vw;
             color: $color-orange;
+            min-width: 40px; // Définissez une largeur minimale pour garantir qu'elle reste visible
+            min-height: 40px;
         }
 
         .modal {
@@ -31,6 +35,9 @@
             width: 100%;
             opacity: 0.9;
             z-index: 3;
+            display: flex; // Ajouté pour activer flexbox
+            justify-content: center; // Centré horizontalement
+            align-items: center;
         }
 
         .move-icon {
@@ -44,10 +51,9 @@
             height: 60vh;
             position: relative;
             flex-direction: column;
-            align-items: center;
+            text-align: center;
             justify-content: space-around;
-            right: 6em;
-            top: 3em;
+
 
             a {
                 font-size: 3em;

@@ -19,11 +19,18 @@ class AdminController extends AbstractController
     }
 
     // Fonction pour gérer les utilisateurs
-    public function manageUsers()
-    {
+   public function manageUsers()
+{
+    $search = isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '';
+    
+    if ($search !== '') {
+        $users = $this->userManager->searchUsers($search);
+    } else {
         $users = $this->userManager->getAllUsers();
-        $this->render('admin/users.phtml', ['users' => $users]);
     }
+    
+    $this->render('admin/users.phtml', ['users' => $users]);
+}
 
     // Fonction pour gérer les messages
     public function manageMessages()
