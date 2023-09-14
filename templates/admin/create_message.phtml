@@ -1,5 +1,10 @@
 <main id="createMessage">
-
+<?php
+if (isset($_SESSION['confirmation_message'])) {
+    echo '<div class="confirmation-message">' . $_SESSION['confirmation_message'] . '</div>';
+    unset($_SESSION['confirmation_message']); // Supprimez le message de la session après l'affichage
+}
+?>
 <h1>Conduisez-nous vers votre satisfaction !</h1>
 <blockquote>
     <p>
@@ -9,7 +14,7 @@
     </p>
 </blockquote>
 
-<form action="index.php?route=create_message" method="post">
+<form action="/projet-final-v2/create_message" method="post">
     <input type="hidden" name="form-name" id="form-name" value="create-message">
     
     <fieldset>
@@ -25,7 +30,7 @@
     <fieldset>
         <input type="submit" value="Créer">
     </fieldset>
-    <a href="index.php?route=index_message">Retour à la liste des messages</a>
+    <a href="/projet-final-v2/homepage">Retour à l'accueil</a>
 </form>
 
 

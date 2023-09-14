@@ -40,6 +40,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -297,25 +303,29 @@ button,
 }
 #homepage #schedule-section .container-homepage {
   display: flex;
+  background-color: #D3D3D3;
   flex-direction: column;
 }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 601px) {
   #homepage #schedule-section .container-homepage {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
-#homepage #schedule-section .container-homepage .schedule-container {
+#homepage #schedule-section .container-homepage .schedule-container,
+#homepage #schedule-section .container-homepage address {
   width: 100%;
 }
-@media screen and (min-width: 801px) {
-  #homepage #schedule-section .container-homepage .schedule-container {
+@media screen and (min-width: 601px) {
+  #homepage #schedule-section .container-homepage .schedule-container,
+  #homepage #schedule-section .container-homepage address {
     width: 45%;
   }
 }
 #homepage #schedule-section .container-homepage .map-container {
   width: 100%;
 }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 601px) {
   #homepage #schedule-section .container-homepage .map-container {
     width: 45%;
   }
@@ -344,6 +354,79 @@ button,
 }
 #homepage #schedule-table .closed {
   background-color: #ffcccc;
+}
+#homepage address {
+  background-color: #D3D3D3;
+}
+#homepage address fieldset {
+  text-align: center;
+  margin: 20px 0;
+  padding: 0.5em;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+#homepage address fieldset legend {
+  font-weight: bold;
+  color: #0B5EBF;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  text-decoration: underline;
+}
+#homepage address fieldset section {
+  margin-bottom: 30px;
+}
+#homepage address fieldset label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #0B5EBF;
+  font-size: 1.3em;
+  text-decoration: underline;
+}
+#homepage address fieldset p {
+  margin: 0;
+  font-size: 1.3em;
+}
+#homepage address fieldset a {
+  color: #0B5EBF;
+  text-decoration: underline;
+  font-weight: bold;
+}
+#homepage address fieldset a:hover {
+  color: #FFAA11;
+}
+
+#promo-october {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 300px;
+  background-color: #D3D3D3;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#promo-october h2 {
+  color: #0B5EBF;
+  font-size: 1.5em;
+}
+#promo-october h3 {
+  color: #0B5EBF;
+  font-size: 1.2em;
+}
+#promo-october p,
+#promo-october ul {
+  color: #0B5EBF;
+  font-size: 1em;
+  line-height: 1.5;
+}
+#promo-october ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+#promo-october ul li {
+  margin-bottom: 10px;
 }
 
 body,
@@ -445,6 +528,261 @@ button,
   /* Change la police */
   color: #0B5EBF;
   /* Change la couleur du texte */
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#headerAdmin .navbar-mobile {
+  display: none;
+  align-items: center;
+}
+#headerAdmin .navbar-mobile i.fas.fa-bars {
+  position: fixed;
+  z-index: 999;
+  top: 1em;
+  right: 1em;
+  font-size: 3rem;
+  color: #FFAA11;
+}
+#headerAdmin .navbar-mobile .modal {
+  transition: top 0.9s;
+  background-color: #D3D3D3;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  opacity: 0.9;
+  z-index: 3;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list {
+  display: flex;
+  height: 60vh;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  right: 6em;
+  top: 3em;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list a {
+  font-size: 3em;
+  font-weight: 800;
+  color: #FFAA11;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list a:hover {
+  color: #FFAA11;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list .logo a {
+  letter-spacing: -1px;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list .logo a span.drive {
+  color: #0B5EBF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list .logo a span.safe {
+  color: #0BBF64;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerAdmin .navbar-mobile .navbar-mobile-list .logo a span.control {
+  color: #FFAA11;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: -2px;
+}
+#headerAdmin .navbar-mobile .social-icons-mobile {
+  display: flex;
+  position: relative;
+  top: 15em;
+  z-index: 3;
+}
+#headerAdmin .navbar-mobile .social-icons-mobile a {
+  margin: 20px;
+}
+#headerAdmin .navbar-mobile .social-icons-mobile i {
+  transition: all 0.5s ease;
+  top: -80px;
+  position: relative;
+  text-align: start;
+}
+#headerAdmin .navbar-desktop {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #D3D3D3;
+  height: 10em;
+  align-items: center;
+}
+#headerAdmin .navbar-desktop ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#headerAdmin .navbar-desktop ul li {
+  position: relative;
+  z-index: 1;
+}
+#headerAdmin .navbar-desktop ul .indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0;
+  background-color: #0BBF64;
+  transition: all 0.5s ease;
+}
+#headerAdmin .navbar-desktop ul a {
+  color: #0B5EBF;
+  font-weight: 700;
+  font-size: 3em;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+@media screen and (min-width: 801px) {
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a,
+  #headerAdmin .navbar-mobile ul li.logo a,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a,
+  #headerAdmin .navbar-desktop ul li.logo a {
+    letter-spacing: -1px;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span.drive,
+  #headerAdmin .navbar-mobile ul li.logo a span.drive,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
+  #headerAdmin .navbar-desktop ul li.logo a span.drive {
+    color: #0B5EBF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span.safe,
+  #headerAdmin .navbar-mobile ul li.logo a span.safe,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.safe,
+  #headerAdmin .navbar-desktop ul li.logo a span.safe {
+    color: #0BBF64;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span.control,
+  #headerAdmin .navbar-mobile ul li.logo a span.control,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
+  #headerAdmin .navbar-desktop ul li.logo a span.control {
+    color: #FFAA11;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: -2px;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span,
+  #headerAdmin .navbar-mobile ul li.logo a span,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span,
+  #headerAdmin .navbar-desktop ul li.logo a span {
+    position: relative;
+    right: -100%;
+    opacity: 0;
+    animation: slide-in 1s ease-out forwards;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span.drive,
+  #headerAdmin .navbar-mobile ul li.logo a span.drive,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
+  #headerAdmin .navbar-desktop ul li.logo a span.drive {
+    animation-delay: 1s;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span:nth-child(2),
+  #headerAdmin .navbar-mobile ul li.logo a span:nth-child(2),
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span:nth-child(2),
+  #headerAdmin .navbar-desktop ul li.logo a span:nth-child(2) {
+    animation-delay: 2s;
+  }
+  #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a span.control,
+  #headerAdmin .navbar-mobile ul li.logo a span.control,
+  #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
+  #headerAdmin .navbar-desktop ul li.logo a span.control {
+    animation-delay: 3s;
+  }
+  @keyframes slide-in {
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  #headerAdmin .navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    background-color: #D3D3D3;
+    height: 10em;
+    align-items: center;
+  }
+  #headerAdmin .navbar-desktop ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  #headerAdmin .navbar-desktop li {
+    position: relative;
+    z-index: 1;
+  }
+  #headerAdmin .navbar-desktop .indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 0;
+    background-color: #0BBF64;
+    transition: all 0.5s ease;
+  }
+  #headerAdmin .navbar-desktop a {
+    color: #0B5EBF;
+    font-weight: 700;
+    font-size: 3em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  #headerAdmin .navbar-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  #headerAdmin .navbar-desktop {
+    display: none;
+  }
+  #headerAdmin .navbar-mobile {
+    display: block;
+  }
 }
 
 body,
@@ -1637,12 +1975,6 @@ button,
   font-family: "Oswald", sans-serif;
 }
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
-
 #createMessage {
   display: flex;
   flex-direction: column;
@@ -1740,6 +2072,17 @@ html {
   color: #0B5EBF;
 }
 
+.confirmation-message {
+  padding: 15px;
+  border: 1px solid #FFF;
+  background-color: #0BBF64;
+  color: #0B5EBF;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
 @media (min-width: 600px) {
   #createMessage h1 {
     font-size: 2.5em;
@@ -1790,22 +2133,29 @@ html {
   margin: 0;
   padding: 0;
 }
+#messageslist h1 {
+  padding: 10px;
+  text-align: center;
+  background-color: #0B5EBF;
+  color: #FFF;
+  font-size: 1.5em;
+}
 #messageslist table {
   width: 100%;
-  min-height: 100%;
-  display: block;
-  overflow-x: auto;
+  min-height: 100vh;
   background-color: #D3D3D3;
   border-collapse: collapse;
 }
 #messageslist table th,
 #messageslist table td {
-  padding: 10px;
+  padding: 0.5em;
   text-align: center;
   border: 1px solid #FFAA11;
   vertical-align: middle;
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: bold;
+  color: #0B5EBF;
+  border: none;
 }
 #messageslist table th {
   background-color: #0B5EBF;
@@ -1822,20 +2172,59 @@ html {
 #messageslist table a {
   color: #0B5EBF;
   border: 1px solid #0B5EBF;
-  padding: 5px;
+  padding: 0.5em;
   border-radius: 5px;
+  font-size: 1.1em;
+  display: inline-block;
+  margin: 0 0.5em;
 }
 #messageslist table a:hover {
   background-color: #FFAA11;
+}
+@media screen and (max-width: 600px) {
+  #messageslist th,
+  #messageslist td {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  #messageslist tr {
+    display: block;
+    margin-bottom: 0.625rem;
+  }
+  #messageslist thead {
+    display: none;
+  }
+  #messageslist td {
+    margin-bottom: 0.3em;
+  }
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   #messageslist table {
     display: table;
   }
+  #messageslist table th,
+  #messageslist table td {
+    padding: 1em;
+    font-size: 1em;
+  }
+  #messageslist table a {
+    padding: 0.7em;
+    font-size: 1.5em;
+  }
 }
 @media screen and (min-width: 1025px) {
   #messageslist table {
     display: table;
+  }
+  #messageslist table th,
+  #messageslist table td {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+  #messageslist table a {
+    padding: 0.8em;
+    font-size: 1em;
   }
 }
 
@@ -2248,6 +2637,237 @@ html {
   }
   #updateProfil h2 {
     font-size: 2.5em;
+  }
+}
+
+#userList {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+#userList h1 {
+  padding: 10px;
+  text-align: center;
+  background-color: #0B5EBF;
+  color: #FFF;
+  font-size: 1em;
+}
+#userList table {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #D3D3D3;
+  border-collapse: collapse;
+}
+#userList table th,
+#userList table td {
+  padding: 0.5em;
+  text-align: center;
+  border: 1px solid #FFAA11;
+  vertical-align: middle;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #0B5EBF;
+  border: none;
+}
+#userList table th {
+  background-color: #0B5EBF;
+  color: #FFF;
+}
+#userList table tr:nth-child(even) {
+  background-color: #0BBF64;
+  color: #FFF;
+}
+#userList table tr:nth-child(odd) {
+  background-color: #D3D3D3;
+  color: #FFF;
+}
+#userList table a {
+  color: #0B5EBF;
+  border: 1px solid #0B5EBF;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: 1.1em;
+  display: inline-block;
+  margin: 0 0.5em;
+}
+#userList table a:hover {
+  background-color: #FFAA11;
+}
+@media screen and (max-width: 600px) {
+  #userList th,
+  #userList td {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+  #userList tr {
+    display: block;
+    margin-bottom: 0.625rem;
+  }
+  #userList thead {
+    display: none;
+  }
+  #userList td {
+    margin-bottom: 0.3em;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  #userList table {
+    display: table;
+  }
+  #userList table th,
+  #userList table td {
+    padding: 1em;
+    font-size: 1em;
+  }
+  #userList table a {
+    padding: 0.7em;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #userList table {
+    display: table;
+  }
+  #userList table th,
+  #userList table td {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+  #userList table a {
+    padding: 0.8em;
+    font-size: 1em;
+  }
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#editUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 1em;
+  background-color: #D3D3D3;
+}
+#editUser h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #0B5EBF;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0.5em;
+  border: 1px solid #0B5EBF;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
+  background-color: #D3D3D3;
+}
+#editUser form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#editUser form fieldset {
+  width: 90%;
+  border: 1px solid #0B5EBF;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
+  background-color: #D3D3D3;
+  padding: 1em;
+  margin: 0.5em 0;
+}
+#editUser form fieldset label {
+  margin-bottom: 0.5em;
+  color: #0B5EBF;
+  font-size: 1.8em;
+}
+#editUser form fieldset input,
+#editUser form fieldset select {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #0B5EBF;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+#editUser form fieldset input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  padding: 0.5em 2em;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #FFAA11;
+  color: #0B5EBF;
+}
+#editUser form fieldset input[type=submit]:hover {
+  background-color: #0BBF64;
+}
+#editUser a {
+  margin-top: 1em;
+  color: #0B5EBF;
+  text-decoration: none;
+  font-size: 2em;
+  text-decoration: underline;
+}
+#editUser a:hover {
+  color: #0BBF64;
+}
+@media screen and (min-width: 481px) {
+  #editUser h1 {
+    font-size: 2.5em;
+  }
+  #editUser form fieldset input,
+  #editUser form fieldset select {
+    font-size: 1.2em;
+  }
+  #editUser form fieldset input[type=submit] {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 769px) {
+  #editUser h1 {
+    font-size: 3em;
+  }
+  #editUser form fieldset input,
+  #editUser form fieldset select {
+    font-size: 1.5em;
+  }
+  #editUser form fieldset input[type=submit] {
+    font-size: 1.5em;
   }
 }
 

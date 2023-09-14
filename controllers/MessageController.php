@@ -23,24 +23,21 @@ class MessageController extends AbstractController
     public function create()
     {
         if (isset($_POST["form-name"]) && $_POST["form-name"] === "create-message") {
-            $user_id = $_SESSION['user']; // Assurez-vous que l'ID utilisateur est stocké dans la session
+            $user_id = $_SESSION['user_id']; // Assurez-vous que l'ID utilisateur est stocké dans la session
             $subject = htmlspecialchars($_POST['subject']);
             $message_body = htmlspecialchars($_POST['message_body']);
 
             $this->messageManager->createMessage($user_id, $subject, $message_body);
+            $_SESSION['confirmation_message'] = "Votre message a été créé avec succès. Merci !";
+
         }
         $this->render('admin/create_message.phtml');
     }
 
     public function store()
     {
-        // Assurez-vous de récupérer les valeurs correctes à partir de $_POST
-        $user_id = $_SESSION['user_id']; // Assurez-vous que l'ID utilisateur est stocké dans la session
-        $subject = htmlspecialchars($_POST['subject']);
-        $message_body = htmlspecialchars($_POST['message_body']);
-        $this->messageManager->createMessage($user_id, $subject, $message_body);
-        header('Location: /projet-final-v2/index_message'); // Rediriger vers la liste des messages
-        exit();
+         header('Location: /projet-final-v2/create_message'); // Rediriger vers la page de création de message
+    exit();
     }
 
     public function edit($id)
@@ -55,7 +52,7 @@ class MessageController extends AbstractController
             $subject = htmlspecialchars($_POST['subject']);
             $message_body = htmlspecialchars($_POST['message_body']);
             $this->messageManager->updateMessage($id, $subject, $message_body);
-            header("Location: /projet-final-v2/index_message");
+            header("Location: /projet-final-v2/messages");
         } else {
             // Vous pouvez rediriger vers une page d'erreur ou afficher un message d'erreur ici
             echo "Les données nécessaires pour la mise à jour sont manquantes.";

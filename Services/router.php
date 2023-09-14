@@ -41,9 +41,7 @@ public function checkRoute($route): void
         $this->userController->register();
     } elseif ($routeParts[0] === 'update_profile') {
         $this->userController->updateUserProfile();
-    } elseif ($routeParts[0] === 'index_message') {
-        $this->messageController->index();
-    } elseif ($routeParts[0] === 'view_message') {
+    }  elseif ($routeParts[0] === 'view_message') {
         $this->messageController->viewMessage($_GET['id']);
     } elseif ($routeParts[0] === 'create_message') {
         $this->messageController->create();
@@ -57,13 +55,10 @@ public function checkRoute($route): void
         $this->adminController->manageUsers();
     } elseif ($routeParts[0] === 'messages') {
         $this->adminController->manageMessages();
-    } elseif ($routeParts[0] === 'admin' && isset($routeParts[1])) {
-            if ($routeParts[1] === 'edit_user') {
-                $this->adminController->editUser((int) $_GET['id']);
-            } elseif ($routeParts[1] === 'delete_user') {
-                $this->adminController->deleteUser((int) $_GET['id']);
-            }
-        
+    }  elseif ($routeParts[0] === 'edit_user') {
+        $this->adminController->editUser($_GET['id']);  
+    } elseif ($routeParts[0] === 'delete_user') {
+        $this->adminController->deleteUser($_GET['id']);  
     } elseif ($routeParts[0] === 'create_appointment') {
         $this->appointmentController->create();
     } elseif ($routeParts[0] === 'store_appointment') {

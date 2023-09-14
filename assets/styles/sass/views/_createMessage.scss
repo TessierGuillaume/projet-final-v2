@@ -2,11 +2,6 @@
 @import '../general/style.scss';
 @import '../general/typography.scss';
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-}
 
 #createMessage {
     display: flex;
@@ -121,6 +116,17 @@ html {
             color: $color-blue;
         }
     }
+}
+
+.confirmation-message {
+    padding: 15px;
+    border: 1px solid $color-white;
+    background-color: $color-green;
+    color: $color-blue;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 @media (min-width: 600px) {

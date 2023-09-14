@@ -140,6 +140,6 @@ class UserController extends AbstractController
     public function logout(): void
     {
         session_destroy();
-        header("Location:/");
+        header("Location:/projet-final-v2/homepage");
     }
 }

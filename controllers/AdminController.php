@@ -15,7 +15,7 @@ class AdminController extends AbstractController
     public function dashboard()
     {
         // Vous pouvez ajouter des statistiques ou des informations pertinentes ici
-        $this->render('admin/dashboard.phtml');
+        $this->render('partials/header_admin.phtml');
     }
 
     // Fonction pour gérer les utilisateurs
@@ -52,9 +52,9 @@ class AdminController extends AbstractController
         $user->setLast_name($lastName);   // mise à jour pour utiliser la méthode correcte
         $user->setRole($role);
 
-        $this->userManager->updateUser($user);
+        $this->userManager->editUser($user);
 
-        header('Location: /projet-final-v2/admin/edit_user?id=' . $id);
+        header('Location: /projet-final-v2/edit_user?id=' . $id);
         exit();
     } else {
         $this->render('admin/edit_user.phtml', ['user' => $user]);
@@ -65,7 +65,7 @@ class AdminController extends AbstractController
     public function deleteUser(int $userId): void
     {
         $this->userManager->deleteUser($userId);
-        header('Location: index.php?route=admin/users');
+        header('Location: /projet-final-v2/admin/users');
         exit();
     }
 
@@ -73,7 +73,7 @@ class AdminController extends AbstractController
     public function deleteMessage($id)
     {
         $this->messageManager->deleteMessage($id);
-        header('Location: index.php?route=messages');
+        header('Location: /projet-final-v2/messages');
         exit();
     }
     public function updateUser(int $userId): void
@@ -93,7 +93,7 @@ class AdminController extends AbstractController
 
             $this->userManager->updateUser($user);
 
-            header('Location: index.php?route=admin/edit_user');
+            header('Location: /projet-final-v2/admin/edit_user');
             exit();
         } else {
             $this->editUser($userId); // Redirige vers le formulaire d'édition si la méthode n'est pas POST

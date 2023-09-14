@@ -100,7 +100,7 @@ class UserManager extends AbstractManager
         return $results;
     }
 
-    public function updateUser(User $user): bool
+    public function editUser(User $user): bool
     {
         $sql = "UPDATE user SET Email = :email, Last_name = :lastName, First_name = :firstName, Role_ID = :roleId WHERE User_ID = :id";
         $stmt = $this->db->prepare($sql);

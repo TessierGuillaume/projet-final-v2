@@ -36,3 +36,24 @@ setInterval(function() {
     enleverActiveImages();
     img_slider[etape].classList.add('active');
 }, 5000);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const promoOctober = document.getElementById('promo-october');
+    const closeBtn = document.createElement('button');
+
+    closeBtn.innerText = 'X';
+    closeBtn.style.position = 'absolute';
+    closeBtn.style.top = '10px';
+    closeBtn.style.right = '10px';
+    closeBtn.style.backgroundColor = 'transparent';
+    closeBtn.style.border = 'none';
+    closeBtn.style.fontSize = '1.2em';
+    closeBtn.style.cursor = 'pointer';
+
+    closeBtn.addEventListener('click', () => {
+        promoOctober.style.display = 'none';
+    });
+
+    promoOctober.appendChild(closeBtn);
+});
