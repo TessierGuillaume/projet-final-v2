@@ -14,7 +14,7 @@ class AdminController extends AbstractController
     // Fonction pour afficher le tableau de bord administratif
     public function dashboard()
     {
-        // Vous pouvez ajouter des statistiques ou des informations pertinentes ici
+       
         $this->render('partials/header_admin.phtml');
     }
 
@@ -33,11 +33,19 @@ class AdminController extends AbstractController
 }
 
     // Fonction pour gérer les messages
-    public function manageMessages()
-    {
+   public function manageMessages()
+{
+    $search = isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '';
+    
+    if ($search !== '') {
+        $messages = $this->messageManager->searchMessages($search);
+    } else {
         $messages = $this->messageManager->getAllMessages();
-        $this->render('admin/messages.phtml', ['messages' => $messages]);
     }
+    
+    $this->render('admin/messages.phtml', ['messages' => $messages]);
+}
+
 
     // Fonction pour modifier un utilisateur (comme exemple)
  public function editUser(int $id)
@@ -55,8 +63,8 @@ class AdminController extends AbstractController
         $role = $roleManager->getRoleByName($roleName);
 
         $user->setEmail($email);
-        $user->setFirst_name($firstName); // mise à jour pour utiliser la méthode correcte
-        $user->setLast_name($lastName);   // mise à jour pour utiliser la méthode correcte
+        $user->setFirst_name($firstName); 
+        $user->setLast_name($lastName);   
         $user->setRole($role);
 
         $this->userManager->editUser($user);

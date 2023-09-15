@@ -2142,6 +2142,32 @@ button,
   color: #FFF;
   font-size: 1.5em;
 }
+#messageslist form {
+  display: flex;
+  justify-content: center;
+  background-color: #D3D3D3;
+}
+#messageslist form input[type=text] {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px #FFAA11;
+  border: 1px solid #0B5EBF;
+  font-size: 2em;
+  color: #0B5EBF;
+  font-weight: bold;
+}
+#messageslist form button {
+  padding: 0.8em;
+  border: none;
+  background-color: #FFAA11;
+  font-size: 1.5em;
+  color: #0B5EBF;
+  cursor: pointer;
+  font-weight: bold;
+}
+#messageslist form button:hover {
+  background-color: #0BBF64;
+}
 #messageslist table {
   width: 100%;
   min-height: 100vh;
@@ -2179,9 +2205,10 @@ button,
   font-size: 1.1em;
   display: inline-block;
   margin: 0 0.5em;
+  background-color: #FFAA11;
 }
 #messageslist table a:hover {
-  background-color: #FFAA11;
+  background-color: #0BBF64;
 }
 @media screen and (max-width: 600px) {
   #messageslist th,

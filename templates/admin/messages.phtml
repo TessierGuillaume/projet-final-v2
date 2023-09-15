@@ -1,21 +1,27 @@
 <main id="messageslist">
 <h1>Liste des Messages</h1>
+<form action="/projet-final-v2/messages" method="GET">
+    <input type="text" name="search" placeholder="Rechercher...">
+    <button type="submit">Rechercher</button>
+</form>
 <table>
     <thead>
         <tr>
             <th>ID</th>
-            <th>User ID</th>
-            <th>Subject</th>
+            <th>Expéditeur</th>
+            <th>Sujet</th>
             <th>Date</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
+        
         <!-- Use PHP to loop through the messages and print their details -->
         <?php foreach ($messages as $message) : ?>
             <tr>
+                
                 <td><?= $message['Message_ID'] ?></td>
-                <td><?= $message['User_ID'] ?></td>
+                <td><?= $message['First_name'] . ' ' . $message['Last_name'] ?></td>
                 <td><?= $message['Subject'] ?></td>
                 <td><?= $message['Message_datetime'] ?></td>
                 <td>
