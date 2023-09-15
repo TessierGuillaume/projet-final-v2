@@ -1,3 +1,16 @@
+let calendar; // Déclarez une variable pour stocker l'instance de votre calendrier
+
+function adjustCalendarView() {
+  if (window.innerWidth < 480) {
+    calendar.changeView('timeGridWeek');
+    calendar.setOption('hiddenDays', [0, 6]); // Masquer le dimanche (0) et le samedi (6)
+  }
+  else {
+    calendar.changeView('dayGridMonth');
+    calendar.setOption('hiddenDays', []); // Afficher tous les jours dans la vue mois
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar_user');
 
@@ -81,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
       return timeSlots.length === 0 ? '<div class="day-full"></div>' : '<div class="day-available"></div>';
     }
 
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
+    calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth', // Définissez une vue initiale par défaut
 
-      height: 650,
+      contentHeight: 'auto',
       locale: 'fr',
       headerToolbar: {
         left: 'prev,next today',
@@ -177,5 +190,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calendar.render();
+
+    adjustCalendarView(); // Appelez la fonction après le rendu initial
   });
 });
+
+window.addEventListener('resize', adjustCalendarView); // Ajustez la vue lors du redimensionnement de la fenêtre

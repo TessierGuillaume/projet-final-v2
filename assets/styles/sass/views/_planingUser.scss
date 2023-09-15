@@ -1,21 +1,113 @@
 @import '../general/_vars.scss';
+@import '../general/_typography.scss';
+
 #planing-user {
+    padding: 10px;
+    background-color: $color-grey;
+
+    h1 {
+        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
+        text-align: center;
+        margin-bottom: 20px;
+        color: $color-blue;
+        font-weight: bold;
+        text-decoration: $color-orange wavy underline;
+    }
+
+    #calendar_user {
+        height: 100%;
+    }
+
+    #calendar-container {
+        width: 100%;
+        height: 100vh;
+        overflow-x: auto;
+    }
+
     .weekend {
         background-color: $color-orange !important;
     }
+
     .day-full {
-        background-color: $color-blue !important; // Choisissez la couleur que vous souhaitez
+        background-color: $color-blue !important;
     }
+
     .day-available {
         background-color: $color-green;
     }
+
+    .fc .fc-button-primary {
+        color: #FFFFFF;
+        background-color: $color-blue !important;
+        border-color: #FFFFFF !important;
+        font-size: 1em; // Taille de police initiale réduite pour les mobiles
+    }
+
     .fc-day {
-        font-size: 18px;
-        /* Change la taille du texte */
-        font-family: 'Arial';
-        /* Change la police */
+        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
+        font-family: $font-button;
         color: $color-blue;
-        /* Change la couleur du texte */
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        font-weight: bold;
+    }
+
+    .fc-toolbar-title {
+        color: $color-blue;
+        padding: 0.2em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 1px solid $color-blue;
+    }
+
+    @media (max-width: 479px) {
+        .fc-toolbar-title {
+            display: none; // Cela cache le titre dans la barre d'outils en mode mobile
+        }
+    }
+
+    @media(min-width: 768px) {
+        h1 {
+            font-size: 1.7em;
+        }
+
+        .fc .fc-button-primary {
+            font-size: 1.2em;
+        }
+
+        .fc-day {
+            font-size: 1.3em;
+        }
+        .fc-toolbar-title {
+            color: $color-blue;
+            padding: 0.5em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid $color-blue;
+        }
+    }
+
+    @media(min-width: 992px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        .fc .fc-button-primary {
+            font-size: 1.5em;
+        }
+
+        .fc-day {
+            font-size: 1.6em;
+        }
+        .fc-toolbar-title {
+            color: $color-blue;
+            padding: 0.5em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid $color-blue;
+        }
     }
 
 }
