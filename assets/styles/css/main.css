@@ -1,3 +1,7 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
@@ -534,6 +538,40 @@ button,
   font-family: "Oswald", sans-serif;
 }
 
+.swal2-popup {
+  background-color: #D3D3D3;
+}
+
+.swal2-popup .swal2-styled.swal2-cancel {
+  font-size: 1.5em;
+}
+
+.swal2-popup .swal2-html-container {
+  font-size: 1.3em;
+}
+
+.swal2-popup .swal2-confirm {
+  background-color: #0B5EBF;
+  border-color: #FFF;
+}
+
+.swal2-popup .swal2-title {
+  color: #0B5EBF;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.swal2-popup .swal2-input {
+  background-color: #0B5EBF;
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  font-size: 1.5em;
+}
+
 #planing-user {
   padding: 10px;
   background-color: #D3D3D3;
@@ -584,6 +622,10 @@ button,
   text-transform: uppercase;
   border: 1px solid #0B5EBF;
 }
+#planing-user .fc-timegrid-slot-label-cushion {
+  color: #0B5EBF;
+  font-weight: bold;
+}
 @media (max-width: 479px) {
   #planing-user .fc-toolbar-title {
     display: none;
@@ -619,6 +661,176 @@ button,
     font-size: 1.6em;
   }
   #planing-user .fc-toolbar-title {
+    color: #0B5EBF;
+    padding: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #0B5EBF;
+  }
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+.swal2-popup {
+  background-color: #D3D3D3;
+}
+
+.swal2-popup .swal2-styled.swal2-cancel {
+  font-size: 1.5em;
+}
+
+.swal2-popup .swal2-html-container {
+  font-size: 1.3em;
+}
+
+.swal2-popup .swal2-confirm {
+  background-color: #0B5EBF;
+  border-color: #FFF;
+}
+
+.swal2-popup .swal2-title {
+  color: #0B5EBF;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.swal2-popup .swal2-input {
+  background-color: #0B5EBF;
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  font-size: 1.5em;
+}
+
+#planing-admin {
+  padding: 10px;
+  background-color: #D3D3D3;
+}
+#planing-admin h1 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0B5EBF;
+  font-weight: bold;
+  text-decoration: #FFAA11 wavy underline;
+}
+#planing-admin #calendar_user {
+  height: 100%;
+}
+#planing-admin #calendar-container {
+  width: 100%;
+  height: 100vh;
+  overflow-x: auto;
+}
+#planing-admin .weekend {
+  background-color: #FFAA11 !important;
+}
+#planing-admin .day-full {
+  background-color: #0B5EBF !important;
+}
+#planing-admin .day-available {
+  background-color: #0BBF64;
+}
+#planing-admin .fc .fc-button-primary {
+  color: #FFFFFF;
+  background-color: #0B5EBF !important;
+  border-color: #FFFFFF !important;
+  font-size: 1em;
+}
+#planing-admin .fc-day {
+  font-size: 1.2em;
+  font-family: "Oswald", sans-serif;
+  color: #0B5EBF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+#planing-admin .fc-toolbar-title {
+  color: #0B5EBF;
+  padding: 0.2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid #0B5EBF;
+}
+#planing-admin .fc-list-event-title {
+  font-size: 1.5em;
+  /* Augmentez la taille de la police des titres des événements */
+}
+#planing-admin .fc-list-event-time {
+  font-size: 1.5em;
+  /* Augmentez la taille de la police des horaires des événements */
+}
+#planing-admin .fc-list-day-cushion {
+  font-size: 1.3em;
+}
+#planing-admin .fc-timegrid-slot-label-cushion {
+  color: #0B5EBF;
+  font-weight: bold;
+}
+#planing-admin .fc-event-main {
+  color: #FFF;
+  font-size: 1.1em;
+  padding: 0.2em;
+}
+#planing-admin .fc-event {
+  color: #0B5EBF;
+}
+@media (max-width: 479px) {
+  #planing-admin .fc-toolbar-title {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #planing-admin h1 {
+    font-size: 1.7em;
+  }
+  #planing-admin .fc .fc-button-primary {
+    font-size: 1.2em;
+  }
+  #planing-admin .fc-day {
+    font-size: 1.3em;
+  }
+  #planing-admin .fc-toolbar-title {
+    color: #0B5EBF;
+    padding: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #0B5EBF;
+  }
+}
+@media (min-width: 992px) {
+  #planing-admin h1 {
+    font-size: 2em;
+  }
+  #planing-admin .fc .fc-button-primary {
+    font-size: 1.5em;
+  }
+  #planing-admin .fc-day {
+    font-size: 1.6em;
+  }
+  #planing-admin .fc-toolbar-title {
     color: #0B5EBF;
     padding: 0.5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

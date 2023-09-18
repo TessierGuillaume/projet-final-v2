@@ -151,13 +151,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         Swal.fire({
           title: 'Prendre un rendez-vous',
+          width: '50em', // Agrandit la largeur de la modale
+          padding: '1em', // Largeur personnalisée
           html: `
-              <input id="swalTitle" class="swal2-input" placeholder="Nom et prénom">
-              <select id="swalTimeSlot" class="swal2-input">${timeOptionsHTML}</select>
-            `,
+      <input id="swalTitle" class="swal2-input" placeholder="Nom et prénom">
+      <select id="swalTimeSlot" class="swal2-input">${timeOptionsHTML}</select>
+    `,
           focusConfirm: false,
           showCancelButton: true,
-          confirmButtonText: 'Soumettre',
+          cancelButtonColor: "#FFAA11",
+          confirmButtonColor: "#0BBF64",
+          confirmButtonText: 'Envoyer', // Texte personnalisé pour le bouton de confirmation
+          cancelButtonText: 'Quitter', // Texte personnalisé pour le bouton d'annulation
+          customClass: {
+            confirmButton: 'swal-confirm-button', // Classe personnalisée pour le bouton de confirmation
+            cancelButton: 'swal-cancel-button' // Classe personnalisée pour le bouton d'annulation
+          },
           preConfirm: () => {
             const title = document.getElementById('swalTitle').value;
             const timeSlot = document.getElementById('swalTimeSlot').value.split('-');

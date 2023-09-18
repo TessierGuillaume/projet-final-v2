@@ -1,0 +1,180 @@
+@import '../general/_vars.scss';
+@import '../general/_typography.scss';
+
+
+//les modification en scss n'étaient pas prix en charges à l'interieur de #planing-user obliger de mettre le style à l'extérieur
+.swal2-popup {
+    background-color: $color-grey;
+
+}
+
+
+.swal2-popup .swal2-styled.swal2-cancel {
+
+    font-size: 1.5em;
+}
+
+.swal2-popup .swal2-html-container {
+    font-size: 1.3em;
+}
+
+.swal2-popup .swal2-confirm {
+
+    background-color: $color-blue;
+    border-color: $color-white;
+}
+
+.swal2-popup .swal2-title {
+    color: $color-blue;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.swal2-popup .swal2-input {
+    background-color: $color-blue;
+    color: $color-white;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+
+    font-size: 1.5em;
+}
+
+#planing-admin {
+    padding: 10px;
+    background-color: $color-grey;
+
+    h1 {
+        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
+        text-align: center;
+        margin-bottom: 20px;
+        color: $color-blue;
+        font-weight: bold;
+        text-decoration: $color-orange wavy underline;
+    }
+
+    #calendar_user {
+        height: 100%;
+    }
+
+    #calendar-container {
+        width: 100%;
+        height: 100vh;
+        overflow-x: auto;
+    }
+
+    .weekend {
+        background-color: $color-orange !important;
+    }
+
+    .day-full {
+        background-color: $color-blue !important;
+    }
+
+    .day-available {
+        background-color: $color-green;
+    }
+
+    .fc .fc-button-primary {
+        color: #FFFFFF;
+        background-color: $color-blue !important;
+        border-color: #FFFFFF !important;
+        font-size: 1em; // Taille de police initiale réduite pour les mobiles
+    }
+
+    .fc-day {
+        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
+        font-family: $font-button;
+        color: $color-blue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        font-weight: bold;
+    }
+
+    .fc-toolbar-title {
+        color: $color-blue;
+        padding: 0.2em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 1px solid $color-blue;
+    }
+    .fc-list-event-title {
+        font-size: 1.5em;
+        /* Augmentez la taille de la police des titres des événements */
+    }
+
+    .fc-list-event-time {
+        font-size: 1.5em;
+        /* Augmentez la taille de la police des horaires des événements */
+    }
+
+    .fc-list-day-cushion {
+        font-size: 1.3em;
+    }
+    .fc-timegrid-slot-label-cushion {
+        color: $color-blue;
+        font-weight: bold;
+    }
+    .fc-event-main {
+        color: $color-white;
+        font-size: 1.1em;
+        padding: 0.2em;
+    }
+    .fc-event {
+        color: $color-blue;
+    }
+
+    @media (max-width: 479px) {
+        .fc-toolbar-title {
+            display: none; // Cela cache le titre dans la barre d'outils en mode mobile
+        }
+    }
+
+    @media(min-width: 768px) {
+        h1 {
+            font-size: 1.7em;
+        }
+
+        .fc .fc-button-primary {
+            font-size: 1.2em;
+        }
+
+        .fc-day {
+            font-size: 1.3em;
+        }
+        .fc-toolbar-title {
+            color: $color-blue;
+            padding: 0.5em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid $color-blue;
+        }
+    }
+
+    @media(min-width: 992px) {
+        h1 {
+            font-size: 2em;
+        }
+
+        .fc .fc-button-primary {
+            font-size: 1.5em;
+        }
+
+        .fc-day {
+            font-size: 1.6em;
+        }
+        .fc-toolbar-title {
+            color: $color-blue;
+            padding: 0.5em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid $color-blue;
+        }
+    }
+
+}

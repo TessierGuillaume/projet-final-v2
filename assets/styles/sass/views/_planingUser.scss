@@ -1,12 +1,60 @@
 @import '../general/_vars.scss';
 @import '../general/_typography.scss';
 
+
+
+
+//les modification en scss n'étaient pas prix en charges à l'interieur de #planing-user obliger de mettre le style à l'extérieur
+.swal2-popup {
+    background-color: $color-grey;
+
+}
+
+
+.swal2-popup .swal2-styled.swal2-cancel {
+
+    font-size: 1.5em;
+}
+
+.swal2-popup .swal2-html-container {
+    font-size: 1.3em;
+}
+
+.swal2-popup .swal2-confirm {
+
+    background-color: $color-blue;
+    border-color: $color-white;
+}
+
+.swal2-popup .swal2-title {
+    color: $color-blue;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+
+.swal2-popup .swal2-input {
+    background-color: $color-blue;
+    color: $color-white;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+
+    font-size: 1.5em;
+}
+
 #planing-user {
     padding: 10px;
     background-color: $color-grey;
 
+
+
+
+
     h1 {
-        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
+        font-size: 1.2em;
         text-align: center;
         margin-bottom: 20px;
         color: $color-blue;
@@ -59,6 +107,11 @@
         text-transform: uppercase;
         border: 1px solid $color-blue;
     }
+    .fc-timegrid-slot-label-cushion {
+        color: $color-blue;
+        font-weight: bold;
+    }
+
 
     @media (max-width: 479px) {
         .fc-toolbar-title {

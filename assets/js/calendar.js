@@ -1,16 +1,29 @@
+let calendar; // Déclarez une variable pour stocker l'instance de votre calendrier
+
+function adjustCalendarView() {
+  if (window.innerWidth < 480) {
+    calendar.changeView('timeGridWeek');
+    calendar.setOption('hiddenDays', [0, 6]); // Masquer le dimanche (0) et le samedi (6)
+  }
+  else {
+    calendar.changeView('dayGridMonth');
+    calendar.setOption('hiddenDays', []); // Afficher tous les jours dans la vue mois
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar_admin');
   const containerEl = document.getElementById('external-events');
   const checkbox = document.getElementById('drop-remove');
 
-
   fetch('event_index', {})
     .then(response => response.json())
     .then(eventList => {
 
-      const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        height: 650,
+      calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: window.innerWidth < 480 ? 'timeGridWeek' : 'dayGridMonth',
+        hiddenDays: window.innerWidth < 480 ? [0, 6] : [],
+        contentHeight: 'auto',
         locale: 'fr',
 
         headerToolbar: {
@@ -37,7 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
           const { value: formValues } = await Swal.fire({
             title: 'Ajouter un événement',
-            confirmButtonText: 'Soumettre',
+            width: '50em', // Agrandit la largeur de la modale
+            padding: '1em',
+            confirmButtonText: 'Envoyer',
+            cancelButtonText: 'Quitter',
+            cancelButtonColor: "#FFAA11",
+            confirmButtonColor: "#0BBF64",
             showCloseButton: true,
             showCancelButton: true,
             html: `
@@ -108,8 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
           showEditForm(eventId);
         },
 
-
-        // ... Le reste de votre code ...
+        // ... (le reste de votre code)
 
       });
 
@@ -129,5 +146,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       calendar.render();
+      adjustCalendarView();
     });
 });
+
+window.addEventListener('resize', adjustCalendarView); // Ajustez la vue lors du redimensionnement de la fenêtre
