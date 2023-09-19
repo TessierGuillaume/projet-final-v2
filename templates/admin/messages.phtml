@@ -1,5 +1,12 @@
 <main id="messageslist">
+        <?php
+if (isset($_SESSION['success_message'])) {
+    echo '<div class="success-message">' . $_SESSION['success_message'] . '</div>';
+    unset($_SESSION['success_message']); // Supprimez le message de la session après l'affichage
+}
+?>
 <h1>Liste des Messages</h1>
+
 <form action="/projet-final-v2/messages" method="GET">
     <input type="text" name="search" placeholder="Rechercher...">
     <button type="submit">Rechercher</button>
@@ -26,11 +33,18 @@
                 <td><?= $message['Message_datetime'] ?></td>
                 <td>
                     <a href="/projet-final-v2/view_message&id=<?= $message['Message_ID'] ?>">Voir</a>
-                    <a href="/projet-final-v2/messages&id=<?= $message['Message_ID'] ?>">Supprimer</a>
+                    <a href="/projet-final-v2/delete_message&id=<?= $message['Message_ID'] ?>" class="delete-link" data-id="<?= $message['Message_ID'] ?>">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+ <div id="delete-modal">
+        <div>
+            <p>Êtes-vous sûr de vouloir supprimer ce message ?</p>
+            <button id="confirm-delete">Oui</button>
+            <button id="cancel-delete">Non</button>
+        </div>
+    </div>
 </main>
 <script type="text/javascript" src="assets/js/listeMessages.js"></script>

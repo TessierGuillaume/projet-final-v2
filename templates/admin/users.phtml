@@ -1,33 +1,50 @@
-<main id="userList">
-<h1>Gestion des utilisateurs</h1>
-<form action="/projet-final-v2/administrer" method="GET">
-    <input type="text" name="search" placeholder="Rechercher par nom, prénom, ou email...">
-    <button type="submit">Rechercher</button>
-</form>
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Email</th>
-            <th>Prénom</th>
-            <th>Nom</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($users as $user) : ?>
-            <tr>
-                <td><?= $user['User_ID'] ?></td>
-                <td><?= $user['Email'] ?></td>
-                <td><?= $user['First_name'] ?></td>
-                <td><?= $user['Last_name'] ?></td>
-                <td>
-                    <a href="/projet-final-v2/edit_user?id=<?= $user['User_ID'] ?>">Modifier</a>
-                    <a href="/projet-final-v2/delete_user?id=<?= $user['User_ID'] ?>">Supprimer</a>
 
-                </td>
+
+<main id="userList">
+    <?php
+if (isset($_SESSION['success_message'])) {
+    echo '<div class="success-message">' . $_SESSION['success_message'] . '</div>';
+    unset($_SESSION['success_message']); // Supprimez le message de la session après l'affichage
+}
+?>
+
+    <h1>Gestion des utilisateurs</h1>
+    <form action="/projet-final-v2/administrer" method="GET">
+        <input type="text" name="search" placeholder="Rechercher par nom, prénom, ou email...">
+        <button type="submit">Rechercher</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Actions</th>
             </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td><?= $user['User_ID'] ?></td>
+                    <td><?= $user['Email'] ?></td>
+                    <td><?= $user['First_name'] ?></td>
+                    <td><?= $user['Last_name'] ?></td>
+                    <td>
+                        <a href="/projet-final-v2/edit_user?id=<?= $user['User_ID'] ?>">Modifier</a>
+                        <a href="/projet-final-v2/delete_user?id=<?= $user['User_ID'] ?>" class="delete-link" data-id="<?= $user['User_ID'] ?>">Supprimer</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    
+    <div id="delete-modal">
+        <div>
+            <p>Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
+            <button id="confirm-delete">Oui</button>
+            <button id="cancel-delete">Non</button>
+        </div>
+    </div>
 </main>
+<script type="text/javascript" src="assets/js/deleteUser.js"></script>

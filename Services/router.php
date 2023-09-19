@@ -6,7 +6,6 @@ class Router
     private HomepageController $homepageController;
     private MessageController $messageController; // Ajout pour le contrôleur de messages
     private AdminController $adminController;
-    private AppointmentController $appointmentController;
     private EventController $eventController;
 
     public function __construct()
@@ -15,7 +14,6 @@ class Router
         $this->homepageController = new HomepageController();
         $this->messageController = new MessageController();
         $this->adminController = new AdminController(); // Initialisation du contrôleur de messages
-        $this->appointmentController = new AppointmentController();
         $this->eventController = new EventController();
     }
     
@@ -59,24 +57,6 @@ public function checkRoute($route): void
         $this->adminController->editUser($_GET['id']);  
     } elseif ($routeParts[0] === 'delete_user') {
         $this->adminController->deleteUser($_GET['id']);  
-    } elseif ($routeParts[0] === 'create_appointment') {
-        $this->appointmentController->create();
-    } elseif ($routeParts[0] === 'store_appointment') {
-        $this->appointmentController->store();
-    } elseif ($routeParts[0] === 'index_appointment') {
-        $this->appointmentController->index();
-    } elseif ($routeParts[0] === 'show_appointment') {
-        $this->appointmentController->show($_GET['id']);
-    } elseif ($routeParts[0] === 'edit_appointment') {
-        $this->appointmentController->edit($_GET['id']);
-    } elseif ($routeParts[0] === 'update_appointment') {
-        $this->appointmentController->update($_GET['id']);
-    } elseif ($routeParts[0] === 'delete_appointment') {
-        $this->appointmentController->delete($_GET['id']);
-    } elseif ($routeParts[0] === 'thank_you') {
-        $this->appointmentController->thankYou();
-    } elseif ($routeParts[0] === 'fetch_appointments') {
-        $this->appointmentController->getAppointments();
     } elseif ($routeParts[0] === 'event_index') {
         $this->eventController->eventIndex();
     } elseif ($routeParts[0] === 'show_event') {

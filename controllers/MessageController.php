@@ -61,12 +61,19 @@ class MessageController extends AbstractController
     }
 
 
-    public function deleteMessage($id)
-    {
-        $this->messageManager->deleteMessage($id);
-        header('Location: /projet-final-v2/delete_message');
-        exit();
+public function deleteMessage($id)
+{
+    $result = $this->messageManager->deleteMessage($id);
+    if ($result) {
+        $_SESSION['success_message'] = "Le message a été supprimé avec succès.";
+        header('Location: /projet-final-v2/messages');
+    } else {
+        $_SESSION['error_message'] = "Échec de la suppression du message.";
+        header('Location: /projet-final-v2/messages');
     }
+    exit();
+}
+
 
     public function manageMessages(): void
     {

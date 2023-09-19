@@ -80,17 +80,20 @@ class AdminController extends AbstractController
     public function deleteUser(int $userId): void
     {
         $this->userManager->deleteUser($userId);
-        header('Location: /projet-final-v2/admin/users');
+        $_SESSION['success_message'] = "L'utilisateur a été supprimé avec succès.";
+
+        header('Location: /projet-final-v2/administrer');
         exit();
     }
 
-    // Fonction pour supprimer un message
-    public function deleteMessage($id)
-    {
-        $this->messageManager->deleteMessage($id);
-        header('Location: /projet-final-v2/messages');
-        exit();
-    }
+    // // Fonction pour supprimer un message
+    // public function deleteMessage($id)
+    // {
+    //     $this->messageManager->deleteMessage($id);
+    //     $_SESSION['success_message'] = "Le message a été supprimé avec succès.";
+    //     header('Location: /projet-final-v2/messages');
+    //     exit();
+    // }
     public function updateUser(int $userId): void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

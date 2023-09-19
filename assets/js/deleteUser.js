@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     confirmDeleteBtn.addEventListener('click', () => {
-        window.location.href = `/projet-final-v2/delete_message?id=${selectedId}`;
+        window.location.href = `/projet-final-v2/delete_user?id=${selectedId}`;
     });
 
     cancelDeleteBtn.addEventListener('click', () => {

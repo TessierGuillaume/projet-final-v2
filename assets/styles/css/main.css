@@ -2133,7 +2133,7 @@ button,
   }
 }
 #register .wrapper {
-  width: 50%;
+  width: 520px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
@@ -2141,17 +2141,24 @@ button,
   color: #FFF;
   border-radius: 10px;
   padding: 30px 40px;
+  font-family: "Oswald", sans-serif;
 }
 #register .wrapper h2 {
   font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+}
+#register .wrapper .form-errors {
+  font-size: 1.3em;
+  color: #FFAA11;
+  text-align: center;
 }
 #register .wrapper .input-box {
   width: 100%;
   position: relative;
   margin-top: 20px;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 #register .wrapper .input-box label {
   position: absolute;
@@ -2190,7 +2197,7 @@ button,
 #register .wrapper .remember-forgot {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin: 15px 5px 15px;
 }
 #register .wrapper .remember-forgot label input {
@@ -2241,18 +2248,18 @@ button,
 }
 
 @media (min-width: 600px) {
-  #wrapper .form-box .input-box .icon {
+  #register .wrapper .input-box .icon {
     font-size: 1.8em;
   }
-  #wrapper .form-box .input-box input {
+  #register .wrapper .input-box input {
     padding-left: 85px;
   }
 }
 @media (min-width: 900px) {
-  #wrapper .form-box .input-box .icon {
+  #register .wrapper .input-box .icon {
     font-size: 2em;
   }
-  #wrapper .form-box .input-box input {
+  #register .wrapper .input-box input {
     padding-left: 90px;
   }
 }
@@ -2520,53 +2527,109 @@ button,
 #messageslist table a:hover {
   background-color: #0BBF64;
 }
+#messageslist #delete-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+#messageslist #delete-modal div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-color: #D3D3D3;
+}
+#messageslist #delete-modal p {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #0B5EBF;
+  font-weight: bold;
+}
+#messageslist #delete-modal button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+#messageslist #delete-modal button:first-of-type {
+  background-color: #0BBF64;
+  color: #fff;
+}
+#messageslist #delete-modal button:last-of-type {
+  background-color: #FFAA11;
+  color: #fff;
+}
+#messageslist #delete-modal button:hover {
+  opacity: 0.8;
+}
+
+.success-message {
+  padding: 15px;
+  border: 1px solid #FFF;
+  background-color: #0BBF64;
+  color: #0B5EBF;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px) {
-  #messageslist th,
-  #messageslist td {
+  th,
+  td {
     display: block;
     width: 100%;
     border: none;
   }
-  #messageslist tr {
+  tr {
     display: block;
     margin-bottom: 0.625rem;
   }
-  #messageslist thead {
+  thead {
     display: none;
   }
-  #messageslist td {
+  td {
     margin-bottom: 0.3em;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  #messageslist table {
+  table {
     display: table;
   }
-  #messageslist table th,
-  #messageslist table td {
+  table th,
+  table td {
     padding: 1em;
     font-size: 1em;
   }
-  #messageslist table a {
+  table a {
     padding: 0.7em;
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 1025px) {
-  #messageslist table {
+  table {
     display: table;
   }
-  #messageslist table th,
-  #messageslist table td {
+  table th,
+  table td {
     padding: 1em;
     font-size: 1.2em;
   }
-  #messageslist table a {
+  table a {
     padding: 0.8em;
     font-size: 1em;
   }
 }
-
 body,
 p {
   font-family: "Lexend", sans-serif;
@@ -3001,7 +3064,7 @@ html {
 #userList form input[type=text] {
   width: 50%;
   padding: 10px;
-  border-radius: 5px #FFAA11;
+  border-radius: 5px;
   border: 1px solid #0B5EBF;
   font-size: 2em;
   color: #0B5EBF;
@@ -3060,53 +3123,109 @@ html {
 #userList table a:hover {
   background-color: #FFAA11;
 }
+#userList #delete-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+#userList #delete-modal div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-color: #D3D3D3;
+}
+#userList #delete-modal p {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #0B5EBF;
+  font-weight: bold;
+}
+#userList #delete-modal button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+#userList #delete-modal button:first-of-type {
+  background-color: #0BBF64;
+  color: #fff;
+}
+#userList #delete-modal button:last-of-type {
+  background-color: #FFAA11;
+  color: #fff;
+}
+#userList #delete-modal button:hover {
+  opacity: 0.8;
+}
+
+.success-message {
+  padding: 15px;
+  border: 1px solid #FFF;
+  background-color: #0BBF64;
+  color: #0B5EBF;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px) {
-  #userList th,
-  #userList td {
+  th,
+  td {
     display: block;
     width: 100%;
     border: none;
   }
-  #userList tr {
+  tr {
     display: block;
     margin-bottom: 0.625rem;
   }
-  #userList thead {
+  thead {
     display: none;
   }
-  #userList td {
+  td {
     margin-bottom: 0.3em;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  #userList table {
+  table {
     display: table;
   }
-  #userList table th,
-  #userList table td {
+  table th,
+  table td {
     padding: 1em;
     font-size: 1em;
   }
-  #userList table a {
+  table a {
     padding: 0.7em;
     font-size: 1.5em;
   }
 }
 @media screen and (min-width: 1025px) {
-  #userList table {
+  table {
     display: table;
   }
-  #userList table th,
-  #userList table td {
+  table th,
+  table td {
     padding: 1em;
     font-size: 1.8em;
   }
-  #userList table a {
+  table a {
     padding: 0.8em;
     font-size: 1em;
   }
 }
-
 body,
 p {
   font-family: "Lexend", sans-serif;
