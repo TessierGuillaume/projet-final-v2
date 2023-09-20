@@ -23,6 +23,12 @@ class UserController extends AbstractController
                             $email = htmlspecialchars($_POST["register-email"]);
                             $Last_name = htmlspecialchars($_POST["register-lastName"]);
                             $First_name = htmlspecialchars($_POST["register-firstName"]);
+                            
+                            $regex = "/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/";
+                            if (!preg_match($regex, $Last_name) || !preg_match($regex, $First_name)) {
+                                $this->render("public/register/register.phtml", ["errors" => ["Nom ou prénom invalide"]]);
+                                return;
+                            }
 
                             // Utilisez le rôle "user" lors de la création du nouvel utilisateur
                             $user = $this->manager->createUser(new User($email, $password, $Last_name, $First_name, $userRole));

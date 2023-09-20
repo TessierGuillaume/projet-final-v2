@@ -2738,6 +2738,42 @@ html {
 #messageView form fieldset button:hover {
   background-color: #0BBF64;
 }
+#messageView .uploaded-images {
+  margin-top: 20px;
+}
+#messageView .uploaded-images h2 {
+  color: #0B5EBF;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#messageView .uploaded-images .uploaded-image {
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#messageView .uploaded-images .uploaded-image img {
+  max-width: 150px;
+  max-height: 150px;
+}
+#messageView .uploaded-images .uploaded-image a {
+  color: #0B5EBF;
+  font-size: 1.8em;
+  background-color: #FFAA11;
+  border: 1px solid #0B5EBF;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+#messageView .uploaded-images .uploaded-image a:hover {
+  background-color: #0BBF64;
+}
 @media screen and (min-width: 481px) {
   #messageView .form-container {
     display: flex;

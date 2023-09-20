@@ -86,14 +86,7 @@ class AdminController extends AbstractController
         exit();
     }
 
-    // // Fonction pour supprimer un message
-    // public function deleteMessage($id)
-    // {
-    //     $this->messageManager->deleteMessage($id);
-    //     $_SESSION['success_message'] = "Le message a été supprimé avec succès.";
-    //     header('Location: /projet-final-v2/messages');
-    //     exit();
-    // }
+   
     public function updateUser(int $userId): void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

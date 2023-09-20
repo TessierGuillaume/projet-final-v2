@@ -17,22 +17,61 @@ class MessageController extends AbstractController
     public function viewMessage($id)
     {
         $message = $this->messageManager->getMessageById($id);
-        $this->render("admin/view_message.phtml", ['message' => $message]);
+        $uploads = $this->messageManager->getMessageWithUploads($id);
+        $this->render("admin/view_message.phtml", ['message' => $message, 'uploads' => $uploads]);
     }
-
-    public function create()
-    {
+    
+    
+    
+    
+public function create()
+{
+    
         if (isset($_POST["form-name"]) && $_POST["form-name"] === "create-message") {
-            $user_id = $_SESSION['user_id']; // Assurez-vous que l'ID utilisateur est stocké dans la session
-            $subject = htmlspecialchars($_POST['subject']);
-            $message_body = htmlspecialchars($_POST['message_body']);
-
-            $this->messageManager->createMessage($user_id, $subject, $message_body);
-            $_SESSION['confirmation_message'] = "Votre message a été créé avec succès. Merci !";
-
+        if(isset($_SESSION['user_id'])){ // Vérification supplémentaire pour éviter les erreurs
+            $user_id = $_SESSION['user_id']; 
+        } else {
+            // Redirection ou message d'erreur si l'ID de l'utilisateur n'est pas trouvé dans la session
+            header('Location:/projet-final-v2/connexion');
+            exit();
         }
-        $this->render('admin/create_message.phtml');
+        $subject = htmlspecialchars($_POST['subject']);
+        $message_body = htmlspecialchars($_POST['message_body']);
+
+        // Création du message et récupération de son ID
+        $message_id = $this->messageManager->createMessage($user_id, $subject, $message_body);
+
+        // Traitement et upload des fichiers
+        if (!empty($_FILES['fichiers']['name'][0])) {
+            $uploads = $this->getUploadedFilesDetails($_FILES['fichiers']);
+            $this->messageManager->uploadFiles($message_id, $uploads, $user_id);
+        }
+
+        $_SESSION['confirmation_message'] = "Votre message a été créé avec succès. Merci !";
     }
+    $this->render('admin/create_message.phtml');
+}
+
+ private function getUploadedFilesDetails($files) {
+        $uploads = [];
+
+        foreach ($files['name'] as $key => $name) {
+            if ($files['error'][$key] === UPLOAD_ERR_OK) {
+                $uploads[] = [
+                    'nom_fichier' => $name,
+                    'chemin_d_acces' => 'assets/images/uploads/' . $name, 
+                    'tmp_name' => $files['tmp_name'][$key], 
+                    'taille' => $files['size'][$key], 
+                    'type_fichier' => $files['type'][$key],
+                    'date_upload' => date('Y-m-d H:i:s'), // Ajout de la date et de l'heure actuelles
+                ];
+            }
+        }
+
+        return $uploads;
+    }
+
+
 
     public function store()
     {

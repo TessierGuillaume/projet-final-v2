@@ -90,6 +90,50 @@
                 }
             }
         }
+    }
+
+    .uploaded-images {
+        margin-top: 20px;
+
+
+        h2 {
+            color: $color-blue;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .uploaded-image {
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            img {
+                max-width: 150px;
+                max-height: 150px;
+            }
+
+            a {
+                color: $color-blue;
+                font-size: 1.8em;
+                background-color: $color-orange;
+                border: 1px solid $color-blue;
+                padding: 0.5em;
+                text-align: center;
+                width: 100%;
+                white-space: nowrap;
+                margin-top: 5px;
+            }
+
+            a:hover {
+                background-color: $color-green;
+            }
+        }
     } // Styles pour tablettes et desktop
     @media screen and (min-width: 481px) {
 

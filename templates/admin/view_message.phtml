@@ -1,29 +1,52 @@
+<?php
+define('BASE_UPLOAD_PATH', '/projet-final-v2/assets/images/uploads/');
+?>
 <main id="messageView">
-<h1>Modifier ou supprimer un message.</h1>
-<h2><span class="label">Titre du message :</span> <span class="content"><?= $message['Subject']; ?></span></h2>
-<h2><span class="label">Message :</span> <span class="content"><?= $message['Message_body']; ?></span></h2>
-<div class="form-container">
-<form action="/projet-final-v2/edit_message&id=<?= $message['Message_ID']; ?>" method="POST">
-    <fieldset>
-        <legend>Modifier le message</legend>
-        <button type="submit">Éditer</button>
-    </fieldset>
-</form>
+    <h1>Modifier ou supprimer un message.</h1>
+    <h2><span class="label">Titre du message :</span> <span class="content"><?= $message['Subject']; ?></span></h2>
+    <h2><span class="label">Message :</span> <span class="content"><?= $message['Message_body']; ?></span></h2>
 
-<form action="/projet-final-v2/delete_message&id=<?= $message['Message_ID']; ?>" method="POST">
-    <fieldset>
-        <legend>Supprimer le message</legend>
-        <button type="submit">Supprimer</button>
-    </fieldset>
-</form>
+   
+    <div class="uploaded-images">
+        <h2>Images uploadées</h2>
+        <?php if(!empty($uploads)): ?>
+    <?php foreach ($uploads as $upload): ?>
+        <?php if (isset($upload['chemin_d_acces']) && $upload['chemin_d_acces']): ?>
+            <div class="uploaded-image">
+                <!-- Afficher l'image -->
+                <img src="<?= $upload['chemin_d_acces'] ?>" alt="<?= $upload['nom_fichier'] ?>">
+                <!-- Lien pour télécharger l'image -->
+                <a href="<?= $upload['chemin_d_acces'] ?>" download>Télécharger</a>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+<?php else: ?>
+    <p>Aucune image uploadée.</p>
+<?php endif; ?>
+    </div>
+    
+    <div class="form-container">
+        <form action="/projet-final-v2/edit_message&id=<?= $message['Message_ID']; ?>" method="POST">
+            <fieldset>
+                <legend>Modifier le message</legend>
+                <button type="submit">Éditer</button>
+            </fieldset>
+        </form>
 
-<form action="/projet-final-v2/messages" method="GET">
-    <fieldset>
-        <legend>Retour à la liste des messages</legend>
-        <button type="submit">Liste</button>
-    </fieldset>
-</form>
-</div>
+        <form action="/projet-final-v2/delete_message&id=<?= $message['Message_ID']; ?>" method="POST">
+            <fieldset>
+                <legend>Supprimer le message</legend>
+                <button type="submit">Supprimer</button>
+            </fieldset>
+        </form>
+
+        <form action="/projet-final-v2/messages" method="GET">
+            <fieldset>
+                <legend>Retour à la liste des messages</legend>
+                <button type="submit">Liste</button>
+            </fieldset>
+        </form>
+    </div>
 </main>
 
 <script type="text/javascript" src="assets/js/affichageMessages.js"></script>

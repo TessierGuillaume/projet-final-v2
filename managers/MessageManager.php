@@ -45,16 +45,18 @@ public function getAllMessages(): array
     }
 
     // Crée un nouveau message
-    public function createMessage($user_id, $subject, $message_body)
-    {
-        $sql = "INSERT INTO message (User_ID, Subject, Message_body, Message_datetime) VALUES (:user_id, :subject, :message_body, NOW())";
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-        $stmt->bindParam(':subject', $subject, PDO::PARAM_STR);
-        $stmt->bindParam(':message_body', $message_body, PDO::PARAM_STR);
-        return $stmt->execute();
-    }
+   public function createMessage($user_id, $subject, $message_body)
+{
+    $sql = "INSERT INTO message (User_ID, Subject, Message_body, Message_datetime) VALUES (:user_id, :subject, :message_body, NOW())";
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->bindParam(':subject', $subject, PDO::PARAM_STR);
+    $stmt->bindParam(':message_body', $message_body, PDO::PARAM_STR);
+    $stmt->execute();
 
+    // Retourner l'ID du message nouvellement créé
+    return $this->db->lastInsertId();
+}
     // Met à jour un message existant
     public function updateMessage($id, $subject, $message_body)
     {
@@ -108,5 +110,50 @@ public function getAllMessages(): array
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+
+public function uploadFiles($message_id, $uploads, $user_id)
+{
+    foreach ($uploads as $file) {
+        // Obtenez le nom du fichier à partir de $_FILES
+        $nom_fichier = $file['nom_fichier'];
+        
+        // Construisez le chemin d'accès complet pour déplacer le fichier
+        $chemin_d_acces = 'assets/images/uploads/' . basename($nom_fichier);
+        
+        // Déplacez le fichier téléchargé vers le répertoire de destination
+        if (!move_uploaded_file($file['tmp_name'], $chemin_d_acces)) {
+            throw new Exception('Failed to move uploaded file.');
+        }
+        
+        // Préparez et exécutez la requête SQL pour insérer les détails du fichier dans la base de données
+        $sql = "INSERT INTO uploads (nom_fichier, chemin_d_acces, taille, date_upload, User_ID, type_fichier, Message_ID) VALUES (:nom_fichier, :chemin_d_acces, :taille, NOW(), :User_ID, :type_fichier, :Message_ID)";
+        $stmt = $this->db->prepare($sql);
+
+        $stmt->bindParam(':nom_fichier', $nom_fichier, PDO::PARAM_STR);
+        $stmt->bindParam(':chemin_d_acces', $chemin_d_acces, PDO::PARAM_STR);
+        $stmt->bindParam(':taille', $file['taille'], PDO::PARAM_INT); // Utilisez 'size' au lieu de 'taille'
+        $stmt->bindParam(':User_ID', $user_id, PDO::PARAM_INT);
+        $stmt->bindParam(':type_fichier', $file['type_fichier'], PDO::PARAM_STR); // Utilisez 'type' au lieu de 'type_fichier'
+        $stmt->bindParam(':Message_ID', $message_id, PDO::PARAM_INT);
+
+        $stmt->execute();
+    }
+}
+
+public function getMessageWithUploads($messageId)
+{
+    $stmt = $this->db->prepare("SELECT * FROM uploads WHERE Message_ID = :Message_ID");
+    $stmt->bindValue(':Message_ID', $messageId, PDO::PARAM_INT);
+    
+    $stmt->execute();
+    
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach ($results as &$upload) {
+        $upload['chemin_d_acces'] = 'assets/images/uploads/' . basename($upload['chemin_d_acces']);
+    }
+   
+    return $results;
+}
 
 }

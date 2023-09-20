@@ -9,6 +9,7 @@ require_once 'models/Service.php';
 require_once 'models/User.php';
 require_once 'models/Vehicle.php';
 require_once 'models/Event.php';
+require_once 'models/Upload.php';
 
 // Abstract
 require_once 'controllers/AbstractController.php';

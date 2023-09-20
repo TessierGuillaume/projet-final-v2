@@ -14,7 +14,7 @@ if (isset($_SESSION['confirmation_message'])) {
     </p>
 </blockquote>
 
-<form action="/projet-final-v2/create_message" method="post">
+<form action="/projet-final-v2/create_message" method="post" enctype="multipart/form-data">
     <input type="hidden" name="form-name" id="form-name" value="create-message">
     
     <fieldset>
@@ -26,7 +26,9 @@ if (isset($_SESSION['confirmation_message'])) {
         <label for="message_body">Votre message !</label>
         <textarea id="message_body" name="message_body" rows="5" required></textarea>
     </fieldset>
-    
+    <fieldset>
+        <label for="fichiers">Ajouter des fichiers (PDF, JPG, PNG) :</label>
+        <input type="file" id="fichiers" name="fichiers[]" accept=".pdf,.jpg,.png" multiple>    </fieldset>
     <fieldset>
         <input type="submit" value="Créer">
     </fieldset>
