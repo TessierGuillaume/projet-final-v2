@@ -35,7 +35,21 @@
     require $template;
     ?>
     
-    <?php require 'partials/footer.phtml'; ?>
+   
+    <footer>
+        <?php
+        if (isset($_SESSION["user_id"], $_SESSION["role"])) {
+            if ($_SESSION["role"] === "admin") {
+                require 'partials/footer_admin.phtml';
+            } else {
+                require 'partials/footer_user.phtml';
+            }
+        } else {
+            require 'partials/footer_visitor.phtml';
+        }
+        ?>
+    </footer>
+
 </body>
 
 

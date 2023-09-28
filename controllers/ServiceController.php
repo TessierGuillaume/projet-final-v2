@@ -1,44 +1,81 @@
 <?php
 
-class ServiceController
+class ServiceController extends AbstractController
 {
-    // Supposons que vous ayez un ServiceManager ou un modèle similaire pour interagir avec vos services
     private $serviceManager;
 
     public function __construct()
     {
         $this->serviceManager = new ServiceManager(); // Ou toute autre logique d'initialisation nécessaire
     }
+
     
-    public function showServicesPage() {
-    require 'public/services/services.phtml';
+public function getAllServicesJson()
+{
+    try {
+        $services = $this->serviceManager->getAllServices();
+        header('Content-Type: application/json');
+        echo json_encode($services);
+    } catch (Exception $e) {
+        // Vous pouvez ici logger l'erreur ou la renvoyer
+        http_response_code(500);
+        echo json_encode(['error' => 'Une erreur est survenue']);
+    }
+}
+public function listServices() 
+    {
+        $services = $this->serviceManager->getAllServices(); // Utilisation de la propriété $eventManager
+        $this->render('public/calendar/calendar.phtml', ['service_list' => $services]);
+    }
+    
+    
+public function showServicesPage()
+{
+    $services = $this->serviceManager->getAllServices();
+    $this->render('public/services/services.phtml', ['services' => $services]);
+
 }
 
-    // Méthode pour afficher la page de contrôle technique
-    public function technicalControl()
-    {
-        // Vous pouvez récupérer les détails spécifiques du service de contrôle technique ici
-        $service = $this->serviceManager->getTechnicalControlService();
 
-        // Passez le service au template si nécessaire
-        $template = 'public/services/services.phtml'; // chemin vers le fichier phtml pour le contrôle technique
+public function updateServices() {
+    try {
+        // Vérification de l'existence de l'ID dans les paramètres GET ou POST
+        if (isset($_GET['Service_ID'])) {
+            $id = $_GET['Service_ID'];
+        } elseif (isset($_POST['Service_ID'])) {
+            $id = $_POST['Service_ID'];
+        } else {
+            throw new Exception("ID du service non fourni.");
+        }
 
-        // Vous incluez le layout ici, qui inclura ensuite le template spécifié
-        require 'templates/layout.phtml';
+        // Récupération du service par l'ID
+        $service = $this->serviceManager->getServiceById($id);
+        if (!$service) {
+            throw new Exception("Service non trouvé.");
+        }
+
+        // Traitement du formulaire de mise à jour
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['Service_name']) && isset($_POST['Service_cost']) && isset($_POST['Vehicle_type'])) {
+                $name = htmlspecialchars($_POST['Service_name']);
+                $cost = htmlspecialchars($_POST['Service_cost']);
+                $vehicle_type = htmlspecialchars($_POST['Vehicle_type']);
+
+                $this->serviceManager->updateService($id, $name, $cost, $vehicle_type);
+                header('Location: /projet-final-v2/services'); // Redirection
+                exit();
+            } else {
+                throw new Exception("Données POST incomplètes.");
+            }
+        }
+
+        // Affichage de la vue
+        $this->render('public/services/services.phtml', ['service' => $service]);
+    } catch (Exception $e) {
+        // Gestion des erreurs
+$this->render('public/404/404.phtml', ['error_message' => $e->getMessage()]);
     }
+}
 
-    // Méthode pour afficher la page de contre-visites
-    public function reinspection()
-    {
-        // Vous pouvez récupérer les détails spécifiques du service de contre-visites ici
-        $service = $this->serviceManager->getReinspectionService();
 
-        // Passez le service au template si nécessaire
-        $template = 'reinspection'; // chemin vers le fichier phtml pour les contre-visites
-
-        // Vous incluez le layout ici, qui inclura ensuite le template spécifié
-        require 'templates/layout.phtml';
-    }
-
-    // Vous pouvez ajouter d'autres méthodes ici pour gérer d'autres fonctionnalités liées aux services
 }

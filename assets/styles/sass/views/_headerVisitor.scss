@@ -76,7 +76,7 @@
         z-index: 3;
 
         a {
-            margin: 20px;
+            margin: 1em;
         }
 
         i {
@@ -86,7 +86,7 @@
             text-align: start;
         }
     }
-    
+
     l {
         li.logo {
             a {
@@ -138,110 +138,118 @@
                             margin-right: -2px;
                         }
 
-                         span {
-                        position: relative;  // Position relative pour le déplacement
-                        right: -100%;  // Position initiale à l'extérieur du cadre
-                        opacity: 0;  // Rendre initialement transparent
+                        span {
+                            position: relative; // Position relative pour le déplacement
+                            right: -100%; // Position initiale à l'extérieur du cadre
+                            opacity: 0; // Rendre initialement transparent
+                            // Animation
+                            animation: slide-in 1s ease-out forwards;
+                        }
 
-                        // Animation
-                        animation: slide-in 1s ease-out forwards;
-                    }
+                        span.drive {
+                            animation-delay: 1s; // Délai de 1 seconde pour "Drive"
+                        }
 
-                    span.drive {
-                        animation-delay: 1s;  // Délai de 1 seconde pour "Drive"
-                    }
-                    
-                    span:nth-child(2) {
-                        animation-delay: 2s;  // Délai de 2 secondes pour "Safe"
-                    }
-                    
-                    span.control {
-                        animation-delay: 3s;  // Délai de 3 secondes pour "Control"
+                        span:nth-child(2) {
+                            animation-delay: 2s; // Délai de 2 secondes pour "Safe"
+                        }
+
+                        span.control {
+                            animation-delay: 3s; // Délai de 3 secondes pour "Control"
+                        }
                     }
                 }
             }
+        } // Définition de l'animation
+        @keyframes slide-in {
+            to {
+                right: 0; // Position finale
+                opacity: 1; // Rendre complètement visible
+            }
+        }
+
+        .navbar-desktop {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            background-color: $color-grey;
+            height: 10em;
+            align-items: center;
+
+
+            ul {
+                display: flex; // Ajouté pour aligner horizontalement
+                justify-content: space-around; // Ajouté pour espacer les éléments
+                width: 100%; // Ajouté pour occuper toute la largeur
+                margin: 0; // Ajouté pour enlever les marges
+                padding: 0; // Ajouté pour enlever les paddings
+                position: relative;
+
+
+
+
+            }
+
+            li {
+                position: relative;
+                z-index: 1;
+            }
+
+            .indicator {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 5px;
+                width: 0;
+                background-color: $color-green;
+                transition: all 0.5s ease;
+            }
+
+
+
+            a {
+                color: $color-blue;
+                font-size: 2.2em;
+                text-transform: uppercase;
+
+
+                transition: color 0.3s ease, background-color 0.3s ease;
+            }
+
+
+        }
+
+        .social-icons-desktop {
+            display: flex; // Ajouté pour aligner horizontalement
+            flex-direction: row; // Ajouté pour aligner horizontalement
+            justify-content: center; // Ajouté pour centrer les éléments
+            align-items: center; // Ajouté pour aligner verticalement
+            li {
+                margin: 0 1em; // Ajouté pour espacer les éléments
+            }
+
+            a {
+                font-size: 2em; // Taille de l'icône
+            }
+        }
+
+
+
+        .navbar-mobile {
+            display: none;
         }
     }
 
-    // Définition de l'animation
-    @keyframes slide-in {
-        to {
-            right: 0;  // Position finale
-            opacity: 1;  // Rendre complètement visible
+    @media screen and (max-width: 800px) {
+        .navbar-desktop {
+            display: none;
+        }
+        .navbar-mobile {
+            display: block;
         }
     }
 
-            .navbar-desktop {
-                display: flex;
-                justify-content: space-between;
-                padding: 0;
-                background-color: $color-grey;
-                height: 10em;
-                align-items: center;
-
-
-                ul {
-                    display: flex; // Ajouté pour aligner horizontalement
-                    justify-content: space-around; // Ajouté pour espacer les éléments
-                    width: 100%; // Ajouté pour occuper toute la largeur
-                    margin: 0; // Ajouté pour enlever les marges
-                    padding: 0; // Ajouté pour enlever les paddings
-                    position: relative;
 
 
 
-
-                }
-
-                li {
-                    position: relative; // Ajouté pour le positionnement correct de l'indicateur
-                    z-index: 1; // Ajouté pour mettre les liens au-dessus de l'indicateur
-                }
-
-                .indicator {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    height: 5px; // Hauteur de l'indicateur
-                    width: 0;
-                    background-color: $color-green; // Couleur de l'indicateur
-                    transition: all 0.5s ease; // Animation
-                }
-
-
-
-                a {
-                    color: $color-blue;
-                    font-weight: 700;
-                    font-size: 3em;
-
-
-                    transition: color 0.3s ease, background-color 0.3s ease; // &:hover {
-                    //     color: $color-blue;
-                    //     background-color: $color-orange;
-                    //     padding: 1rem;
-                    //     border-radius: 1rem;
-                    // }
-                }
-
-
-            }
-
-
-            .navbar-mobile {
-                display: none;
-            }
-        }
-        @media screen and (max-width: 800px) {
-            .navbar-desktop {
-                display: none;
-            }
-            .navbar-mobile {
-                display: block;
-            }
-        }
-
-
-
-
-    }
+}

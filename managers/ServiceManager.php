@@ -2,50 +2,56 @@
 
 class ServiceManager extends AbstractManager
 {
-    public function getAllServices()
+ public function getAllServices()
+{
+    $sql = 'SELECT * FROM service';
+    $query = $this->db->prepare($sql);  
+    $query->execute();
+
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+}
+    public function getAllServiceNames() {
+    $query = "SELECT Service_name FROM services";
+    $result = $this->pdo->query($query)->fetchAll();
+    return $result;
+}
+
+
+    public function getServiceByName(array $serviceName) : bool
     {
-        // Écrire la requête SQL pour récupérer tous les services
-        $sql = "SELECT * FROM service";
-
-        // Préparer la requête
-        $stmt = $this->db->prepare($sql);
-
-        // Exécuter la requête
-        $stmt->execute();
-
-        // Récupérer les lignes résultantes sous forme de tableau associatif
-        $services = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        return $services;
-    }
-
-    public function getTechnicalControlService()
-    {
-        $query = $this->db->prepare("SELECT * FROM service WHERE Service_name = 'Technical Control'");
+        $query = $this->db->prepare("SELECT * FROM service WHERE Service_name = :serviceName");
+        $query->bindParam(':serviceName', $serviceName);
         $query->execute();
 
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
-        return new Service(
-            $result['Service_Id'],
-            $result['Service_Name'],
-            $result['Service_Description'],
-            $result['Service_Cost']
-        );
-    }
+        if ($result) {
+            return new Service(
+                $result['Service_ID'],
+                $result['Service_name'],
+                $result['Service_description'],
+                (float)$result['Service_cost'],
+                $result['Vehicle_type']
+            );
+        }
 
-    public function getReinspectionService()
+        return null;
+    }
+    
+    public function updateService($id, $name, $cost, $vehicle_type)
     {
-        $query = $this->db->prepare("SELECT * FROM service WHERE Service_name = 'Reinspection'");
-        $query->execute();
-
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-
-        return new Service(
-            $result['Service_Id'],
-            $result['Service_Name'],
-            $result['Service_Description'],
-            $result['Service_Cost']
-        );
+          $sql = "UPDATE service SET Service_name = ?, Service_cost = ?, Vehicle_type = ? WHERE Service_ID = ?";
+          $stmt = $this->db->prepare($sql);
+          $stmt->execute([$name, $cost, $vehicle_type, $id]);
     }
+    
+    public function getServiceById($id) {
+    $sql = 'SELECT * FROM service WHERE Service_ID = :id';
+    $query = $this->db->prepare($sql);
+    $query->bindParam(':id', $id);
+    $query->execute();
+    return $query->fetch(PDO::FETCH_ASSOC);
+}
+
+
 }

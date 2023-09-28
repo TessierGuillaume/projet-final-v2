@@ -3,11 +3,12 @@
 
 #homepage {
     .btn-appointment {
-        background-color: $color-green;
-        color: $color-white;
+        background-color: $color-orange;
+        color: $color-blue;
+        font-weight: 900;
         padding: 15px 30px;
         border-radius: 5px;
-        font-size: 1.5em;
+        font-size: 1.8em;
         text-align: center;
         box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
         cursor: pointer;
@@ -22,7 +23,7 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
         &:hover {
-            background-color: darken($color-orange, 10%);
+            background-color: $color-green;
             box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
             transform: translate(-50%, -54%);
         }
@@ -30,13 +31,20 @@
 
     #slider-promo-section {
         .slider {
-            height: 50vh;
+            height: 500px;
             position: relative;
             text-align: center;
             z-index: 1;
 
+
+
+
+
+
+
             img {
                 object-fit: cover;
+                object-position: center;
                 height: 100%;
                 width: 100%;
                 position: absolute;
@@ -87,16 +95,18 @@
             display: flex;
             background-color: $color-grey;
             flex-direction: column;
+            align-items: stretch;
 
             @media screen and (min-width: 601px) {
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: stretch;
             }
 
             .schedule-container,
             address {
                 width: 100%;
-
+                height: 100%;
                 @media screen and (min-width: 601px) {
                     width: 45%;
                 }
@@ -120,7 +130,6 @@
     #schedule-table {
         width: 100%;
         border-collapse: collapse;
-        margin: 25px 0;
         font-size: 18px;
         text-align: left;
 
@@ -128,18 +137,22 @@
         td {
             border: 1px solid #ddd;
             padding: 8px;
+
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: $color-blue;
         }
 
-        tr:nth-child(even) {
+        tr:nth-child {
             background-color: #f2f2f2;
+        }
+        .open {
+            background-color: $color-green;
         }
 
         .closed {
-            background-color: #ffcccc;
+            background-color: $color-orange;
         }
     }
 
@@ -147,82 +160,198 @@
         background-color: $color-grey;
         fieldset {
             text-align: center;
-            margin: 20px 0;
             padding: 0.5em;
             font-size: 1.5em;
-            margin-top: 1em;
+            margin-top: 0.5em;
 
             legend {
 
                 font-weight: bold;
                 color: $color-blue;
-                margin-bottom: 20px;
-                font-size: 1.3em;
+                margin-bottom: 2em;
+                font-size: 1.8em;
                 text-decoration: underline;
             }
             section {
-                margin-bottom: 30px;
+                margin-bottom: 5em;
 
             }
             label {
                 display: block;
-                margin-bottom: 5px;
+                margin-bottom: 1em;
                 font-weight: bold;
                 color: $color-blue;
-                font-size: 1.3em;
+                font-size: 1.5em;
                 text-decoration: underline;
 
             }
             p {
-                margin: 0;
+                margin: 1em;
                 font-size: 1.3em;
             }
             a {
                 color: $color-blue;
-                text-decoration: underline;
+                text-decoration: none;
                 font-weight: bold;
             }
             a:hover {
                 color: $color-orange;
+
+
             }
         }
     }
-}
 
-#promo-october {
-    position: fixed;
-    top: 20%;
-    right: 0;
-    width: 300px;
-    background-color: $color-grey;
-    padding: 20px;
-    border-radius: 10px 0 0 10px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-
-    h2 {
-        color: $color-blue;
-        font-size: 1.5em;
+    @media (min-width: 768px) {
+        .container-homepage {
+            .schedule-container,
+            .map-container,
+            address,
+            #testimonials {
+                flex: 1 0 calc(50% - 10px); // 50% de la largeur totale moins 10px pour les marges
+                margin: 5px;
+            }
+        }
     }
 
-    h3 {
-        color: $color-blue;
-        font-size: 1.2em;
+
+
+    @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+    .map-and-testimonials {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media screen and (min-width: 601px) {
+            flex-direction: row;
+        }
     }
 
-    p,
-    ul {
-        color: $color-blue;
-        font-size: 1em;
-        line-height: 1.5;
+    .map-container {
+        flex: 1;
+        order: 2;
+        width: 100%;
+        iframe {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        @media screen and (min-width: 601px) {
+            order: 1;
+            width: auto;
+        }
     }
 
-    ul {
-        list-style-type: square;
-        padding-left: 20px;
+    #testimonials {
+        flex: 1;
+        order: 1;
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+        p {
+            font-size: 1.8em;
 
-        li {
+
+
+        }
+        span {
+            margin-top: 10px;
             margin-bottom: 10px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .testimonial-card {
+            margin: 2em;
+
+        }
+
+        @media screen and (min-width: 601px) {
+            order: 2;
+        }
+
+        .stars {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .fas.fa-star {
+            color: gold;
+            margin-right: 5px;
+            font-size: 2em;
+        }
+    }
+    #promo-october {
+        position: fixed;
+        top: 20%;
+        right: 0;
+        width: 300px;
+        background-color: $color-orange;
+        padding: 20px;
+        border-radius: 10px 0 0 10px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+
+        .close-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            i.fa-solid {
+                color: red;
+                font-size: 24px;
+            }
+        }
+        h2 {
+            color: $color-green;
+            font-weight: bold;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px #000000;
+            animation: bounce 2s infinite;
+        }
+
+        h3 {
+            color: $color-white;
+            font-size: 1.8em;
+
+        }
+
+        p,
+        ul {
+            color: $color-white;
+            font-size: 1.5em;
+            line-height: 1.5;
+
+        }
+
+        ul {
+
+            padding-left: 20px;
+
+            li {
+                margin-bottom: 10px;
+                font-size: 1.3em;
+
+            }
         }
     }
 }

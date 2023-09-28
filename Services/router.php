@@ -7,6 +7,7 @@ class Router
     private MessageController $messageController; // Ajout pour le contrôleur de messages
     private AdminController $adminController;
     private EventController $eventController;
+    private ServiceController $serviceController;
 
     public function __construct()
     {
@@ -15,6 +16,7 @@ class Router
         $this->messageController = new MessageController();
         $this->adminController = new AdminController(); // Initialisation du contrôleur de messages
         $this->eventController = new EventController();
+        $this->serviceController = new ServiceController();
     }
     
     
@@ -75,10 +77,13 @@ public function checkRoute($route): void
         $this->eventController->getEventsUser();
     } elseif ($routeParts[0] === 'event_index_user') {
         $this->eventController->getEventsIndexForUser();
-    }elseif ($routeParts[0] === 'services') {
-        $this->serviceController->showServicesPage();
-    } else {
-        $this->homepageController->index();
+    }elseif ($routeParts[0] === 'getServices') {
+        $this->eventController->getServices();
+    }elseif ($routeParts[0] === 'update_services') {
+         $this->serviceController->updateServices();
+        } else {
+            // handle the case where no route matches
+            $this->serviceController->render('public/404/404.phtml', ['error_message' => 'Route non trouvée']);
+        }
     }
-}
 }

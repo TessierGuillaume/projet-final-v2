@@ -8,8 +8,9 @@ class Event
     private string $title;
     private ?string $description;
     private ?string $url;
-    private string $start; // Correspond à la colonne "start" de la table
-    private string $end;   // Correspond à la colonne "end" de la table
+    private string $start; 
+    private string $end; 
+    private ?int $serviceId; 
 
     public function __construct(?int $id, ?int $userId, ?int $vehicleId, string $title, ?string $description, ?string $url, string $start, string $end)
     {
@@ -21,6 +22,7 @@ class Event
         $this->url = $url;
         $this->start = $start;
         $this->end = $end;
+        $this->serviceId = $serviceId;
     }
     public function getId(): ?int
     {
@@ -93,4 +95,15 @@ class Event
     {
         $this->end = $end;
     }
+    
+      public function getServiceId(): ?int
+    {
+        return $this->serviceId; // Méthode pour obtenir la valeur de l'ID du service
+    }
+
+    public function setServiceId(?int $serviceId): void
+    {
+        $this->serviceId = $serviceId; // Méthode pour définir la valeur de l'ID du service
+    }
+
 }

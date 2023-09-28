@@ -207,4 +207,8 @@ class EventController extends AbstractController
             }
         }
     }
+    public function getServices() {
+    $services = $this->serviceManager->getAllServices();
+    echo json_encode($services);
+}
 }

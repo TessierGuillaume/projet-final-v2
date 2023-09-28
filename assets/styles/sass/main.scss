@@ -11,7 +11,9 @@
 @use 'views/_headerVisitor.scss';
 @use 'views/_reset.scss';
 @use 'views/_services.scss';
-@use 'views/_footer.scss';
+@use 'views/_footerVisitor.scss';
+@use 'views/_footerUser.scss';
+@use 'views/_footerAdmin.scss';
 @use 'views/_login.scss';
 @use 'views/_register.scss';
 @use 'views/_createMessage.scss';

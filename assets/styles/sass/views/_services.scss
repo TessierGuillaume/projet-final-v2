@@ -3,107 +3,88 @@
 @import '../general/style.scss';
 
 #services {
-    background-color: $color-grey;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
+    background-color: $color-grey;
+    line-height: 1.42em;
 
 
-    h2,
-    h3 {
-        display: inline-block;
-        color: $color-blue;
-        text-align: center;
-        font-weight: bold;
-        font-size: 2em;
-        padding: 0.5em;
-        margin: 1em;
-        font-family: $font-title;
-        border: 1px solid $color-blue;
-        border-radius: 5px;
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
-        -3px -3px 6px rgba(255, 255, 255, 0.3);
+    .container {
+        text-align: left;
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        display: table;
+        padding: 0;
+        background-color: $color-blue;
     }
 
-    h1 {
-        display: inline-block;
-        text-align: center;
-        margin-bottom: 0.5em;
-        color: $color-blue;
+    .container th h2 {
         font-weight: bold;
-        font-size: 2.1em;
-        padding: 0.5em;
-        font-family: $font-title;
-        border: 1px solid $color-blue;
-        border-radius: 5px;
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
-        -3px -3px 6px rgba(255, 255, 255, 0.3);
-
+        font-size: 1.6em;
+        text-align: left;
+        color: $color-blue;
+        background-color: $color-grey;
     }
 
-    section {
-        margin-bottom: 20px;
-        position: relative;
-        background-color: rgba($color-grey, 0.3);
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-        p,
-        ul {
-            text-align: left;
-            padding: 1em;
-            font-size: 1.8em;
-            font-family: $font-body, sans-serif;
-        }
+    .container td {
+        font-weight: bold;
 
-        ul {
-            list-style: disc inside;
-            padding: 0.5em;
+        font-size: 1.3em;
+        -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+        -moz-box-shadow: 0 2px 2px -2px #0E1119;
+        box-shadow: 0 2px 2px -2px #0E1119;
+        padding: 2%;
+        border-bottom: 1px solid #ccc;
+    }
 
-            li {
-                margin-bottom: 5px;
-                padding: 0.5em;
+    /* Background-color des rangées impaires */
+    .container tr:nth-child(odd) {
+        background-color: $color-grey;
+    }
 
-            }
-        }
-    } // Boutons et liens
-    button,
-    .cta {
+    /* Background-color des rangées paires */
+    .container tr:nth-child(even) {
+        background-color: $color-white;
+    }
+
+    .container td:first-child {
+        color: $color-blue;
+    }
+
+    .container tr:hover {
         background-color: $color-orange;
-        color: $color-white;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        text-transform: uppercase;
-        text-align: center; // Centrer le texte des boutons et des appels à l'action
-    } // Responsivité pour les écrans plus grands
-    @media (min-width: 768px) {
-        h1,
-        h2,
-        h3 {
-            font-size: 2em; // Augmenter la taille de la police pour les titres sur les écrans plus grands
+        -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+        -moz-box-shadow: 0 6px 6px -6px #0E1119;
+        box-shadow: 0 6px 6px -6px #0E1119;
+    }
+
+    .container td:hover {
+        background-color: $color-orange;
+        color: #403E10;
+        font-weight: bold;
+        box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+        transform: translate3d(6px, -6px, 0);
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+        transition-property: all;
+        transition-timing-function: line;
+    }
+
+    /* Styles spécifiques pour les écrans plus larges (à partir de 800px) */
+    @media (min-width: 800px) {
+        .container {
+            width: 80%;
+            /* Réduire la largeur pour les écrans plus larges */
+            margin: 0 auto;
         }
 
-        h1 {
-            margin: 20px 0;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        p,
-        ul {
-            font-size: 1.2em; // Augmenter la taille de la police pour les paragraphes et les listes sur les écrans plus grands
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        button,
-        .cta {
-            padding: 10px 20px;
+        /* Afficher la quatrième colonne (Coût) et l'en-tête correspondant */
+        .container td:nth-child(4),
+        .container th:nth-child(4) {
+            display: table-cell;
         }
     }
 }

@@ -53,6 +53,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -130,11 +136,11 @@ html {
   top: 1em;
   right: 1em;
   font-size: 3rem;
-  color: #FFAA11;
+  color: #e67e22;
 }
 #headerAdmin .navbar-mobile .modal {
   transition: top 0.9s;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   height: 100vh;
   position: fixed;
   top: -100vh;
@@ -159,18 +165,18 @@ html {
 #headerAdmin .navbar-mobile .modal .navbar-mobile-list a {
   font-size: 3em;
   margin-bottom: 1em;
-  color: #FFAA11;
+  color: #e67e22;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 #headerAdmin .navbar-mobile .modal .navbar-mobile-list a:hover {
   background-color: #FFF;
   border-radius: 1rem;
-  color: #0B5EBF;
+  color: #3498db;
 }
 #headerAdmin .navbar-desktop {
   display: none;
   justify-content: space-between;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   padding: 1em;
   align-items: center;
   height: 10em;
@@ -187,15 +193,15 @@ html {
   position: relative;
 }
 #headerAdmin .navbar-desktop ul li a {
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: 700;
   font-size: 2em;
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 #headerAdmin .navbar-desktop ul li a:hover {
-  background-color: #D3D3D3;
-  color: #FFAA11;
+  background-color: #ecf0f1;
+  color: #e67e22;
 }
 #headerAdmin .navbar-desktop ul .indicator {
   position: absolute;
@@ -203,7 +209,7 @@ html {
   left: 0;
   height: 3px;
   width: 0;
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   transition: all 0.5s ease;
 }
 @media screen and (min-width: 801px) {
@@ -235,11 +241,12 @@ button,
 }
 
 #homepage .btn-appointment {
-  background-color: #0BBF64;
-  color: #FFF;
+  background-color: #e67e22;
+  color: #3498db;
+  font-weight: 900;
   padding: 15px 30px;
   border-radius: 5px;
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-align: center;
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -254,18 +261,19 @@ button,
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 #homepage .btn-appointment:hover {
-  background-color: #dd8e00;
+  background-color: #2ecc71;
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -54%);
 }
 #homepage #slider-promo-section .slider {
-  height: 50vh;
+  height: 500px;
   position: relative;
   text-align: center;
   z-index: 1;
 }
 #homepage #slider-promo-section .slider img {
   object-fit: cover;
+  object-position: center;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -310,18 +318,21 @@ button,
 }
 #homepage #schedule-section .container-homepage {
   display: flex;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   flex-direction: column;
+  align-items: stretch;
 }
 @media screen and (min-width: 601px) {
   #homepage #schedule-section .container-homepage {
     flex-direction: row;
     justify-content: space-between;
+    align-items: stretch;
   }
 }
 #homepage #schedule-section .container-homepage .schedule-container,
 #homepage #schedule-section .container-homepage address {
   width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 601px) {
   #homepage #schedule-section .container-homepage .schedule-container,
@@ -344,7 +355,6 @@ button,
 #homepage #schedule-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 18px;
   text-align: left;
 }
@@ -354,86 +364,184 @@ button,
   padding: 8px;
 }
 #homepage #schedule-table th {
+  background-color: #3498db;
+}
+#homepage #schedule-table tr:nth-child {
   background-color: #f2f2f2;
 }
-#homepage #schedule-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+#homepage #schedule-table .open {
+  background-color: #2ecc71;
 }
 #homepage #schedule-table .closed {
-  background-color: #ffcccc;
+  background-color: #e67e22;
 }
 #homepage address {
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #homepage address fieldset {
   text-align: center;
-  margin: 20px 0;
   padding: 0.5em;
   font-size: 1.5em;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 #homepage address fieldset legend {
   font-weight: bold;
-  color: #0B5EBF;
-  margin-bottom: 20px;
-  font-size: 1.3em;
+  color: #3498db;
+  margin-bottom: 2em;
+  font-size: 1.8em;
   text-decoration: underline;
 }
 #homepage address fieldset section {
-  margin-bottom: 30px;
+  margin-bottom: 5em;
 }
 #homepage address fieldset label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1em;
   font-weight: bold;
-  color: #0B5EBF;
-  font-size: 1.3em;
+  color: #3498db;
+  font-size: 1.5em;
   text-decoration: underline;
 }
 #homepage address fieldset p {
-  margin: 0;
+  margin: 1em;
   font-size: 1.3em;
 }
 #homepage address fieldset a {
-  color: #0B5EBF;
-  text-decoration: underline;
+  color: #3498db;
+  text-decoration: none;
   font-weight: bold;
 }
 #homepage address fieldset a:hover {
-  color: #FFAA11;
+  color: #e67e22;
 }
-
-#promo-october {
+@media (min-width: 768px) {
+  #homepage .container-homepage .schedule-container,
+  #homepage .container-homepage .map-container,
+  #homepage .container-homepage address,
+  #homepage .container-homepage #testimonials {
+    flex: 1 0 calc(50% - 10px);
+    margin: 5px;
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+#homepage .map-and-testimonials {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (min-width: 601px) {
+  #homepage .map-and-testimonials {
+    flex-direction: row;
+  }
+}
+#homepage .map-container {
+  flex: 1;
+  order: 2;
+  width: 100%;
+}
+#homepage .map-container iframe {
+  width: 100%;
+  min-width: 100%;
+}
+@media screen and (min-width: 601px) {
+  #homepage .map-container {
+    order: 1;
+    width: auto;
+  }
+}
+#homepage #testimonials {
+  flex: 1;
+  order: 1;
+}
+#homepage #testimonials h2 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+#homepage #testimonials p {
+  font-size: 1.8em;
+}
+#homepage #testimonials span {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  text-align: center;
+}
+#homepage #testimonials .testimonial-card {
+  margin: 2em;
+}
+@media screen and (min-width: 601px) {
+  #homepage #testimonials {
+    order: 2;
+  }
+}
+#homepage #testimonials .stars {
+  display: flex;
+  margin-top: 10px;
+}
+#homepage #testimonials .fas.fa-star {
+  color: gold;
+  margin-right: 5px;
+  font-size: 2em;
+}
+#homepage #promo-october {
   position: fixed;
   top: 20%;
   right: 0;
   width: 300px;
-  background-color: #D3D3D3;
+  background-color: #e67e22;
   padding: 20px;
   border-radius: 10px 0 0 10px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
-#promo-october h2 {
-  color: #0B5EBF;
+#homepage #promo-october .close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+#homepage #promo-october .close-button i.fa-solid {
+  color: red;
+  font-size: 24px;
+}
+#homepage #promo-october h2 {
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px #000000;
+  animation: bounce 2s infinite;
+}
+#homepage #promo-october h3 {
+  color: #FFF;
+  font-size: 1.8em;
+}
+#homepage #promo-october p,
+#homepage #promo-october ul {
+  color: #FFF;
   font-size: 1.5em;
-}
-#promo-october h3 {
-  color: #0B5EBF;
-  font-size: 1.2em;
-}
-#promo-october p,
-#promo-october ul {
-  color: #0B5EBF;
-  font-size: 1em;
   line-height: 1.5;
 }
-#promo-october ul {
-  list-style-type: square;
+#homepage #promo-october ul {
   padding-left: 20px;
 }
-#promo-october ul li {
+#homepage #promo-october ul li {
   margin-bottom: 10px;
+  font-size: 1.3em;
 }
 
 body,
@@ -459,20 +567,20 @@ button,
 #view-message h2 {
   margin-bottom: 15px;
   font-family: "Lato", sans-serif;
-  color: #0B5EBF;
+  color: #3498db;
 }
 #view-message p {
   margin-bottom: 20px;
   font-family: "Lexend", sans-serif;
-  color: #D3D3D3;
+  color: #ecf0f1;
 }
 #view-message a {
   display: inline-block;
   margin: 5px;
   padding: 10px;
-  border: 1px solid #D3D3D3;
+  border: 1px solid #ecf0f1;
   text-decoration: none;
-  color: #FFAA11;
+  color: #e67e22;
   font-family: "Oswald", sans-serif;
 }
 @media screen and (min-width: 768px) {
@@ -496,20 +604,20 @@ button,
   width: 100%;
   display: block;
   overflow-x: auto;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #message-list table th {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
 }
 #message-list table th,
 #message-list table td {
   padding: 10px;
   text-align: left;
-  border: 1px solid #FFAA11;
+  border: 1px solid #e67e22;
 }
 #message-list table tr:nth-child(even) {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   color: #FFF;
 }
 @media screen and (min-width: 768px) {
@@ -539,7 +647,7 @@ button,
 }
 
 .swal2-popup {
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 
 .swal2-popup .swal2-styled.swal2-cancel {
@@ -551,18 +659,18 @@ button,
 }
 
 .swal2-popup .swal2-confirm {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   border-color: #FFF;
 }
 
 .swal2-popup .swal2-title {
-  color: #0B5EBF;
+  color: #3498db;
   font-size: 2em;
   font-weight: bold;
 }
 
 .swal2-popup .swal2-input {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
   font-size: 1.5em;
   padding: 0.5em;
@@ -574,15 +682,15 @@ button,
 
 #planing-user {
   padding: 10px;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #planing-user h1 {
   font-size: 1.2em;
   text-align: center;
   margin-bottom: 20px;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
-  text-decoration: #FFAA11 wavy underline;
+  text-decoration: #e67e22 wavy underline;
 }
 #planing-user #calendar_user {
   height: 100%;
@@ -593,37 +701,37 @@ button,
   overflow-x: auto;
 }
 #planing-user .weekend {
-  background-color: #FFAA11 !important;
+  background-color: #e67e22 !important;
 }
 #planing-user .day-full {
-  background-color: #0B5EBF !important;
+  background-color: #3498db !important;
 }
 #planing-user .day-available {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #planing-user .fc .fc-button-primary {
   color: #FFFFFF;
-  background-color: #0B5EBF !important;
+  background-color: #3498db !important;
   border-color: #FFFFFF !important;
   font-size: 1em;
 }
 #planing-user .fc-day {
   font-size: 1.2em;
   font-family: "Oswald", sans-serif;
-  color: #0B5EBF;
+  color: #3498db;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-weight: bold;
 }
 #planing-user .fc-toolbar-title {
-  color: #0B5EBF;
+  color: #3498db;
   padding: 0.2em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   text-transform: uppercase;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
 }
 #planing-user .fc-timegrid-slot-label-cushion {
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
 }
 @media (max-width: 479px) {
@@ -642,12 +750,12 @@ button,
     font-size: 1.3em;
   }
   #planing-user .fc-toolbar-title {
-    color: #0B5EBF;
+    color: #3498db;
     padding: 0.5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     text-transform: uppercase;
-    border: 1px solid #0B5EBF;
+    border: 1px solid #3498db;
   }
 }
 @media (min-width: 992px) {
@@ -661,12 +769,12 @@ button,
     font-size: 1.6em;
   }
   #planing-user .fc-toolbar-title {
-    color: #0B5EBF;
+    color: #3498db;
     padding: 0.5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     text-transform: uppercase;
-    border: 1px solid #0B5EBF;
+    border: 1px solid #3498db;
   }
 }
 
@@ -690,7 +798,7 @@ button,
 }
 
 .swal2-popup {
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 
 .swal2-popup .swal2-styled.swal2-cancel {
@@ -702,18 +810,18 @@ button,
 }
 
 .swal2-popup .swal2-confirm {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   border-color: #FFF;
 }
 
 .swal2-popup .swal2-title {
-  color: #0B5EBF;
+  color: #3498db;
   font-size: 2em;
   font-weight: bold;
 }
 
 .swal2-popup .swal2-input {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
   font-size: 1.5em;
   padding: 0.5em;
@@ -725,15 +833,15 @@ button,
 
 #planing-admin {
   padding: 10px;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #planing-admin h1 {
   font-size: 1.2em;
   text-align: center;
   margin-bottom: 20px;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
-  text-decoration: #FFAA11 wavy underline;
+  text-decoration: #e67e22 wavy underline;
 }
 #planing-admin #calendar_user {
   height: 100%;
@@ -744,34 +852,34 @@ button,
   overflow-x: auto;
 }
 #planing-admin .weekend {
-  background-color: #FFAA11 !important;
+  background-color: #e67e22 !important;
 }
 #planing-admin .day-full {
-  background-color: #0B5EBF !important;
+  background-color: #3498db !important;
 }
 #planing-admin .day-available {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #planing-admin .fc .fc-button-primary {
   color: #FFFFFF;
-  background-color: #0B5EBF !important;
+  background-color: #3498db !important;
   border-color: #FFFFFF !important;
   font-size: 1em;
 }
 #planing-admin .fc-day {
   font-size: 1.2em;
   font-family: "Oswald", sans-serif;
-  color: #0B5EBF;
+  color: #3498db;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-weight: bold;
 }
 #planing-admin .fc-toolbar-title {
-  color: #0B5EBF;
+  color: #3498db;
   padding: 0.2em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   text-transform: uppercase;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
 }
 #planing-admin .fc-list-event-title {
   font-size: 1.5em;
@@ -785,7 +893,7 @@ button,
   font-size: 1.3em;
 }
 #planing-admin .fc-timegrid-slot-label-cushion {
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
 }
 #planing-admin .fc-event-main {
@@ -794,7 +902,7 @@ button,
   padding: 0.2em;
 }
 #planing-admin .fc-event {
-  color: #0B5EBF;
+  color: #3498db;
 }
 @media (max-width: 479px) {
   #planing-admin .fc-toolbar-title {
@@ -812,12 +920,12 @@ button,
     font-size: 1.3em;
   }
   #planing-admin .fc-toolbar-title {
-    color: #0B5EBF;
+    color: #3498db;
     padding: 0.5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     text-transform: uppercase;
-    border: 1px solid #0B5EBF;
+    border: 1px solid #3498db;
   }
 }
 @media (min-width: 992px) {
@@ -831,12 +939,12 @@ button,
     font-size: 1.6em;
   }
   #planing-admin .fc-toolbar-title {
-    color: #0B5EBF;
+    color: #3498db;
     padding: 0.5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     text-transform: uppercase;
-    border: 1px solid #0B5EBF;
+    border: 1px solid #3498db;
   }
 }
 
@@ -881,11 +989,11 @@ html {
   top: 1em;
   right: 1em;
   font-size: 3rem;
-  color: #FFAA11;
+  color: #e67e22;
 }
 #headerAdmin .navbar-mobile .modal {
   transition: top 0.9s;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   height: 100vh;
   position: fixed;
   top: -100vh;
@@ -907,11 +1015,11 @@ html {
 #headerAdmin .navbar-mobile .navbar-mobile-list a {
   font-size: 3em;
   font-weight: 800;
-  color: #FFAA11;
+  color: #e67e22;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 #headerAdmin .navbar-mobile .navbar-mobile-list a:hover {
-  color: #FFAA11;
+  color: #e67e22;
   background-color: #FFF;
   border-radius: 1rem;
 }
@@ -919,17 +1027,17 @@ html {
   letter-spacing: -1px;
 }
 #headerAdmin .navbar-mobile .navbar-mobile-list .logo a span.drive {
-  color: #0B5EBF;
+  color: #3498db;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
 #headerAdmin .navbar-mobile .navbar-mobile-list .logo a span.safe {
-  color: #0BBF64;
+  color: #2ecc71;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
 #headerAdmin .navbar-mobile .navbar-mobile-list .logo a span.control {
-  color: #FFAA11;
+  color: #e67e22;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
@@ -952,7 +1060,7 @@ html {
   display: flex;
   justify-content: space-between;
   padding: 0;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   height: 10em;
   align-items: center;
 }
@@ -974,11 +1082,11 @@ html {
   left: 0;
   height: 5px;
   width: 0;
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   transition: all 0.5s ease;
 }
 #headerAdmin .navbar-desktop ul a {
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: 700;
   font-size: 3em;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -994,7 +1102,7 @@ html {
   #headerAdmin .navbar-mobile ul li.logo a span.drive,
   #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
   #headerAdmin .navbar-desktop ul li.logo a span.drive {
-    color: #0B5EBF;
+    color: #3498db;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1002,7 +1110,7 @@ html {
   #headerAdmin .navbar-mobile ul li.logo a span.safe,
   #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.safe,
   #headerAdmin .navbar-desktop ul li.logo a span.safe {
-    color: #0BBF64;
+    color: #2ecc71;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1010,7 +1118,7 @@ html {
   #headerAdmin .navbar-mobile ul li.logo a span.control,
   #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
   #headerAdmin .navbar-desktop ul li.logo a span.control {
-    color: #FFAA11;
+    color: #e67e22;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1051,7 +1159,7 @@ html {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    background-color: #D3D3D3;
+    background-color: #ecf0f1;
     height: 10em;
     align-items: center;
   }
@@ -1073,11 +1181,11 @@ html {
     left: 0;
     height: 5px;
     width: 0;
-    background-color: #0BBF64;
+    background-color: #2ecc71;
     transition: all 0.5s ease;
   }
   #headerAdmin .navbar-desktop a {
-    color: #0B5EBF;
+    color: #3498db;
     font-weight: 700;
     font-size: 3em;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -1138,13 +1246,13 @@ html {
   top: 1em;
   right: 1.8em;
   font-size: 8vw;
-  color: #FFAA11;
+  color: #e67e22;
   min-width: 40px;
   min-height: 40px;
 }
 #headerUser .navbar-mobile .modal {
   transition: top 0.9s;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   height: 100vh;
   position: fixed;
   top: -100vh;
@@ -1171,11 +1279,11 @@ html {
 #headerUser .navbar-mobile .navbar-mobile-list a {
   font-size: 3em;
   font-weight: 800;
-  color: #FFAA11;
+  color: #e67e22;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 #headerUser .navbar-mobile .navbar-mobile-list a:hover {
-  color: #FFAA11;
+  color: #e67e22;
   background-color: #FFF;
   border-radius: 1rem;
 }
@@ -1201,17 +1309,17 @@ html {
   letter-spacing: -1px;
 }
 #headerUser ul li.logo a span.drive {
-  color: #0B5EBF;
+  color: #3498db;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
 #headerUser ul li.logo a span.safe {
-  color: #0BBF64;
+  color: #2ecc71;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
 #headerUser ul li.logo a span.control {
-  color: #FFAA11;
+  color: #e67e22;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
@@ -1226,7 +1334,7 @@ html {
   #headerUser .navbar-mobile ul li.logo a span.drive,
   #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
   #headerUser .navbar-desktop ul li.logo a span.drive {
-    color: #0B5EBF;
+    color: #3498db;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1234,7 +1342,7 @@ html {
   #headerUser .navbar-mobile ul li.logo a span.safe,
   #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.safe,
   #headerUser .navbar-desktop ul li.logo a span.safe {
-    color: #0BBF64;
+    color: #2ecc71;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1242,7 +1350,7 @@ html {
   #headerUser .navbar-mobile ul li.logo a span.control,
   #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
   #headerUser .navbar-desktop ul li.logo a span.control {
-    color: #FFAA11;
+    color: #e67e22;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1283,7 +1391,7 @@ html {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    background-color: #D3D3D3;
+    background-color: #ecf0f1;
     height: 10em;
     align-items: center;
   }
@@ -1305,11 +1413,11 @@ html {
     left: 0;
     height: 5px;
     width: 0;
-    background-color: #0BBF64;
+    background-color: #2ecc71;
     transition: all 0.5s ease;
   }
   #headerUser .navbar-desktop a {
-    color: #0B5EBF;
+    color: #3498db;
     font-weight: 700;
     font-size: 3em;
     transition: color 0.3s ease, background-color 0.3s ease;
@@ -1371,11 +1479,11 @@ html {
   top: 1em;
   right: 1em;
   font-size: 3rem;
-  color: #FFAA11;
+  color: #e67e22;
 }
 #headerVisitor .navbar-mobile .modal {
   transition: top 0.9s;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   height: 100vh;
   position: fixed;
   top: -100vh;
@@ -1401,11 +1509,11 @@ html {
 #headerVisitor .navbar-mobile .navbar-mobile-list a {
   font-size: 3em;
   font-weight: 800;
-  color: #FFAA11;
+  color: #e67e22;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 #headerVisitor .navbar-mobile .navbar-mobile-list a:hover {
-  color: #FFAA11;
+  color: #e67e22;
   background-color: #FFF;
   border-radius: 1rem;
 }
@@ -1419,7 +1527,7 @@ html {
   z-index: 3;
 }
 #headerVisitor .social-icons-mobile a {
-  margin: 20px;
+  margin: 1em;
 }
 #headerVisitor .social-icons-mobile i {
   transition: all 0.5s ease;
@@ -1431,17 +1539,17 @@ html {
   letter-spacing: -1px;
 }
 #headerVisitor l li.logo a span.drive {
-  color: #0B5EBF;
+  color: #3498db;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
 #headerVisitor l li.logo a span.safe {
-  color: #0BBF64;
+  color: #2ecc71;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
 #headerVisitor l li.logo a span.control {
-  color: #FFAA11;
+  color: #e67e22;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
 }
@@ -1456,7 +1564,7 @@ html {
   #headerVisitor .navbar-mobile ul li.logo a span.drive,
   #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.drive,
   #headerVisitor .navbar-desktop ul li.logo a span.drive {
-    color: #0B5EBF;
+    color: #3498db;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1464,7 +1572,7 @@ html {
   #headerVisitor .navbar-mobile ul li.logo a span.safe,
   #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.safe,
   #headerVisitor .navbar-desktop ul li.logo a span.safe {
-    color: #0BBF64;
+    color: #2ecc71;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1472,7 +1580,7 @@ html {
   #headerVisitor .navbar-mobile ul li.logo a span.control,
   #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a span.control,
   #headerVisitor .navbar-desktop ul li.logo a span.control {
-    color: #FFAA11;
+    color: #e67e22;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: -2px;
   }
@@ -1513,7 +1621,7 @@ html {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    background-color: #D3D3D3;
+    background-color: #ecf0f1;
     height: 10em;
     align-items: center;
   }
@@ -1535,14 +1643,26 @@ html {
     left: 0;
     height: 5px;
     width: 0;
-    background-color: #0BBF64;
+    background-color: #2ecc71;
     transition: all 0.5s ease;
   }
   #headerVisitor .navbar-desktop a {
-    color: #0B5EBF;
-    font-weight: 700;
-    font-size: 3em;
+    color: #3498db;
+    font-size: 2.2em;
+    text-transform: uppercase;
     transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  #headerVisitor .social-icons-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #headerVisitor .social-icons-desktop li {
+    margin: 0 1em;
+  }
+  #headerVisitor .social-icons-desktop a {
+    font-size: 2em;
   }
   #headerVisitor .navbar-mobile {
     display: none;
@@ -1728,93 +1848,79 @@ html {
 }
 
 #services {
-  background-color: #D3D3D3;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px;
+  background-color: #ecf0f1;
+  line-height: 1.42em;
+  /* Background-color des rangées impaires */
+  /* Background-color des rangées paires */
+  /* Styles spécifiques pour les écrans plus larges (à partir de 800px) */
 }
-#services h2,
-#services h3 {
-  display: inline-block;
-  color: #0B5EBF;
-  text-align: center;
-  font-weight: bold;
-  font-size: 2em;
-  padding: 0.5em;
-  margin: 1em;
-  font-family: "Lato", sans-serif;
-  border: 1px solid #0B5EBF;
-  border-radius: 5px;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
-}
-#services h1 {
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 0.5em;
-  color: #0B5EBF;
-  font-weight: bold;
-  font-size: 2.1em;
-  padding: 0.5em;
-  font-family: "Lato", sans-serif;
-  border: 1px solid #0B5EBF;
-  border-radius: 5px;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
-}
-#services section {
-  margin-bottom: 20px;
-  position: relative;
-  background-color: rgba(211, 211, 211, 0.3);
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
-#services section p,
-#services section ul {
+#services .container {
   text-align: left;
-  padding: 1em;
-  font-size: 1.8em;
-  font-family: "Lexend", sans-serif, sans-serif;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  padding: 0;
+  background-color: #3498db;
 }
-#services section ul {
-  list-style: disc inside;
-  padding: 0.5em;
+#services .container th h2 {
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: left;
+  color: #3498db;
+  background-color: #ecf0f1;
 }
-#services section ul li {
-  margin-bottom: 5px;
-  padding: 0.5em;
+#services .container td {
+  font-weight: bold;
+  font-size: 1.3em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+  -moz-box-shadow: 0 2px 2px -2px #0E1119;
+  box-shadow: 0 2px 2px -2px #0E1119;
+  padding: 2%;
+  border-bottom: 1px solid #ccc;
 }
-#services button,
-#services .cta {
-  background-color: #FFAA11;
-  color: #FFF;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-align: center;
+#services .container tr:nth-child(odd) {
+  background-color: #ecf0f1;
 }
-@media (min-width: 768px) {
-  #services h1,
-  #services h2,
-  #services h3 {
-    font-size: 2em;
+#services .container tr:nth-child(even) {
+  background-color: #FFF;
+}
+#services .container td:first-child {
+  color: #3498db;
+}
+#services .container tr:hover {
+  background-color: #e67e22;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+  -moz-box-shadow: 0 6px 6px -6px #0E1119;
+  box-shadow: 0 6px 6px -6px #0E1119;
+}
+#services .container td:hover {
+  background-color: #e67e22;
+  color: #403E10;
+  font-weight: bold;
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+@media (min-width: 800px) {
+  #services {
+    /* Afficher la quatrième colonne (Coût) et l'en-tête correspondant */
   }
-  #services h1 {
-    margin: 20px 0;
+  #services .container {
+    width: 80%;
+    /* Réduire la largeur pour les écrans plus larges */
+    margin: 0 auto;
   }
-  #services section {
-    margin-bottom: 40px;
-  }
-  #services p,
-  #services ul {
-    font-size: 1.2em;
-  }
-  #services ul li {
-    margin-bottom: 10px;
-  }
-  #services button,
-  #services .cta {
-    padding: 10px 20px;
+  #services .container td:nth-child(4),
+  #services .container th:nth-child(4) {
+    display: table-cell;
   }
 }
 
@@ -1849,56 +1955,295 @@ html {
   /* 1rem = 10px*/
 }
 
-#footer {
-  background-color: #D3D3D3;
-  color: #0B5EBF;
+#footerVisitor {
+  position: relative;
+  background-color: #2B2B2B;
+  color: #FFF;
   padding: 2em 1em;
   display: flex;
-  text-align: center;
+  min-height: 200px;
   flex-direction: column;
+  text-align: center;
+}
+#footerVisitor nav {
+  flex: 1;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footerVisitor nav h3 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+#footerVisitor nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+#footerVisitor nav ul li {
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#footerVisitor nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.8em;
+  text-align: center;
+}
+#footerVisitor .footer-social h3 {
+  text-align: center;
+}
+#footerVisitor .footer-social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8em;
+  list-style: none;
+}
+#footerVisitor .footer-social a {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+#footerVisitor .copyright {
+  text-align: center;
+  font-size: 0.8em;
 }
 @media (min-width: 768px) {
-  #footer {
+  #footerVisitor {
     flex-direction: row;
+    text-align: center;
+  }
+  #footerVisitor .copyright {
+    position: absolute;
+    bottom: 2em;
+    font-size: 1.8em;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 }
-#footer .footer-links,
-#footer .footer-menu,
-#footer .footer-social {
-  flex: 1;
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
 }
-#footer .footer-links ul,
-#footer .footer-menu ul,
-#footer .footer-social ul {
-  list-style: none;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#footerUser {
+  position: relative;
+  background-color: #2B2B2B;
+  color: #FFF;
+  padding: 2em 1em;
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #footerUser {
+    flex-direction: row;
+    text-align: center;
+  }
+}
+#footerUser nav {
+  flex: 1;
+  margin-bottom: 1em;
+}
+#footerUser nav h3 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #FFF;
+}
+#footerUser nav ul {
   padding: 0;
 }
-#footer .footer-links ul li,
-#footer .footer-menu ul li,
-#footer .footer-social ul li {
+#footerUser nav ul li {
   margin: 0.5em 0;
+  color: #FFF;
 }
-#footer .footer-links ul li a,
-#footer .footer-menu ul li a,
-#footer .footer-social ul li a {
-  text-decoration: none;
-  color: #0B5EBF;
-  font-size: 2em;
+#footerUser nav ul li a {
+  color: #FFF;
+  font-size: 1.8em;
 }
-#footer .footer-links ul li a:hover,
-#footer .footer-menu ul li a:hover,
-#footer .footer-social ul li a:hover {
+#footerUser nav ul li a:hover {
   text-decoration: underline;
-  color: #0BBF64;
+  color: #2ecc71;
 }
-#footer .footer-social {
+#footerUser .footer-social ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 1.8em;
+  color: #FFF;
 }
-#footer .footer-social a {
-  margin: 0 0.5em;
+#footerUser .footer-social a {
+  margin: 1em;
   font-size: 1.5em;
+  color: #FFF;
+}
+#footerUser .footer-social h3 {
+  color: #FFF;
+}
+@media (min-width: 768px) {
+  #footerUser .footer-social ul {
+    justify-content: center;
+  }
+}
+#footerUser .copyright {
+  text-align: center;
+  font-size: 0 0.8em;
+  color: #FFF;
+}
+@media (min-width: 768px) {
+  #footerUser .copyright {
+    position: absolute;
+    bottom: 1.5em;
+    font-size: 1.6em;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+
+body,
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+button,
+.cta {
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/
+}
+
+#footerUser {
+  position: relative;
+  background-color: #2B2B2B;
+  color: #FFF;
+  padding: 2em 1em;
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #footerUser {
+    flex-direction: row;
+    text-align: center;
+  }
+}
+#footerUser nav {
+  flex: 1;
+  margin-bottom: 1em;
+}
+#footerUser nav h3 {
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#footerUser nav ul {
+  list-style: none;
+  padding: 0;
+}
+#footerUser nav ul li {
+  margin: 0.5em 0;
+}
+#footerUser nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.8em;
+}
+#footerUser nav ul li a:hover {
+  text-decoration: underline;
+  color: #2ecc71;
+}
+#footerUser .footer-social ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8em;
+}
+#footerUser .footer-social a {
+  margin: 1em;
+  font-size: 1.5em;
+}
+@media (min-width: 768px) {
+  #footerUser .footer-social ul {
+    justify-content: center;
+  }
+}
+#footerUser .copyright {
+  text-align: center;
+  font-size: 0 0.8em;
+}
+@media (min-width: 768px) {
+  #footerUser .copyright {
+    position: absolute;
+    bottom: 1.5em;
+    font-size: 1.6em;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
 }
 
 * {
@@ -2026,12 +2371,12 @@ button,
   text-decoration: none;
 }
 #login .wrapper .remember-forgot a:hover {
-  color: #0B5EBF;
+  color: #3498db;
 }
 #login .wrapper .btn {
   width: 100%;
   height: 45px;
-  background: #FFAA11;
+  background: #e67e22;
   border: none;
   outline: none;
   border-radius: 40px;
@@ -2042,8 +2387,8 @@ button,
   font-size: 2em;
 }
 #login .wrapper .btn:hover {
-  color: #0B5EBF;
-  background-color: #0BBF64;
+  color: #3498db;
+  background-color: #2ecc71;
 }
 #login .wrapper .register-link {
   font-size: 1.8em;
@@ -2059,11 +2404,11 @@ button,
 }
 #login .wrapper .register-link p:hover {
   text-decoration: underline;
-  color: #0B5EBF;
+  color: #3498db;
 }
 
 .remember-forgot label:hover {
-  color: #0B5EBF;
+  color: #3498db;
 }
 
 @media (min-width: 600px) {
@@ -2151,7 +2496,7 @@ button,
 }
 #register .wrapper .form-errors {
   font-size: 1.3em;
-  color: #FFAA11;
+  color: #e67e22;
   text-align: center;
 }
 #register .wrapper .input-box {
@@ -2201,7 +2546,7 @@ button,
   margin: 15px 5px 15px;
 }
 #register .wrapper .remember-forgot label input {
-  accent-color: #0B5EBF;
+  accent-color: #3498db;
   margin-right: 3px;
   transform: scale(1.5);
 }
@@ -2211,12 +2556,12 @@ button,
 }
 #register .wrapper .remember-forgot a:hover {
   text-decoration: underline;
-  color: #0B5EBF;
+  color: #3498db;
 }
 #register .wrapper .btn {
   width: 100%;
   height: 45px;
-  background: #FFAA11;
+  background: #e67e22;
   border: none;
   outline: none;
   border-radius: 40px;
@@ -2227,8 +2572,8 @@ button,
   font-size: 2em;
 }
 #register .wrapper .btn:hover {
-  color: #0B5EBF;
-  background-color: #0BBF64;
+  color: #3498db;
+  background-color: #2ecc71;
 }
 #register .wrapper .register-link {
   font-size: 1.8em;
@@ -2244,7 +2589,7 @@ button,
 }
 #register .wrapper .register-link p a:hover {
   text-decoration: underline;
-  color: #0B5EBF;
+  color: #3498db;
 }
 
 @media (min-width: 600px) {
@@ -2372,15 +2717,15 @@ button,
   width: 100%;
   border: none;
   border-radius: 40px;
-  background: #FFAA11;
+  background: #e67e22;
   color: #FFF;
   font-size: 1.5em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 #createMessage form fieldset input[type=submit]:hover {
-  background-color: #0BBF64;
-  color: #0B5EBF;
+  background-color: #2ecc71;
+  color: #3498db;
 }
 #createMessage a {
   color: #FFF;
@@ -2388,14 +2733,14 @@ button,
   font-size: 1.5em;
 }
 #createMessage a:hover {
-  color: #0B5EBF;
+  color: #3498db;
 }
 
 .confirmation-message {
   padding: 15px;
   border: 1px solid #FFF;
-  background-color: #0BBF64;
-  color: #0B5EBF;
+  background-color: #2ecc71;
+  color: #3498db;
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 20px;
@@ -2455,77 +2800,77 @@ button,
 #messageslist h1 {
   padding: 10px;
   text-align: center;
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
   font-size: 1.5em;
 }
 #messageslist form {
   display: flex;
   justify-content: center;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #messageslist form input[type=text] {
   width: 50%;
   padding: 10px;
-  border-radius: 5px #FFAA11;
-  border: 1px solid #0B5EBF;
+  border-radius: 5px #e67e22;
+  border: 1px solid #3498db;
   font-size: 2em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
 }
 #messageslist form button {
   padding: 0.8em;
   border: none;
-  background-color: #FFAA11;
+  background-color: #e67e22;
   font-size: 1.5em;
-  color: #0B5EBF;
+  color: #3498db;
   cursor: pointer;
   font-weight: bold;
 }
 #messageslist form button:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #messageslist table {
   width: 100%;
   min-height: 100vh;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   border-collapse: collapse;
 }
 #messageslist table th,
 #messageslist table td {
   padding: 0.5em;
   text-align: center;
-  border: 1px solid #FFAA11;
+  border: 1px solid #e67e22;
   vertical-align: middle;
   font-size: 1.3em;
   font-weight: bold;
-  color: #0B5EBF;
+  color: #3498db;
   border: none;
 }
 #messageslist table th {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
 }
 #messageslist table tr:nth-child(even) {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   color: #FFF;
 }
 #messageslist table tr:nth-child(odd) {
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   color: #FFF;
 }
 #messageslist table a {
-  color: #0B5EBF;
-  border: 1px solid #0B5EBF;
+  color: #3498db;
+  border: 1px solid #3498db;
   padding: 0.5em;
   border-radius: 5px;
   font-size: 1.1em;
   display: inline-block;
   margin: 0 0.5em;
-  background-color: #FFAA11;
+  background-color: #e67e22;
 }
 #messageslist table a:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #messageslist #delete-modal {
   display: none;
@@ -2544,12 +2889,12 @@ button,
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #messageslist #delete-modal p {
   margin-bottom: 20px;
   font-size: 1.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
 }
 #messageslist #delete-modal button {
@@ -2561,11 +2906,11 @@ button,
   cursor: pointer;
 }
 #messageslist #delete-modal button:first-of-type {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   color: #fff;
 }
 #messageslist #delete-modal button:last-of-type {
-  background-color: #FFAA11;
+  background-color: #e67e22;
   color: #fff;
 }
 #messageslist #delete-modal button:hover {
@@ -2575,8 +2920,8 @@ button,
 .success-message {
   padding: 15px;
   border: 1px solid #FFF;
-  background-color: #0BBF64;
-  color: #0B5EBF;
+  background-color: #2ecc71;
+  color: #3498db;
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 20px;
@@ -2668,12 +3013,12 @@ html {
   align-items: center;
   width: 100vw;
   padding: 1em;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #messageView h1 {
   margin-bottom: 0.5em;
-  color: #0B5EBF;
-  border: 1px solid #0B5EBF;
+  color: #3498db;
+  border: 1px solid #3498db;
   border-radius: 5px;
   padding: 0.5em;
   font-weight: bold;
@@ -2694,14 +3039,14 @@ html {
 #messageView h2 .label,
 #messageView p .label {
   text-decoration: underline;
-  color: #0B5EBF;
+  color: #3498db;
   border-radius: 5px;
   font-size: 1.5em;
   text-align: center;
 }
 #messageView h2 .content,
 #messageView p .content {
-  color: #0BBF64;
+  color: #2ecc71;
   margin-top: 1em;
   font-size: 1.8em;
   text-align: center;
@@ -2712,7 +3057,7 @@ html {
   margin-top: 3em;
 }
 #messageView form fieldset {
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   border-radius: 5px;
   padding: 1em;
   display: flex;
@@ -2722,27 +3067,27 @@ html {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
 }
 #messageView form fieldset legend {
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
   padding: 0 0.5em;
 }
 #messageView form fieldset button {
   padding: 0.5em 1em;
   font-weight: bold;
-  color: #0B5EBF;
-  background-color: #FFAA11;
-  border: 1px solid #0B5EBF;
+  color: #3498db;
+  background-color: #e67e22;
+  border: 1px solid #3498db;
   border-radius: 5px;
   cursor: pointer;
 }
 #messageView form fieldset button:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #messageView .uploaded-images {
   margin-top: 20px;
 }
 #messageView .uploaded-images h2 {
-  color: #0B5EBF;
+  color: #3498db;
   text-align: center;
   font-size: 2em;
   font-weight: bold;
@@ -2761,10 +3106,10 @@ html {
   max-height: 150px;
 }
 #messageView .uploaded-images .uploaded-image a {
-  color: #0B5EBF;
+  color: #3498db;
   font-size: 1.8em;
-  background-color: #FFAA11;
-  border: 1px solid #0B5EBF;
+  background-color: #e67e22;
+  border: 1px solid #3498db;
   padding: 0.5em;
   text-align: center;
   width: 100%;
@@ -2772,7 +3117,7 @@ html {
   margin-top: 5px;
 }
 #messageView .uploaded-images .uploaded-image a:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 @media screen and (min-width: 481px) {
   #messageView .form-container {
@@ -2853,19 +3198,19 @@ html {
   height: 100vh;
   width: 100vw;
   padding: 1em;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #messagesEdit h1 {
   text-align: center;
   margin-bottom: 0.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
   font-size: 2em;
   padding: 0.5em;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #messagesEdit form {
   width: 100%;
@@ -2875,16 +3220,16 @@ html {
 }
 #messagesEdit form fieldset {
   width: 90%;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   padding: 1em;
   margin: 0.5em 0;
 }
 #messagesEdit form fieldset label {
   margin-bottom: 0.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-size: 1.8em;
 }
 #messagesEdit form fieldset input,
@@ -2892,7 +3237,7 @@ html {
   width: 100%;
   padding: 0.5em;
   border-radius: 5px;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   margin-bottom: 1em;
   font-size: 1.8em;
 }
@@ -2903,21 +3248,21 @@ html {
   padding: 0.5em 2em;
   border-radius: 5px;
   font-weight: bold;
-  background-color: #FFAA11;
-  color: #0B5EBF;
+  background-color: #e67e22;
+  color: #3498db;
 }
 #messagesEdit form fieldset input[type=submit]:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #messagesEdit a {
   margin-top: 1em;
-  color: #0B5EBF;
+  color: #3498db;
   text-decoration: none;
   font-size: 2em;
   text-decoration: underline;
 }
 #messagesEdit a:hover {
-  color: #0BBF64;
+  color: #2ecc71;
 }
 @media screen and (min-width: 481px) {
   #messagesEdit h1 {
@@ -2982,13 +3327,13 @@ html {
   justify-content: center;
   min-height: 100vh;
   padding: 1em;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   text-align: center;
 }
 #updateProfil .message {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   border: 1px solid #d6e9c6;
-  color: #0B5EBF;
+  color: #3498db;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -3000,17 +3345,17 @@ html {
   display: inline-block;
   text-align: center;
   margin-bottom: 0.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
   font-size: 2.1em;
   padding: 0.5em;
   font-family: "Lato", sans-serif;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
 }
 #updateProfil h2 {
-  color: #0B5EBF;
+  color: #3498db;
   margin-bottom: 1.5em;
   font-size: 1.5em;
 }
@@ -3029,7 +3374,7 @@ html {
 #updateProfil form fieldset label {
   display: block;
   margin-bottom: 1em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
   font-size: 1.8em;
 }
@@ -3037,11 +3382,11 @@ html {
   width: 100%;
   padding: 1em;
   border-radius: 4px;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
 }
 #updateProfil form fieldset input[type=submit] {
-  background-color: #FFAA11;
-  color: #0B5EBF;
+  background-color: #e67e22;
+  color: #3498db;
   font-size: 1.8em;
   border: none;
   padding: 1em;
@@ -3051,7 +3396,7 @@ html {
   border-radius: 5px;
 }
 #updateProfil form fieldset input[type=submit]:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 @media screen and (min-width: 481px) {
   #updateProfil form fieldset label,
@@ -3088,68 +3433,68 @@ html {
 #userList h1 {
   padding: 10px;
   text-align: center;
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
   font-size: 1.8em;
 }
 #userList form {
   display: flex;
   justify-content: center;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #userList form input[type=text] {
   width: 50%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   font-size: 2em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
 }
 #userList form button {
   padding: 0.8em;
   border: none;
-  background-color: #FFAA11;
+  background-color: #e67e22;
   font-size: 1.5em;
-  color: #0B5EBF;
+  color: #3498db;
   cursor: pointer;
   font-weight: bold;
 }
 #userList form button:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #userList table {
   width: 100%;
   min-height: 100vh;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   border-collapse: collapse;
 }
 #userList table th,
 #userList table td {
   padding: 0.5em;
   text-align: center;
-  border: 1px solid #FFAA11;
+  border: 1px solid #e67e22;
   vertical-align: middle;
   font-size: 1.3em;
   font-weight: bold;
-  color: #0B5EBF;
+  color: #3498db;
   border: none;
 }
 #userList table th {
-  background-color: #0B5EBF;
+  background-color: #3498db;
   color: #FFF;
 }
 #userList table tr:nth-child(even) {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   color: #FFF;
 }
 #userList table tr:nth-child(odd) {
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   color: #FFF;
 }
 #userList table a {
-  color: #0B5EBF;
-  border: 1px solid #0B5EBF;
+  color: #3498db;
+  border: 1px solid #3498db;
   padding: 0.5em;
   border-radius: 5px;
   font-size: 1.1em;
@@ -3157,7 +3502,7 @@ html {
   margin: 0 0.5em;
 }
 #userList table a:hover {
-  background-color: #FFAA11;
+  background-color: #e67e22;
 }
 #userList #delete-modal {
   display: none;
@@ -3176,12 +3521,12 @@ html {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #userList #delete-modal p {
   margin-bottom: 20px;
   font-size: 1.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
 }
 #userList #delete-modal button {
@@ -3193,11 +3538,11 @@ html {
   cursor: pointer;
 }
 #userList #delete-modal button:first-of-type {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
   color: #fff;
 }
 #userList #delete-modal button:last-of-type {
-  background-color: #FFAA11;
+  background-color: #e67e22;
   color: #fff;
 }
 #userList #delete-modal button:hover {
@@ -3207,8 +3552,8 @@ html {
 .success-message {
   padding: 15px;
   border: 1px solid #FFF;
-  background-color: #0BBF64;
-  color: #0B5EBF;
+  background-color: #2ecc71;
+  color: #3498db;
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 20px;
@@ -3300,19 +3645,19 @@ html {
   height: 100vh;
   width: 100vw;
   padding: 1em;
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #editUser h1 {
   text-align: center;
   margin-bottom: 0.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-weight: bold;
   font-size: 2em;
   padding: 0.5em;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
 }
 #editUser form {
   width: 100%;
@@ -3322,16 +3667,16 @@ html {
 }
 #editUser form fieldset {
   width: 90%;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
-  background-color: #D3D3D3;
+  background-color: #ecf0f1;
   padding: 1em;
   margin: 0.5em 0;
 }
 #editUser form fieldset label {
   margin-bottom: 0.5em;
-  color: #0B5EBF;
+  color: #3498db;
   font-size: 1.8em;
 }
 #editUser form fieldset input,
@@ -3339,7 +3684,7 @@ html {
   width: 100%;
   padding: 0.5em;
   border-radius: 5px;
-  border: 1px solid #0B5EBF;
+  border: 1px solid #3498db;
   margin-bottom: 1em;
   font-size: 1.8em;
 }
@@ -3350,21 +3695,21 @@ html {
   padding: 0.5em 2em;
   border-radius: 5px;
   font-weight: bold;
-  background-color: #FFAA11;
-  color: #0B5EBF;
+  background-color: #e67e22;
+  color: #3498db;
 }
 #editUser form fieldset input[type=submit]:hover {
-  background-color: #0BBF64;
+  background-color: #2ecc71;
 }
 #editUser a {
   margin-top: 1em;
-  color: #0B5EBF;
+  color: #3498db;
   text-decoration: none;
   font-size: 2em;
   text-decoration: underline;
 }
 #editUser a:hover {
-  color: #0BBF64;
+  color: #2ecc71;
 }
 @media screen and (min-width: 481px) {
   #editUser h1 {
