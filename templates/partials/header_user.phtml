@@ -1,10 +1,20 @@
+
+
+
 <header id="headerUser">
    
  <nav class="navbar-mobile">
+     <div class="logo">
+         <a href="/projet-final-v2/accueil" title="Accédez à la page d'accueil">
+             <span class="drive">Drive</span>
+             <span class="safe">Safe</span>
+             <span class="control">Control</span>
+         </a>
+     </div>
    <i class="fas fa-bars"></i>   
      <div class="modal"> 
       <ul class="navbar-mobile-list">
-        <li class="logo"><a href="/projet-final-v2/homepage" title="Accédez à la page d'accueil"><span class="drive">Drive</span><span class="safe" >Safe</span><span class="control">Control</span></a></li>
+        <li class="logo"><a href="/projet-final-v2/accueil" title="Accédez à la page d'accueil"><span class="drive">Drive</span><span class="safe" >Safe</span><span class="control">Control</span></a></li>
         <li><a href="/projet-final-v2/services" title="Nos services">Prestations</a></li>
         <li><a href="/projet-final-v2/create_message" title="Nous contacter">Contacts</a></li>
         <li><a href="/projet-final-v2/calendar_user" title="Prendre rendez-vous">Réservez </a></li>
@@ -22,19 +32,42 @@
     <!-- Menu pour l'utilisateur connecté -->
     <ul >
         <li class="logo" >
-            <a href="/projet-final-v2/homepage" title="Accédez à la page d'accueil" ><span class="drive">Drive</span><span class="safe" >Safe</span><span class="control">Control</span></a>
+            <a href="/projet-final-v2/accueil" title="Accédez à la page d'accueil" ><span class="drive">Drive</span><span class="safe" >Safe</span><span class="control">Control</span></a>
         </li>
         <li><a href="/projet-final-v2/services" title="Nos services">Prestations</a></li>
         <li><a href="/projet-final-v2/create_message" title="Nous contacter">Contact</a></li>
         <li><a href="/projet-final-v2/calendar_user" title="Prendre rendez-vous">Réservez </a></li>
+        <div class="social-icons-desktop">
         <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-x-twitter twitter-icon" title="lien twitter"></i></a></li>
         <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook facebook-icon" title="lien facebook"></i></a></li>
         <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram instagram-icon" title="lien instagram"></i></a></li>
+        <li>&nbsp;</li>
         <li><a href="/projet-final-v2/update_profile"><i class="fa-solid fa-user" title="Modifier mon profil"></i></a></li>
-        <li><a href="/projet-final-v2/deconnexion"><i class="fa-solid fa-right-from-bracket" title="Se déconnecter"></i></a></li>
+        <li><a href="/projet-final-v2/deconnexion"><i class="fa-solid fa-right-from-bracket exit" title="Se déconnecter"></i></a></li>
+        </div>
+        
+        
       <div class="indicator"></div> 
     </ul>
 </nav>
+<div class="user-barre">
+     <?php
+    // Vérifiez si l'utilisateur est connecté
+    if (isset($_SESSION['user_id'])) {
+        // Instanciez UserManager
+        $userManager = new UserManager();
+        
+        // Obtenez les informations de l'utilisateur à partir de la base de données
+        $user = $userManager->getUserById($_SESSION['user_id']);
+        
+        if ($user) {
+            // Affichez le first name et last name de l'utilisateur connecté
+            echo 'Bienvenue, ' . htmlspecialchars($user->getFirst_name()) . ' ' . htmlspecialchars($user->getLast_name()) . ' !';
+        }
+    }
+    ?>
+    </div>
+</div>
 </header>
 
 <script type="text/javascript" src="assets/js/header.js"></script>

@@ -1,27 +1,77 @@
 @import '../general/_typography.scss';
 @import '../general/_vars.scss';
-@import '../general/_style.scss';
+@import '../general/style.scss';
 
 
 #headerUser {
 
+
+
+    .user-barre {
+        background: #000;
+        color: #FFF;
+        padding: 0 2em;
+        text-align: right;
+        font-size: 1.5em;
+
+    }
     .banniere-titre {
         margin-bottom: 1em;
     }
     .navbar-mobile {
-        display: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff; // Ajout d'un fond blanc
+        padding: 0.5em;
+        position: fixed;
+        width: 100%;
+        height: 5em;
+        z-index: 999;
 
+        .logo {
+            display: flex;
+            align-items: center;
+            margin: 1em 0 0 1em;
+
+
+
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 2em;
+                span {
+                    display: inline-block;
+                }
+
+                span.drive {
+                    color: $color-blue;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+                span.safe {
+                    color: $color-green;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+                span.control {
+                    color: $color-orange;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    margin-right: -2px;
+                }
+            }
+        }
 
 
 
         i.fas.fa-bars {
             position: fixed;
             z-index: 999;
-            top: 1em;
-            right: 1.8em;
-            font-size: 8vw;
+            top: 0.4em;
+            right: 1em;
+            font-size: 3em;
             color: $color-orange;
-            min-width: 40px; // Définissez une largeur minimale pour garantir qu'elle reste visible
+            min-width: 40px;
             min-height: 40px;
         }
 
@@ -35,8 +85,8 @@
             width: 100%;
             opacity: 0.9;
             z-index: 3;
-            display: flex; // Ajouté pour activer flexbox
-            justify-content: center; // Centré horizontalement
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
 
@@ -75,10 +125,12 @@
         }
     }
 
+
+
     .social-icons-mobile {
         display: flex;
         position: relative;
-        top: 15em;
+        top: 3em;
         z-index: 3;
 
         a {
@@ -125,7 +177,7 @@
                     a {
                         letter-spacing: -1px;
                         span.drive {
-                            color: $color-blue; // Couleur pour "Drive"
+                            color: $color-blue;
                             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                             margin-right: -2px;
                         }
@@ -136,29 +188,28 @@
 
                         }
                         span.control {
-                            color: $color-orange; // Couleur pour "Control"
+                            color: $color-orange;
                             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                             margin-right: -2px;
                         }
 
                         span {
-                            position: relative; // Position relative pour le déplacement
-                            right: -100%; // Position initiale à l'extérieur du cadre
-                            opacity: 0; // Rendre initialement transparent
-                            // Animation
+                            position: relative;
+                            right: -100%;
+                            opacity: 0; // Animation
                             animation: slide-in 1s ease-out forwards;
                         }
 
                         span.drive {
-                            animation-delay: 1s; // Délai de 1 seconde pour "Drive"
+                            animation-delay: 1s;
                         }
 
                         span:nth-child(2) {
-                            animation-delay: 2s; // Délai de 2 secondes pour "Safe"
+                            animation-delay: 2s;
                         }
 
                         span.control {
-                            animation-delay: 3s; // Délai de 3 secondes pour "Control"
+                            animation-delay: 3s;
                         }
                     }
                 }
@@ -175,17 +226,18 @@
             display: flex;
             justify-content: space-between;
             padding: 0;
-            background-color: $color-grey;
+            background-color: $color-white;
             height: 10em;
             align-items: center;
+            border-bottom: solid 3px $color-blue;
 
 
             ul {
-                display: flex; // Ajouté pour aligner horizontalement
-                justify-content: space-around; // Ajouté pour espacer les éléments
-                width: 100%; // Ajouté pour occuper toute la largeur
-                margin: 0; // Ajouté pour enlever les marges
-                padding: 0; // Ajouté pour enlever les paddings
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                margin: 0;
+                padding: 0;
                 position: relative;
 
 
@@ -194,26 +246,27 @@
             }
 
             li {
-                position: relative; // Ajouté pour le positionnement correct de l'indicateur
-                z-index: 1; // Ajouté pour mettre les liens au-dessus de l'indicateur
+                position: relative;
+                z-index: 1;
             }
 
             .indicator {
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                height: 5px; // Hauteur de l'indicateur
+                height: 3px; // Hauteur de l'indicateur
                 width: 0;
-                background-color: $color-green; // Couleur de l'indicateur
+                background-color: $color-blue; // Couleur de l'indicateur
                 transition: all 0.5s ease; // Animation
             }
 
 
 
             a {
-                color: $color-blue;
-                font-weight: 700;
-                font-size: 3em;
+                color: #000;
+                font-weight: 300;
+                font-size: 2em;
+                text-transform: uppercase;
 
 
                 transition: color 0.3s ease, background-color 0.3s ease;
@@ -221,7 +274,23 @@
 
 
         }
+        .social-icons-desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            li {
+                margin: 0 2em;
+            }
 
+            a {
+                font-size: 2.5em;
+            }
+        }
+        .exit {
+            color: red;
+            font-size: 1.3em;
+        }
 
         .navbar-mobile {
             display: none;
@@ -235,6 +304,7 @@
             display: block;
         }
     }
+
 
 
 

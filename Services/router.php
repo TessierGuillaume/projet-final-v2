@@ -27,6 +27,11 @@ class Router
 
 public function checkRoute($route): void
 {
+    
+     if (empty($route)) {
+        $route = 'accueil'; // Si $route est vide, on le définit à 'accueil'
+    }
+    
     $routeParts = explode("/", $route);
 
      if ($routeParts[0] === 'accueil') {
@@ -83,7 +88,7 @@ public function checkRoute($route): void
          $this->serviceController->updateServices();
         } else {
             // handle the case where no route matches
-            $this->serviceController->render('public/404/404.phtml', ['error_message' => 'Route non trouvée']);
+        $this->homepageController->index();
         }
     }
 }
