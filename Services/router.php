@@ -86,7 +86,11 @@ public function checkRoute($route): void
         $this->eventController->getServices();
     }elseif ($routeParts[0] === 'update_services') {
          $this->serviceController->updateServices();
-        } else {
+    }elseif ($routeParts[0] === 'legal_notice') {
+         $this->homepageController->legalNotice();
+    }elseif ($routeParts[0] === 'faq') {
+         $this->homepageController->faq();
+    } else {
             // handle the case where no route matches
         $this->homepageController->index();
         }

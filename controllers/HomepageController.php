@@ -43,4 +43,16 @@ class HomepageController extends AbstractController
             $this->render('public/contact/contact.phtml');
         }
     }
+    
+    
+        
+    public function legalNotice()
+{
+   $this->render('templates/public/legal_notice/legal_notice.phtml');
+}
+    
+    public function faq()
+{
+   $this->render('templates/public/faq/faq.phtml');
+}
 }

@@ -8,12 +8,14 @@
     padding: 0;
 
 
-    h1 {
+    h2 {
         padding: 10px;
         text-align: center;
         background-color: $color-blue;
         color: $color-white;
         font-size: 1.8em;
+        text-transform: uppercase;
+        margin-top: 4em;
     }
     form {
         display: flex;
@@ -28,17 +30,23 @@
             border: 1px solid $color-blue;
             font-size: 2em;
             color: $color-blue;
-            font-weight: bold;
+            margin: 0.2em 0;
+
         }
 
         button {
             padding: 0.8em;
-            border: none;
-            background-color: $color-orange;
+            border: 1px solid $color-blue;
+            background-color: $color-white;
             font-size: 1.5em;
             color: $color-blue;
             cursor: pointer;
-            font-weight: bold;
+            border-radius: 5px;
+            width: 7em;
+            margin: 0.3em;
+            text-transform: uppercase;
+
+
 
             &:hover {
                 background-color: $color-green;
@@ -56,10 +64,8 @@
         td {
             padding: 0.5em;
             text-align: center;
-            border: 1px solid $color-orange;
             vertical-align: middle;
-            font-size: 1.3em;
-            font-weight: bold;
+            font-size: 1.8em;
             color: $color-blue;
             border: none;
         }
@@ -70,7 +76,7 @@
         }
 
         tr:nth-child(even) {
-            background-color: $color-green;
+            background-color: $color-white;
             color: $color-white;
         }
 
@@ -84,11 +90,12 @@
             border: 1px solid $color-blue;
             padding: 0.5em;
             border-radius: 5px;
+            background: $color-white;
             font-size: 1.1em;
             display: inline-block;
             margin: 0 0.5em;
             &:hover {
-                background-color: $color-orange;
+                background-color: $color-green;
             }
         }
     }
@@ -131,7 +138,7 @@
             cursor: pointer;
 
             &:first-of-type {
-                background-color: $color-green;
+                background-color: $color-white;
                 color: #fff;
             }
 
@@ -182,7 +189,7 @@
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-    // Mode tablette
+
     table {
         display: table;
         th,
@@ -196,6 +203,8 @@
         }
     }
 }
+
+
 
 @media screen and (min-width: 1025px) {
     // Mode desktop

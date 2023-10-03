@@ -37,7 +37,6 @@ setInterval(function() {
     img_slider[etape].classList.add('active');
 }, 9000);
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const promoOctober = document.getElementById('promo-october');
     const closeBtn = document.createElement('button');
@@ -45,10 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
     closeBtn.classList.add('close-button');
 
-
     closeBtn.addEventListener('click', () => {
         promoOctober.style.display = 'none';
     });
 
     promoOctober.appendChild(closeBtn);
+    
+    // Le code pour faire disparaître le curseur à la fin de l'animation de frappe
+    const sliderTitle = document.querySelector('.slider-title');
+
+    sliderTitle.addEventListener('animationend', (e) => {
+        if (e.animationName === 'typing') {
+            sliderTitle.style.animation = 'hide-cursor 0.5s forwards';
+        }
+    });
 });

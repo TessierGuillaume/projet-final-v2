@@ -10,7 +10,7 @@
     background-image: url("../../images/background-road.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center ;
     animation: backgroundGrow 20s infinite alternate;
     @keyframes backgroundGrow {
         0% {
@@ -25,18 +25,18 @@
         width: 520px; // Modification ici pour cohérence
         background: transparent;
         border: 2px solid rgba(255, 255, 255, .2);
-        backdrop-filter: blur(20px);
         box-shadow: 0 0 10px rgba(0, 0, 0, .5);
         color: $color-white;
         border-radius: 10px;
-        padding: 30px 40px;
+        padding: 1em;
+        margin: 1.5em;
         font-family: $font-button; // Ajout pour cohérence
-
         h2 {
             font-size: 3em;
             text-align: center;
             margin-bottom: 20px;
-            font-family: $font-button; // Ajout pour cohérence
+            font-family: $font-button;
+            text-transform: uppercase;
         }
 
         .form-errors {
@@ -56,6 +56,8 @@
                 left: 70px;
                 transform: translateY(-50%);
                 font-size: 0.8em;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
             }
             .hidden {
                 display: none;
@@ -116,13 +118,13 @@
         .btn {
             width: 100%;
             height: 45px;
-            background: $color-orange;
+            background: $color-white;
             border: none;
             outline: none;
             border-radius: 40px;
             box-shadow: 0 0 10px rgba(0, 0, 0, .1);
             cursor: pointer;
-            color: $color-white;
+            color: $color-blue;
             margin-bottom: 20px;
             font-size: 2em;
         }
@@ -154,7 +156,8 @@
 }
 
 @media (min-width: 600px) {
-    #register .wrapper .input-box { // Modification ici pour corriger le sélecteur
+    #register .wrapper .input-box {
+        // Modification ici pour corriger le sélecteur
         .icon {
             font-size: 1.8em;
         }
@@ -166,7 +169,8 @@
 }
 
 @media (min-width: 900px) {
-    #register .wrapper .input-box { // Modification ici pour corriger le sélecteur
+    #register .wrapper .input-box {
+        // Modification ici pour corriger le sélecteur
         .icon {
             font-size: 2em;
         }

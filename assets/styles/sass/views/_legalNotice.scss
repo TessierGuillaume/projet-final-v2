@@ -1,0 +1,96 @@
+@import '../general/_vars.scss';
+@import '../general/style.scss';
+@import '../general/typography.scss';
+
+#legalNotice {
+
+    background-image: url('../../images/femme-contente.jpg');
+    background-size: cover; // Fait en sorte que l'image de fond couvre toute la zone
+    background-position: center; // Centre l'image de fond
+    background-attachment: fixed; // L'image de fond reste fixe lors du défilement
+    min-height: 100vh;
+    margin: 0; // Aucune marge pour #legalNotice
+    width: 100vw;
+    background-position: top 25% right 25%;
+    .contenair-legal-notice {
+        background-color: $color-grey;
+        opacity: 0.9;
+        margin: 6em 2em 0 2em;
+        padding: 1em;
+
+        font-size: 1.4em;
+        line-height: 1.6;
+
+    }
+
+    h1,
+    h2,
+    h3 {
+        margin-top: 1.5em;
+    }
+    h1 {
+        text-align: center;
+        color: $color-blue;
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    ul {
+        margin-bottom: 1.5em;
+    }
+
+    p {
+        margin-bottom: 1.2em;
+    }
+    @media (min-width: 768px) {
+
+
+        font-size: 1.6em;
+
+        .contenair-legal-notice {
+            font-size: 1.6em;
+            margin: 0;
+
+
+
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+
+        h2 {
+            font-size: 2em;
+        }
+
+
+    }
+    @media (min-width: 1024px) {
+
+        width: 100vw;
+        min-height: 100vh;
+
+
+        .contenair-legal-notice {
+            font-size: 1.6em;
+           
+
+
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+
+
+        h2 {
+            font-size: 2.3em;
+        }
+
+    }
+}

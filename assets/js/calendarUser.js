@@ -132,10 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Vérifie si le jour est un samedi ou un dimanche
         if (dayOfWeek === 0 || dayOfWeek === 6) {
-          Swal.fire('Erreur', 'Le contrôle technique est ouvert du lundi au vendredi de 8h00 à 18h00.', 'error');
+          Swal.fire('Désolé', 'Le contrôle technique est ouvert du lundi au vendredi de 8h00 à 18h00.', 'error');
           return;
         }
         const timeSlots = getTimeSlotsForDate(info.date, eventList);
+        if (timeSlots.length === 0) {
+          Swal.fire('Désolé', 'Tous les créneaux sont pris pour cette date.', 'error');
+          return;
+        }
         const timeOptionsHTML = timeSlots.map(slot => {
           const startTime = slot.start.format('HH:mm');
           const endTime = slot.end.format('HH:mm');

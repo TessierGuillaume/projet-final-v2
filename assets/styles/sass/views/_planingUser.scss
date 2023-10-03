@@ -48,18 +48,21 @@
 #planing-user {
     padding: 10px;
     background-color: $color-grey;
+    margin: 4em 0 3em 2em;
+    width: 96%;
 
 
 
 
 
     h1 {
-        font-size: 1.2em;
+        font-size: 1.23em;
         text-align: center;
         margin-bottom: 20px;
         color: $color-blue;
-        font-weight: bold;
-        text-decoration: $color-orange wavy underline;
+        text-transform: uppercase;
+
+
     }
 
     #calendar_user {
@@ -73,43 +76,43 @@
     }
 
     .weekend {
-        background-color: $color-orange !important;
+        background-color: lighten($color-orange, 20%);
+
     }
 
     .day-full {
-        background-color: $color-blue !important;
+        background-color: lighten(red, 15%);
     }
 
     .day-available {
-        background-color: $color-green;
+        background-color: lighten($color-green, 10%);
     }
 
     .fc .fc-button-primary {
-        color: #FFFFFF;
-        background-color: $color-blue !important;
-        border-color: #FFFFFF !important;
+        color: $color-white;
+        background-color: $color-blue;
+        border-color: $color-white;
         font-size: 1em; // Taille de police initiale réduite pour les mobiles
     }
 
     .fc-day {
         font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
         font-family: $font-button;
-        color: $color-blue;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-        font-weight: bold;
+        color: $color-black;
+
+
     }
 
     .fc-toolbar-title {
         color: $color-blue;
         padding: 0.2em;
         box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-        font-weight: bold;
         text-transform: uppercase;
         border: 1px solid $color-blue;
     }
     .fc-timegrid-slot-label-cushion {
-        color: $color-blue;
-        font-weight: bold;
+        color: $color-black;
+
     }
 
 
@@ -135,7 +138,6 @@
             color: $color-blue;
             padding: 0.5em;
             box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-            font-weight: bold;
             text-transform: uppercase;
             border: 1px solid $color-blue;
         }
@@ -157,7 +159,6 @@
             color: $color-blue;
             padding: 0.5em;
             box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-            font-weight: bold;
             text-transform: uppercase;
             border: 1px solid $color-blue;
         }

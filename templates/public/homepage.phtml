@@ -3,19 +3,21 @@
     <!--<h1>Homepage </h1>-->
     
      <section id="slider-promo-section">
-        <figure class="slider">
+
+        <section class="slider">
              <?php if (isset($_SESSION['user_id'])): ?> <!--affiche le lien que si l'utilisateur est connecté-->
             <a href="/projet-final-v2/calendar_user" class="btn-appointment">Prendre un rendez-vous</a>
             <?php endif; ?>
-
-                <img src="assets/images/femme-contente.jpg" alt="" class="img_slider active">
+                <h1 class="slider-title">Contrôle Technique de Qualité à Pont-Péan</h1>
+                <img src="assets/images/femme-contente.jpg" alt="Femme contente après contrôle technique" class="img_slider active">
                 <img src="assets/images/homme-tablette.jpg" alt="" class="img_slider">
                 <img src="assets/images/bureau.jpg" alt="" class="img_slider">
                 <img src="assets/images/controle-voiture.jpg" alt="" class="img_slider">
                 <img src="assets/images/facade-controle.jpg" alt="" class="img_slider">
                 <div class="suivant"><i class="fa-sharp fa-solid fa-circle-right"></i></div>
                 <div class="precedent"><i class="fa-sharp fa-solid fa-circle-left"></i></div>
-               <!-- Bouton pour prendre rendez-vous -->
+               
+</section>
 
     <aside id="promo-october">
     <h2>Offre Spéciale Octobre !</h2>

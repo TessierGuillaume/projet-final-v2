@@ -9,6 +9,7 @@
 }
 
 
+
 .swal2-popup .swal2-styled.swal2-cancel {
 
     font-size: 1.5em;
@@ -27,7 +28,6 @@
 .swal2-popup .swal2-title {
     color: $color-blue;
     font-size: 2em;
-    font-weight: bold;
 
 }
 
@@ -46,13 +46,14 @@
 #planing-admin {
     padding: 10px;
     background-color: $color-grey;
+    width: 96vw;
+    margin: 4em 0 3em 2em;
 
     h1 {
         font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
         text-align: center;
         margin-bottom: 20px;
         color: $color-blue;
-        font-weight: bold;
         text-decoration: $color-orange wavy underline;
     }
 
@@ -67,11 +68,11 @@
     }
 
     .weekend {
-        background-color: $color-orange !important;
+        background-color: $color-orange;
     }
 
     .day-full {
-        background-color: $color-blue !important;
+        background-color: $color-blue;
     }
 
     .day-available {
@@ -80,43 +81,45 @@
 
     .fc .fc-button-primary {
         color: #FFFFFF;
-        background-color: $color-blue !important;
-        border-color: #FFFFFF !important;
-        font-size: 1em; // Taille de police initiale réduite pour les mobiles
+        background-color: $color-blue;
+        border-color: #FFFFFF;
+        font-size: 1em;
     }
 
     .fc-day {
-        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
+        font-size: 1.2em;
         font-family: $font-button;
         color: $color-blue;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-        font-weight: bold;
+
+
+
     }
+
+
 
     .fc-toolbar-title {
         color: $color-blue;
         padding: 0.2em;
         box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-        font-weight: bold;
         text-transform: uppercase;
         border: 1px solid $color-blue;
     }
     .fc-list-event-title {
-        font-size: 1.5em;
-        /* Augmentez la taille de la police des titres des événements */
+        font-size: 1.3em;
+
     }
 
     .fc-list-event-time {
-        font-size: 1.5em;
-        /* Augmentez la taille de la police des horaires des événements */
+        font-size: 1.1em;
+
     }
 
     .fc-list-day-cushion {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .fc-timegrid-slot-label-cushion {
         color: $color-blue;
-        font-weight: bold;
+
     }
     .fc-event-main {
         color: $color-white;
@@ -149,7 +152,6 @@
             color: $color-blue;
             padding: 0.5em;
             box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-            font-weight: bold;
             text-transform: uppercase;
             border: 1px solid $color-blue;
         }
@@ -171,7 +173,6 @@
             color: $color-blue;
             padding: 0.5em;
             box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-            font-weight: bold;
             text-transform: uppercase;
             border: 1px solid $color-blue;
         }

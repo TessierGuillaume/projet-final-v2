@@ -129,6 +129,7 @@
         position: relative;
         top: 3em;
         z-index: 3;
+        margin-left: 2em;
 
         a {
             margin: 20px;
@@ -296,6 +297,7 @@
         }
         .navbar-mobile {
             display: block;
+            top: 0;
         }
     }
 

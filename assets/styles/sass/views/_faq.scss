@@ -1,0 +1,76 @@
+@import '../general/_typography.scss';
+@import '../general/_vars.scss';
+@import '../general/style.scss';
+
+#faq {
+    width: 94vw;
+    margin: 8em 2em 2em 1em;
+    padding: 0.5em;
+    background-color: $color-grey;
+    overflow-y: auto;
+
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-blue;
+        font-size: 2em;
+    }
+
+
+    h2 {
+        margin: 2em 0 2em 0em;
+        font-weight: bold;
+        font-size: 1.8em;
+        text-align: center;
+
+    }
+    .hidden {
+        display: none;
+
+    }
+
+    button.toggle-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $color-blue;
+        padding: 0;
+        margin: 1em;
+    }
+
+    dl {
+        margin-top: 1rem;
+        text-align: center;
+        dt {
+            font-weight: bold;
+            margin: 1em;
+            font-size: 1.6em;
+        }
+
+        dd {
+            margin-left: 1em;
+            font-size: 1.4em;
+        }
+    }
+
+
+    @media (min-width: 768px) {
+        width: 90vw;
+        margin: 6em auto;
+        padding: 1em;
+
+        h1 {
+            font-size: 2.5em;
+        }
+    }
+    @media (min-width: 1024px) {
+        width: 80vw;
+        margin: 4em auto;
+        padding: 2em;
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+}
