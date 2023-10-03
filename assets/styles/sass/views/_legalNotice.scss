@@ -5,19 +5,18 @@
 #legalNotice {
 
     background-image: url('../../images/femme-contente.jpg');
-    background-size: cover; // Fait en sorte que l'image de fond couvre toute la zone
-    background-position: center; // Centre l'image de fond
-    background-attachment: fixed; // L'image de fond reste fixe lors du défilement
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
-    margin: 0; // Aucune marge pour #legalNotice
+    margin: 0;
     width: 100vw;
     background-position: top 25% right 25%;
-    .contenair-legal-notice {
+    .container-legal-notice {
         background-color: $color-grey;
         opacity: 0.9;
         margin: 6em 2em 0 2em;
         padding: 1em;
-
         font-size: 1.4em;
         line-height: 1.6;
 
@@ -50,7 +49,7 @@
 
         font-size: 1.6em;
 
-        .contenair-legal-notice {
+        .container-legal-notice {
             font-size: 1.6em;
             margin: 0;
 
@@ -75,9 +74,9 @@
         min-height: 100vh;
 
 
-        .contenair-legal-notice {
+        .container-legal-notice {
             font-size: 1.6em;
-           
+
 
 
         }

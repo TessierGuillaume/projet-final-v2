@@ -44,6 +44,11 @@
                     color: $color-white;
                     font-size: 1.8em;
                     text-align: center;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: $color-blue;
+                    }
                 }
             }
         }

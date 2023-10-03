@@ -3,28 +3,40 @@
 @import '../general/style.scss';
 
 #faq {
-    width: 94vw;
-    margin: 8em 2em 2em 1em;
-    padding: 0.5em;
-    background-color: $color-grey;
-    overflow-y: auto;
+    background-image: url('../../images/femme-contente.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    width: 100vw;
+    background-position: top 25% right 25%;
 
+    .container-faq {
+        background-color: $color-grey;
+        opacity: 0.9;
+        margin: 6em 2em 0 2em;
+        padding: 1em;
+        font-size: 1.4em;
+        line-height: 1.3;
 
+    }
     h1 {
         text-align: center;
         text-transform: uppercase;
         color: $color-blue;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
 
     h2 {
         margin: 2em 0 2em 0em;
         font-weight: bold;
-        font-size: 1.8em;
+        font-size: 1.3em;
         text-align: center;
 
     }
+
     .hidden {
         display: none;
 
@@ -36,7 +48,8 @@
         cursor: pointer;
         color: $color-blue;
         padding: 0;
-        margin: 1em;
+        margin: 0.5em;
+        font-size: 1em;
     }
 
     dl {
@@ -45,32 +58,60 @@
         dt {
             font-weight: bold;
             margin: 1em;
-            font-size: 1.6em;
+            font-size: 1.3em;
         }
 
         dd {
             margin-left: 1em;
-            font-size: 1.4em;
+            font-size: 1.3em;
         }
     }
 
 
     @media (min-width: 768px) {
-        width: 90vw;
-        margin: 6em auto;
-        padding: 1em;
+
+        font-size: 1.6em;
+
+        .container-faq {
+            font-size: 1.6em;
+            margin: 0;
+
+
+
+        }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 1.8em;
         }
+
+
+        h2 {
+            font-size: 1.6em;
+        }
+
+
     }
     @media (min-width: 1024px) {
-        width: 80vw;
-        margin: 4em auto;
-        padding: 2em;
+        width: 100vw;
+        min-height: 100vh;
+
+
+        .container-faq {
+            font-size: 1.4em;
+
+
+
+        }
 
         h1 {
-            font-size: 3em;
+            font-size: 1.8em;
         }
+
+
+
+        h2 {
+            font-size: 1.6em;
+        }
+
     }
 }

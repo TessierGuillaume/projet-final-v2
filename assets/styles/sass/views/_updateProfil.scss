@@ -1,16 +1,29 @@
 @import '../general/_typography.scss';
 @import '../general/_vars.scss';
-@import '../general/style.scss';
+@import '../general/_style.scss';
 
 #updateProfil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+    background-image: url('../../images/homme-tablette.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
-    padding: 1em;
-    background-color: $color-grey;
-    text-align: center;
+    margin: 0;
+    width: 100vw;
+    background-position: top 35% right 33%;
+
+    .container-profil {
+        background-color: $color-grey;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 1em;
+        text-align: center;
+    }
 
     .message {
         background-color: $color-green;
@@ -29,7 +42,7 @@
         text-align: center;
         margin-bottom: 0.5em;
         color: $color-blue;
-        font-weight: bold;
+        text-transform: uppercase;
         font-size: 2.1em;
         padding: 0.5em;
         font-family: $font-title;
@@ -60,7 +73,7 @@
                 display: block;
                 margin-bottom: 1em;
                 color: $color-blue;
-                font-weight: bold;
+                text-transform: uppercase;
                 font-size: 1.8em;
             }
 
@@ -72,7 +85,7 @@
             }
 
             input[type="submit"] {
-                background-color: $color-orange;
+                background-color: $color-white;
                 color: $color-blue;
                 font-size: 1.8em;
                 border: none;
@@ -81,6 +94,7 @@
                 border-radius: 4px;
                 width: 100%;
                 border-radius: 5px;
+                text-transform: uppercase;
             }
 
             input[type="submit"]:hover {

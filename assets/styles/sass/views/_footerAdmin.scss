@@ -2,7 +2,7 @@
 @import '../general/_vars.scss';
 @import '../general/_style.scss';
 
-#footerUser {
+#footerAdmin {
 
     position: relative;
     background-color: #2B2B2B;
@@ -42,7 +42,7 @@
 
                     &:hover {
                         text-decoration: underline;
-                        color: $color-green;
+                        color: $color-blue;
                     }
                 }
             }
