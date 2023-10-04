@@ -2,7 +2,7 @@
 @import '../general/_typography.scss';
 
 #homepage {
-          margin-right: 0.5em;
+    margin-right: 0.5em;
     .btn-appointment {
         background-color: $color-white;
         color: $color-black;
@@ -62,17 +62,6 @@
             text-align: center;
             margin: 8em 2em 0 2em;
 
-
-            @media screen and (min-width: 768px) {
-                margin: 2em 2em 0 2em;
-                height: 500px;
-            }
-
-            @media screen and (min-width: 1024px) {
-                height: 600px;
-                margin: 2em 2em 0 2em;
-            }
-
             .slider-title {
                 position: absolute;
                 top: 50%;
@@ -82,7 +71,7 @@
                 z-index: 2;
                 font-size: 1.3em;
                 text-transform: uppercase;
-                background-color: rgba(0, 0, 0, 0.5); // Noir avec une transparence de 70%
+                background-color: rgba(0, 0, 0, 0.5);
                 padding: 0.3em 0;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
                 overflow: hidden;
@@ -91,19 +80,10 @@
                 animation: typing 6s steps(50, end) forwards,
                 blink-caret 0.75s step-end 6s,
                 hide-cursor 0.1s step-end 6s forwards;
-
-
-                @media screen and (min-width: 768px) {
-                    font-size: 2.5em;
-                }
-
-                @media screen and (min-width: 1024px) {
-                    font-size: 3em;
-                }
             }
         }
-
     }
+
 
 
 
@@ -122,8 +102,7 @@
         &.active {
             opacity: 1;
         }
-    }
-//  flèche pour changement de photo pour slider enlever pour meilleur désign possibilité de les remettres si utilité
+    } //  flèche pour changement de photo pour slider enlever pour meilleur désign possibilité de les remettres si utilité
     // .suivant,
     // .precedent {
     //     color: #fff;
@@ -155,7 +134,6 @@
 
 
 #schedule-section {
-
     margin: 2em;
 
     .container-homepage {
@@ -164,39 +142,24 @@
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 2em;
+    }
 
-        @media screen and (min-width: 601px) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: stretch;
-        }
+    .schedule-container,
+    address {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        margin-top: 1em;
+    }
 
-        .schedule-container,
-        address {
-            width: 100%;
-            height: 100%;
-            border-radius: 30px;
-            margin-top: 1em;
-            @media screen and (min-width: 601px) {
-                width: 45%;
-                margin-left: 1em;
-            }
-        }
-
-        .map-container {
-            width: 100%;
-
-            @media screen and (min-width: 601px) {
-                width: 45%;
-            }
-
-            iframe {
-                width: 100%;
-                height: auto;
-            }
-        }
+    .map-container {
+        width: 100%;
     }
 }
+
+
+
+
 
 #schedule-table {
     width: 100%;
@@ -294,18 +257,6 @@ address {
     }
 }
 
-@media (min-width: 768px) {
-    .container-homepage {
-        .schedule-container,
-        .map-container,
-        address,
-        #testimonials {
-            flex: 1 0 calc(50% - 10px); // 50% de la largeur totale moins 10px pour les marges
-            margin: 5px;
-
-        }
-    }
-}
 
 
 
@@ -331,10 +282,6 @@ address {
     justify-content: space-between;
     align-items: flex-start;
     align-items: stretch;
-
-    @media screen and (min-width: 601px) {
-        flex-direction: row;
-    }
 }
 
 .map-container {
@@ -345,22 +292,10 @@ address {
     box-shadow: 3px 5px 13px -2px #000000;
     border-radius: 30px;
     overflow: hidden;
+
     iframe {
         width: 100%;
         min-width: 100%;
-    }
-
-    @media screen and (min-width: 601px) {
-        order: 1;
-        width: auto;
-        margin: 2em 1em 0 0;
-        border-radius: 30px;
-        overflow: hidden;
-        iframe {
-            width: 100%;
-            min-width: 100%;
-            height: 100%;
-        }
     }
 }
 
@@ -382,9 +317,6 @@ address {
     }
     p {
         font-size: 1.8em;
-
-
-
     }
     span {
         margin-top: 10px;
@@ -394,11 +326,6 @@ address {
     }
     .testimonial-card {
         margin: 3em;
-
-    }
-
-    @media screen and (min-width: 601px) {
-        order: 2;
     }
 
     .stars {
@@ -415,8 +342,8 @@ address {
 
 #promo-october {
     position: fixed;
-    top: 20%;
-    right: 0;
+    top: 30%;
+    right: 12%;
     width: 300px;
     background-color: lighten($color-black, 15%);
     padding: 20px;
@@ -478,6 +405,106 @@ address {
             margin-bottom: 10px;
             font-size: 1.3em;
 
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #homepage {
+
+        #slider-promo-section .slider {
+            margin: 2em 2em 0 2em;
+            height: auto;
+        }
+
+        #slider-promo-section .slider .slider-title {
+            font-size: 2.5em;
+        }
+
+        .container-homepage {
+            .schedule-container,
+            .map-container,
+            address,
+            #testimonials {
+                flex: 1 0 calc(50% - 10px); // 50% de la largeur totale moins 10px pour les marges
+                margin: 5px;
+
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 601px) {
+
+    #homepage {
+
+        #slider-promo-section .slider .slider-title {
+            font-size: 2.5em;
+        }
+        #slider-promo-section .slider {
+            height: auto;
+            margin: 2em 2em 0 2em;
+        }
+        #testimonials {
+            order: 2;
+        }
+
+        .map-and-testimonials {
+            flex-direction: row;
+        }
+
+        .map-container {
+            order: 1;
+            width: auto;
+            margin: 2em 1em 0 0;
+            border-radius: 30px;
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+                min-width: 100%;
+                height: 100%;
+            }
+        }
+
+        #schedule-section .container-homepage {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        #schedule-section .schedule-container,
+        #schedule-section address {
+            width: 45%;
+            margin-left: 1em;
+        }
+
+        #schedule-section .map-container {
+            width: 45%;
+        }
+
+        #schedule-section .map-container iframe {
+            width: 100%;
+            height: 450px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #homepage {
+
+
+        #slider-promo-section .slider {
+            height: 600px;
+            margin: 2em 2em 0 2em;
+        }
+
+
+        #slider-promo-section .slider .slider-title {
+            font-size: 3em;
         }
     }
 }

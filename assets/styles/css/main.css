@@ -167,18 +167,6 @@ button,
   text-align: center;
   margin: 8em 2em 0 2em;
 }
-@media screen and (min-width: 768px) {
-  #homepage #slider-promo-section .slider {
-    margin: 2em 2em 0 2em;
-    height: 500px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #homepage #slider-promo-section .slider {
-    height: 600px;
-    margin: 2em 2em 0 2em;
-  }
-}
 #homepage #slider-promo-section .slider .slider-title {
   position: absolute;
   top: 50%;
@@ -195,16 +183,6 @@ button,
   white-space: nowrap;
   border-right: 0.15em solid white;
   animation: typing 6s steps(50, end) forwards, blink-caret 0.75s step-end 6s, hide-cursor 0.1s step-end 6s forwards;
-}
-@media screen and (min-width: 768px) {
-  #homepage #slider-promo-section .slider .slider-title {
-    font-size: 2.5em;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #homepage #slider-promo-section .slider .slider-title {
-    font-size: 3em;
-  }
 }
 #homepage img {
   object-fit: cover;
@@ -232,38 +210,15 @@ button,
   align-items: stretch;
   margin-bottom: 2em;
 }
-@media screen and (min-width: 601px) {
-  #schedule-section .container-homepage {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-}
-#schedule-section .container-homepage .schedule-container,
-#schedule-section .container-homepage address {
+#schedule-section .schedule-container,
+#schedule-section address {
   width: 100%;
   height: 100%;
   border-radius: 30px;
   margin-top: 1em;
 }
-@media screen and (min-width: 601px) {
-  #schedule-section .container-homepage .schedule-container,
-  #schedule-section .container-homepage address {
-    width: 45%;
-    margin-left: 1em;
-  }
-}
-#schedule-section .container-homepage .map-container {
+#schedule-section .map-container {
   width: 100%;
-}
-@media screen and (min-width: 601px) {
-  #schedule-section .container-homepage .map-container {
-    width: 45%;
-  }
-}
-#schedule-section .container-homepage .map-container iframe {
-  width: 100%;
-  height: auto;
 }
 
 #schedule-table {
@@ -346,15 +301,6 @@ address fieldset a:hover {
   color: #3498db;
 }
 
-@media (min-width: 768px) {
-  .container-homepage .schedule-container,
-  .container-homepage .map-container,
-  .container-homepage address,
-  .container-homepage #testimonials {
-    flex: 1 0 calc(50% - 10px);
-    margin: 5px;
-  }
-}
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -373,11 +319,6 @@ address fieldset a:hover {
   align-items: flex-start;
   align-items: stretch;
 }
-@media screen and (min-width: 601px) {
-  .map-and-testimonials {
-    flex-direction: row;
-  }
-}
 
 .map-container {
   flex: 1;
@@ -391,20 +332,6 @@ address fieldset a:hover {
 .map-container iframe {
   width: 100%;
   min-width: 100%;
-}
-@media screen and (min-width: 601px) {
-  .map-container {
-    order: 1;
-    width: auto;
-    margin: 2em 1em 0 0;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  .map-container iframe {
-    width: 100%;
-    min-width: 100%;
-    height: 100%;
-  }
 }
 
 #testimonials {
@@ -435,11 +362,6 @@ address fieldset a:hover {
 #testimonials .testimonial-card {
   margin: 3em;
 }
-@media screen and (min-width: 601px) {
-  #testimonials {
-    order: 2;
-  }
-}
 #testimonials .stars {
   display: flex;
   margin-top: 10px;
@@ -452,8 +374,8 @@ address fieldset a:hover {
 
 #promo-october {
   position: fixed;
-  top: 20%;
-  right: 0;
+  top: 30%;
+  right: 12%;
   width: 300px;
   background-color: #262626;
   padding: 20px;
@@ -505,6 +427,75 @@ address fieldset a:hover {
   font-size: 1.3em;
 }
 
+@media (min-width: 768px) {
+  #homepage #slider-promo-section .slider {
+    margin: 2em 2em 0 2em;
+    height: auto;
+  }
+  #homepage #slider-promo-section .slider .slider-title {
+    font-size: 2.5em;
+  }
+  #homepage .container-homepage .schedule-container,
+  #homepage .container-homepage .map-container,
+  #homepage .container-homepage address,
+  #homepage .container-homepage #testimonials {
+    flex: 1 0 calc(50% - 10px);
+    margin: 5px;
+  }
+}
+@media screen and (min-width: 601px) {
+  #homepage #slider-promo-section .slider .slider-title {
+    font-size: 2.5em;
+  }
+  #homepage #slider-promo-section .slider {
+    height: auto;
+    margin: 2em 2em 0 2em;
+  }
+  #homepage #testimonials {
+    order: 2;
+  }
+  #homepage .map-and-testimonials {
+    flex-direction: row;
+  }
+  #homepage .map-container {
+    order: 1;
+    width: auto;
+    margin: 2em 1em 0 0;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  #homepage .map-container iframe {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+  #homepage #schedule-section .container-homepage {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #homepage #schedule-section .schedule-container,
+  #homepage #schedule-section address {
+    width: 45%;
+    margin-left: 1em;
+  }
+  #homepage #schedule-section .map-container {
+    width: 45%;
+  }
+  #homepage #schedule-section .map-container iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #homepage #slider-promo-section .slider {
+    height: 600px;
+    margin: 2em 2em 0 2em;
+  }
+  #homepage #slider-promo-section .slider .slider-title {
+    font-size: 3em;
+  }
+}
 body,
 p {
   font-family: "Lexend", sans-serif;
@@ -1060,6 +1051,22 @@ html {
   margin-right: -2px;
 }
 @media screen and (min-width: 801px) {
+  #headerAdmin .social-icons-desktop a i {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  #headerAdmin .social-icons-desktop a i.exit {
+    margin-left: 4em;
+  }
+  #headerAdmin .social-icons-desktop a:hover i.twitter-icon,
+  #headerAdmin .social-icons-desktop a:hover i.facebook-icon,
+  #headerAdmin .social-icons-desktop a:hover i.instagram-icon {
+    color: blue;
+    transform: rotate(45deg);
+  }
+  #headerAdmin .social-icons-desktop a:hover i.exit {
+    color: green;
+    transform: rotate(360deg);
+  }
   #headerAdmin .navbar-mobile ul.navbar-mobile-list li.logo a,
   #headerAdmin .navbar-mobile ul li.logo a,
   #headerAdmin .navbar-desktop ul.navbar-mobile-list li.logo a,
@@ -1377,6 +1384,23 @@ html {
   margin-right: -2px;
 }
 @media screen and (min-width: 801px) {
+  #headerUser .social-icons-desktop a .fa-user {
+    margin-left: 2em;
+  }
+  #headerUser .social-icons-desktop a i {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  #headerUser .social-icons-desktop a:hover i.twitter-icon,
+  #headerUser .social-icons-desktop a:hover i.facebook-icon,
+  #headerUser .social-icons-desktop a:hover i.instagram-icon {
+    color: blue;
+    transform: rotate(45deg);
+  }
+  #headerUser .social-icons-desktop a:hover i.fa-solid.fa-user,
+  #headerUser .social-icons-desktop a:hover i.exit {
+    color: green;
+    transform: rotate(360deg);
+  }
   #headerUser .navbar-mobile ul.navbar-mobile-list li.logo a,
   #headerUser .navbar-mobile ul li.logo a,
   #headerUser .navbar-desktop ul.navbar-mobile-list li.logo a,
@@ -1676,6 +1700,15 @@ html {
   margin-right: -2px;
 }
 @media screen and (min-width: 801px) {
+  #headerVisitor .social-icons-desktop a i {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  #headerVisitor .social-icons-desktop a:hover i.twitter-icon,
+  #headerVisitor .social-icons-desktop a:hover i.facebook-icon,
+  #headerVisitor .social-icons-desktop a:hover i.instagram-icon {
+    color: blue;
+    transform: rotate(45deg);
+  }
   #headerVisitor .navbar-mobile ul.navbar-mobile-list li.logo a,
   #headerVisitor .navbar-mobile ul li.logo a,
   #headerVisitor .navbar-desktop ul.navbar-mobile-list li.logo a,
@@ -2208,15 +2241,9 @@ html {
   color: #FFF;
   padding: 2em 1em;
   display: flex;
-  min-height: 200px;
+  min-height: 20vh;
   flex-direction: column;
   text-align: center;
-}
-@media (min-width: 768px) {
-  #footerUser {
-    flex-direction: row;
-    text-align: center;
-  }
 }
 #footerUser nav {
   flex: 1;
@@ -2226,18 +2253,16 @@ html {
   margin-bottom: 0.5em;
   font-size: 2em;
   font-weight: bold;
-  color: #FFF;
 }
 #footerUser nav ul {
   padding: 0;
 }
 #footerUser nav ul li {
   margin: 0.5em 0;
-  color: #FFF;
 }
 #footerUser nav ul li a {
-  color: #FFF;
   font-size: 1.8em;
+  color: #FFF;
 }
 #footerUser nav ul li a:hover {
   text-decoration: underline;
@@ -2246,30 +2271,30 @@ html {
 #footerUser .footer-social ul {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
   font-size: 1.8em;
-  color: #FFF;
 }
 #footerUser .footer-social a {
   margin: 1em;
   font-size: 1.5em;
-  color: #FFF;
 }
 #footerUser .footer-social h3 {
   color: #FFF;
 }
-@media (min-width: 768px) {
-  #footerUser .footer-social ul {
-    justify-content: center;
-  }
-}
 #footerUser .copyright {
   text-align: center;
-  font-size: 0 0.8em;
+  font-size: 0.8em;
   color: #FFF;
 }
 @media (min-width: 768px) {
+  #footerUser {
+    flex-direction: row;
+    text-align: center;
+  }
+  #footerUser .footer-social ul {
+    justify-content: center;
+  }
   #footerUser .copyright {
     position: absolute;
     bottom: 1.5em;

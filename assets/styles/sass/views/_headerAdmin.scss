@@ -169,6 +169,34 @@
     }
 
     @media screen and (min-width: 801px) {
+
+        .social-icons-desktop {
+            a {
+                i {
+                    transition: color 0.3s ease, transform 0.3s ease; // Ajoutez transform ici
+                }
+
+                i.exit {
+                    margin-left: 4em; // Espace ajouté à gauche de l'icône 'exit'
+                }
+
+                &:hover {
+                    i.twitter-icon,
+                    i.facebook-icon,
+                    i.instagram-icon {
+                        color: blue;
+                        transform: rotate(45deg); // Ajoutez cette ligne pour la rotation
+                    }
+
+                    i.exit {
+                        color: green;
+                        transform: rotate(360deg); // Ajoutez cette ligne pour la rotation
+                    }
+                }
+            }
+        }
+
+
         .navbar-mobile,
         .navbar-desktop {
             ul.navbar-mobile-list,
@@ -323,6 +351,7 @@
             display: none;
         }
     }
+
     @media screen and (max-width: 800px) {
         .navbar-desktop {
             display: none;

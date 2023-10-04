@@ -172,6 +172,32 @@
     }
 
     @media screen and (min-width: 801px) {
+
+        .social-icons-desktop {
+            a {
+
+                .fa-user {
+                    margin-left: 2em;
+                }
+
+                i {
+                    transition: color 0.3s ease, transform 0.3s ease; // Ajoutez transform ici
+                }
+                &:hover {
+                    i.twitter-icon,
+                    i.facebook-icon,
+                    i.instagram-icon {
+                        color: blue;
+                        transform: rotate(45deg);
+                    }
+                    i.fa-solid.fa-user,
+                    i.exit {
+                        color: green;
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
         .navbar-mobile,
         .navbar-desktop {
             ul.navbar-mobile-list,
@@ -242,11 +268,9 @@
                 margin: 0;
                 padding: 0;
                 position: relative;
-
-
-
-
             }
+
+
 
             li {
                 position: relative;

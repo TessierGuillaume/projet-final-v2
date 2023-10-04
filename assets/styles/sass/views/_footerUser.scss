@@ -3,19 +3,14 @@
 @import '../general/_style.scss';
 
 #footerUser {
-
     position: relative;
     background-color: #2B2B2B;
     color: $color-white;
     padding: 2em 1em;
     display: flex;
-    min-height: 200px;
+    min-height: 20vh;
     flex-direction: column;
-    text-align: center; // Pour les écrans plus grands
-    @media (min-width: 768px) {
-        flex-direction: row;
-        text-align: center;
-    }
+    text-align: center;
 
     nav {
         flex: 1;
@@ -25,22 +20,17 @@
             margin-bottom: 0.5em;
             font-size: 2em;
             font-weight: bold;
-            color: $color-white;
         }
 
         ul {
-
             padding: 0;
-
 
             li {
                 margin: 0.5em 0;
-                color: $color-white;
 
                 a {
-
-                    color: $color-white;
                     font-size: 1.8em;
+                    color: $color-white;
 
                     &:hover {
                         text-decoration: underline;
@@ -55,34 +45,36 @@
         ul {
             display: flex;
             justify-content: center;
+            flex-direction: row;
             align-items: center;
-            text-align: center;
             font-size: 1.8em;
-            color: $color-white;
         }
 
         a {
             margin: 1em;
             font-size: 1.5em;
-            color: $color-white;
-        }
-        h3 {
-            color: $color-white;
         }
 
-        @media (min-width: 768px) {
-            ul {
-                justify-content: center;
-            }
+        h3 {
+            color: $color-white;
         }
     }
 
     .copyright {
         text-align: center;
-        font-size: 0 .8em;
+        font-size: 0.8em;
         color: $color-white;
+    }
 
-        @media (min-width: 768px) {
+    @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: center;
+
+        .footer-social ul {
+            justify-content: center;
+        }
+
+        .copyright {
             position: absolute;
             bottom: 1.5em;
             font-size: 1.6em;
