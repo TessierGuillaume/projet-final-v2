@@ -3,7 +3,6 @@
 @import '../general/_style.scss';
 
 #footerAdmin {
-
     position: relative;
     background-color: #2B2B2B;
     color: $color-white;
@@ -11,11 +10,7 @@
     display: flex;
     min-height: 200px;
     flex-direction: column;
-    text-align: center; // Pour les écrans plus grands
-    @media (min-width: 768px) {
-        flex-direction: row;
-        text-align: center;
-    }
+    text-align: center;
 
     nav {
         flex: 1;
@@ -25,7 +20,7 @@
             margin-bottom: 0.5em;
             font-size: 2em;
             font-weight: bold;
-            text-decoration: underline;
+
         }
 
         ul {
@@ -57,23 +52,32 @@
             text-align: center;
             font-size: 1.8em;
         }
+
         a {
             margin: 1em;
             font-size: 1.5em;
         }
-
-        @media (min-width: 768px) {
-            ul {
-                justify-content: center;
-            }
-        }
     }
+}
 
-    .copyright {
+.copyright {
+    text-align: center;
+    font-size: 0.8em;
+    color: $color-white;
+}
+
+// pour tablette et ordinateur
+@media (min-width: 768px) {
+    #footerAdmin {
+
+        flex-direction: row;
         text-align: center;
-        font-size: 0 .8em;
 
-        @media (min-width: 768px) {
+        .footer-social ul {
+            justify-content: center;
+        }
+
+        .copyright {
             position: absolute;
             bottom: 1.5em;
             font-size: 1.6em;

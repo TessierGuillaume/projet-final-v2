@@ -15,7 +15,7 @@
     .container-legal-notice {
         background-color: $color-grey;
         opacity: 0.9;
-        margin: 6em 2em 0 2em;
+        margin: 0em 2em 0 2em;
         padding: 1em;
         font-size: 1.4em;
         line-height: 1.6;
@@ -44,7 +44,11 @@
     p {
         margin-bottom: 1.2em;
     }
-    @media (min-width: 768px) {
+}
+
+// pour tablette
+@media (min-width: 768px) {
+    #legalNotice {
 
 
         font-size: 1.6em;
@@ -52,7 +56,7 @@
         .container-legal-notice {
             font-size: 1.6em;
             margin: 0;
-
+            margin: 0 2em 0 2em;
 
 
         }
@@ -68,14 +72,21 @@
 
 
     }
-    @media (min-width: 1024px) {
 
+
+
+}
+
+// pour ordinateur
+@media (min-width: 1024px) {
+    #legalNotice {
         width: 100vw;
         min-height: 100vh;
 
 
         .container-legal-notice {
             font-size: 1.6em;
+            margin: 0 3em 0 2em;
 
 
 
@@ -90,6 +101,5 @@
         h2 {
             font-size: 2.3em;
         }
-
     }
 }

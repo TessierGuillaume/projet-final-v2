@@ -12,7 +12,7 @@ class Event
     private string $end; 
     private ?int $serviceId; 
 
-    public function __construct(?int $id, ?int $userId, ?int $vehicleId, string $title, ?string $description, ?string $url, string $start, string $end)
+    public function __construct(?int $id, ?int $userId, ?int $vehicleId, string $title, ?string $description, ?string $url, string $start, string $end, ?int $serviceId)
     {
         $this->id = $id;
         $this->userId = $userId;

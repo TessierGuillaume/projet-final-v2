@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Code pour le menu mobile
+    // Gestion du menu mobile
     const icone = document.querySelector('.navbar-mobile i');
     const modal = document.querySelector('.modal');
 
+    // Écouteur pour l'icône du menu mobile
     icone.addEventListener('click', function() {
-        console.log("icone cliquée");
+// Basculer entre les classes pour ouvrir/fermer le menu
         modal.classList.toggle('change-modal');
         icone.classList.toggle('fa-times');
     });
-
-    // Code pour l'indicateur animé de la barre de navigation
-    // (Note: Cette partie du code ne sera pas utilisée pour l'instant puisque 
-    // votre menu admin n'a pas d'indicateur, mais je l'ai laissé au cas où vous 
-    // voudriez l'ajouter plus tard)
     const links = document.querySelectorAll('.navbar-desktop ul li');
     const indicator = document.querySelector('.navbar-desktop ul .indicator');
 
+    // Écouteurs d'événements pour les liens de la barre de navigation
     links.forEach(link => {
         link.addEventListener('mouseover', function() {
+            // Calculer la position et la taille de l'indicateur en fonction du lien survolé
             const linkBounds = link.getBoundingClientRect();
             const ulBounds = link.parentElement.getBoundingClientRect();
 
@@ -26,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         link.addEventListener('mouseout', function() {
+            // Réinitialiser la taille de l'indicateur lorsque la souris quitte le lien
             indicator.style.width = 0;
         });
     });

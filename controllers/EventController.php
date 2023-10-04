@@ -38,8 +38,8 @@ class EventController extends AbstractController
             // Récupération des données POST
             $startIso8601 = $_POST['start'];
             $endIso8601 = $_POST['end'];
-            $title = $_POST['title'];
-            $description = $_POST['description'];
+             $title = htmlspecialchars($_POST['title']);
+            $description = htmlspecialchars($_POST['description']);
 
             // Convertir les dates et heures au format compatible avec la base de données
             $startDateTime = new DateTime($startIso8601);
@@ -171,8 +171,9 @@ class EventController extends AbstractController
             // Récupération des données POST
             $startIso8601 = $_POST['start'];
             $endIso8601 = $_POST['end'];
-            $title = $_POST['title'];
+            $title = htmlspecialchars($_POST['title']);
             $description = null;
+            //voir pour mettre htmlspecialchars si besoin!
 
             // Convertir les dates et heures au format compatible avec la base de données
             $startDateTime = new DateTime($startIso8601);

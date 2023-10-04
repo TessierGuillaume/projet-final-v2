@@ -82,22 +82,22 @@
         color: white;
 
     }
+}
 
-    /* Styles spécifiques pour les écrans plus larges (à partir de 800px) */
-    @media (min-width: 800px) {
+// pour les écrans plus larges 
 
-        #services {
-            background-size: cover;
-            background-position: center;
-        }
+@media (min-width: 800px) {
+
+    #services {
+        background-size: cover;
+        background-position: center;
+
         .container {
             width: 95vw;
-
-            /* Réduire la largeur pour les écrans plus larges */
             margin: 0 auto;
         }
 
-        /* Afficher la quatrième colonne (Coût) et l'en-tête correspondant */
+        // Afficher la quatrième colonne (Coût) et l'en-tête correspondant 
         .container td:nth-child(4),
         .container th:nth-child(4) {
             display: table-cell;

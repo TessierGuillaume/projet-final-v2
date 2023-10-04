@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("../../images/background-road2.png");
-    background-size: 100% 100%;
+    background-image: url("../../images/bouteille-mer1.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
@@ -50,7 +50,7 @@
 
     p {
 
-        margin-bottom: 20px;
+        margin-bottom: 2em;
     }
 
     form {
@@ -68,7 +68,7 @@
         fieldset {
             width: 100%;
             border: none;
-            margin-bottom: 20px;
+            margin-bottom: 2em;
             position: relative;
 
             label {
@@ -83,18 +83,19 @@
                 padding: 10px;
                 border-radius: 10px;
                 border: 2px solid rgba(255, 255, 255, .2);
-                font-size: 1.5em;
-                color: $color-white;
-                background: transparent;
-                margin-top: 10px;
+                font-size: 1.4em;
+                color: $color-black;
+                background: white;
+                opacity: 0.7;
+                margin-top: 1em;
             }
 
             input[type="submit"] {
                 width: 100%;
                 border: none;
                 border-radius: 40px;
-                background: $color-orange;
-                color: $color-white;
+                background: $color-white;
+                color: $color-black;
                 font-size: 1.5em;
                 box-shadow: 0 0 10px rgba(0, 0, 0, .1);
                 cursor: pointer;
@@ -120,9 +121,9 @@
 
 .confirmation-message {
     padding: 15px;
-    border: 1px solid $color-white;
-    background-color: $color-green;
-    color: $color-blue;
+    border: 1px solid $color-blue;
+    background-color: $color-white;
+    color: $color-black;
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 20px;

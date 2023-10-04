@@ -1,18 +1,52 @@
 <?php
+
+
+/**
+ * @author : Gaellan
+ * @link : https://github.com/Gaellan
+ */
 abstract class AbstractManager
 {
     protected PDO $db;
 
 
 
-    public function __construct()
+  function __construct()
     {
-        try {
-            $this->db = new PDO("mysql:host=db.3wa.io;dbname=guillaumetessier_ControleTechnique;charset=utf8", "guillaumetessier", "1b75c35a36371d17570d1a25e38cb2af");
-            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            // Gérer l'erreur de connexion
-            die("Erreur de connexion: " . $e->getMessage());
+        $dbInfo = $this->getDatabaseInfo();
+
+        $connexion =
+            "mysql:host=" .
+            $dbInfo["host"] .
+            ";port=3306;charset=utf8;dbname=" .
+            $dbInfo["db_name"];
+        $this->db = new PDO($connexion, $dbInfo["user"], $dbInfo["password"]);
+    }
+
+    protected function getDatabaseInfo(): array
+    {
+        $handle = fopen("config/database.txt", "r");
+        $lineNbr = 0;
+        $info = [];
+
+        if ($handle) {
+            while (($line = fgets($handle)) !== false) {
+                if ($lineNbr === 0) {
+                    $info["user"] = trim($line);
+                } elseif ($lineNbr === 1) {
+                    $info["password"] = trim($line);
+                } elseif ($lineNbr === 2) {
+                    $info["host"] = trim($line);
+                } elseif ($lineNbr === 3) {
+                    $info["db_name"] = trim($line);
+                }
+
+                $lineNbr++;
+            }
+
+            fclose($handle);
         }
+
+        return $info;
     }
 }

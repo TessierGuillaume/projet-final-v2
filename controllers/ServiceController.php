@@ -39,6 +39,11 @@ public function showServicesPage()
 
 public function updateServices() {
     try {
+        // Vérification de l'authentification et de l'autorisation
+        if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+            throw new Exception("Vous n'êtes pas autorisé à effectuer cette action.");
+        }
+
         // Vérification de l'existence de l'ID dans les paramètres GET ou POST
         if (isset($_GET['Service_ID'])) {
             $id = $_GET['Service_ID'];
@@ -58,7 +63,13 @@ public function updateServices() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['Service_name']) && isset($_POST['Service_cost']) && isset($_POST['Vehicle_type'])) {
                 $name = htmlspecialchars($_POST['Service_name']);
-                $cost = htmlspecialchars($_POST['Service_cost']);
+                
+                // Validation du coût
+                if (!is_numeric($_POST['Service_cost'])) {
+                    throw new Exception("Le coût du service doit être un nombre.");
+                }
+                $cost = $_POST['Service_cost'];
+
                 $vehicle_type = htmlspecialchars($_POST['Vehicle_type']);
 
                 $this->serviceManager->updateService($id, $name, $cost, $vehicle_type);
@@ -73,9 +84,10 @@ public function updateServices() {
         $this->render('public/services/services.phtml', ['service' => $service]);
     } catch (Exception $e) {
         // Gestion des erreurs
-$this->render('public/404/404.phtml', ['error_message' => $e->getMessage()]);
+        $this->render('public/404/404.phtml', ['error_message' => $e->getMessage()]);
     }
 }
+
 
 
 }

@@ -4,6 +4,7 @@ class UserManager extends AbstractManager
 {
     public function getUserById(int $id): ?User
     {
+        // Requête SQL pour récupérer toutes les informations d'un utilisateur et son rôle associé en utilisant l'ID de l'utilisateur. 
         $query = $this->db->prepare("SELECT u.*, r.Role_Name FROM user u LEFT JOIN role r ON u.Role_ID = r.Role_ID WHERE u.User_ID = :id");
         $parameters = ["id" => $id];
         $query->execute($parameters);
@@ -116,6 +117,7 @@ class UserManager extends AbstractManager
     {
         $sql = "UPDATE user SET Email = :email, Last_name = :lastName, First_name = :firstName, Role_ID = :roleId WHERE User_ID = :id";
         $stmt = $this->db->prepare($sql);
+        // Lie la valeur de l'email de l'utilisateur au paramètre ":email" dans la requête SQL comme une chaîne de caractères.
         $stmt->bindValue(':email', $user->getEmail(), PDO::PARAM_STR);
         $stmt->bindValue(':lastName', $user->getLast_name(), PDO::PARAM_STR);
         $stmt->bindValue(':firstName', $user->getFirst_name(), PDO::PARAM_STR);

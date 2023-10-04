@@ -1,5 +1,5 @@
 let calendar; // Déclarez une variable pour stocker l'instance de votre calendrier
-
+// Ajuste la vue du calendrier en fonction de la taille de l'écran
 function adjustCalendarView() {
   if (window.innerWidth < 480) {
     calendar.changeView('timeGridWeek');
@@ -13,19 +13,20 @@ function adjustCalendarView() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar_user');
-
+  // Fonction asynchrone pour récupérer les données des événements
   async function fetchData() {
     const response = await fetch('event_index_user', {});
     return await response.json();
   }
 
   fetchData().then(eventList => {
+    // Filtrage des événements disponibles
     const availableEvents = eventList.filter(event => !event.User_ID);
-
+    // Génère les créneaux horaires disponibles pour une date donnée
     function getTimeSlotsForDate(date, eventList) {
       const selectedDate = moment(date);
       const options = [];
-
+      //code pour générer les créneaux horaires
       for (let i = 8; i < 18; i++) {
         for (let j = 0; j < 60; j += 45) {
           const startTimeHour = i;
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       return options;
     }
-
+    //Fonction asynchrone pour créer un nouvel événement
     async function createEvent(formData, clickedDate) {
       const options = {
         method: 'POST',
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
-
+    // Fonction pour vérifier la disponibilité d'une journée
     function checkDayAvailability(dateStr) {
       const date = moment(dateStr);
       const dayOfWeek = date.day(); // 0 = dimanche, 6 = samedi
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const timeSlots = getTimeSlotsForDate(date, eventList);
       return timeSlots.length === 0 ? '<div class="day-full"></div>' : '<div class="day-available"></div>';
     }
-
+    // Initialisation du calendrier FullCalendar
     calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth', // Définissez une vue initiale par défaut
 
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const timeSlots = getTimeSlotsForDate(date, eventList);
         return timeSlots.length === 0 ? ['day-full'] : ['day-available'];
       },
-
+      // Gestion du clic sur une date
       dateClick: function(info) {
         const selectedDate = moment(info.date);
         const dayOfWeek = selectedDate.day(); // 0 = dimanche, 6 = samedi
@@ -155,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         Swal.fire({
           title: 'Prendre un rendez-vous',
-          width: '50em', // Agrandit la largeur de la modale
-          padding: '1em', // Largeur personnalisée
+          width: '50em',
+          padding: '1em',
           html: `
       <input id="swalTitle" class="swal2-input" placeholder="Nom et prénom">
       <select id="swalTimeSlot" class="swal2-input">${timeOptionsHTML}</select>
@@ -165,11 +166,11 @@ document.addEventListener('DOMContentLoaded', function() {
           showCancelButton: true,
           cancelButtonColor: "#FFAA11",
           confirmButtonColor: "#0BBF64",
-          confirmButtonText: 'Envoyer', // Texte personnalisé pour le bouton de confirmation
-          cancelButtonText: 'Quitter', // Texte personnalisé pour le bouton d'annulation
+          confirmButtonText: 'Envoyer',
+          cancelButtonText: 'Quitter',
           customClass: {
-            confirmButton: 'swal-confirm-button', // Classe personnalisée pour le bouton de confirmation
-            cancelButton: 'swal-cancel-button' // Classe personnalisée pour le bouton d'annulation
+            confirmButton: 'swal-confirm-button',
+            cancelButton: 'swal-cancel-button'
           },
           preConfirm: () => {
             const title = document.getElementById('swalTitle').value;
@@ -194,7 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
       },
-      eventClick: function(info) {
+
+      // Gestion du clic sur un événement existant
+        eventClick: function(info) {
         info.jsEvent.preventDefault();
 
         const eventId = info.event.id;

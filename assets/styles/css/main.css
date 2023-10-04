@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
@@ -165,7 +164,7 @@ button,
   height: 400px;
   position: relative;
   text-align: center;
-  margin: 8em 2em 0 2em;
+  margin: 2em 2em 0 2em;
 }
 #homepage #slider-promo-section .slider .slider-title {
   position: absolute;
@@ -235,7 +234,7 @@ button,
 #schedule-table th,
 #schedule-table td {
   border: 1px solid #FFF;
-  padding: 0.5em;
+  padding: 1.5em;
 }
 #schedule-table th {
   background-color: #333333;
@@ -478,6 +477,7 @@ address fieldset a:hover {
   #homepage #schedule-section address {
     width: 45%;
     margin-left: 1em;
+    height: auto;
   }
   #homepage #schedule-section .map-container {
     width: 45%;
@@ -489,7 +489,7 @@ address fieldset a:hover {
 }
 @media screen and (min-width: 1024px) {
   #homepage #slider-promo-section .slider {
-    height: 600px;
+    height: 400px;
     margin: 2em 2em 0 2em;
   }
   #homepage #slider-promo-section .slider .slider-title {
@@ -942,7 +942,7 @@ html {
 #headerAdmin .navbar-mobile .logo {
   display: flex;
   align-items: center;
-  margin: 1em 0 0 1em;
+  margin: 1em 0 0 4em;
 }
 #headerAdmin .navbar-mobile .logo a {
   display: flex;
@@ -1020,8 +1020,9 @@ html {
 #headerAdmin .social-icons-mobile {
   display: flex;
   position: relative;
-  top: 3em;
+  top: 8em;
   z-index: 3;
+  margin-left: 5em;
 }
 #headerAdmin .social-icons-mobile a {
   margin: 20px;
@@ -2016,7 +2017,6 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top 25% right 25%;
-  /* Styles spécifiques pour les écrans plus larges (à partir de 800px) */
 }
 #services .container {
   overflow: hidden;
@@ -2073,17 +2073,14 @@ html {
   background-color: black;
   color: white;
 }
+
 @media (min-width: 800px) {
   #services {
-    /* Afficher la quatrième colonne (Coût) et l'en-tête correspondant */
-  }
-  #services #services {
     background-size: cover;
     background-position: center;
   }
   #services .container {
     width: 95vw;
-    /* Réduire la largeur pour les écrans plus larges */
     margin: 0 auto;
   }
   #services .container td:nth-child(4),
@@ -2091,7 +2088,6 @@ html {
     display: table-cell;
   }
 }
-
 body,
 p {
   font-family: "Lexend", sans-serif;
@@ -2136,74 +2132,64 @@ html {
 #footerVisitor nav {
   flex: 1;
   margin-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #footerVisitor nav h3 {
   margin-bottom: 0.5em;
   font-size: 2em;
   font-weight: bold;
-  text-align: center;
+  text-decoration: underline;
 }
 #footerVisitor nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
+  list-style: none;
+  padding: 0;
 }
 #footerVisitor nav ul li {
   margin: 0.5em 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 #footerVisitor nav ul li a {
   text-decoration: none;
   color: #FFF;
   font-size: 1.8em;
-  text-align: center;
 }
 #footerVisitor nav ul li a:hover {
   text-decoration: underline;
   color: #3498db;
 }
-#footerVisitor .footer-social h3 {
-  text-align: center;
-}
 #footerVisitor .footer-social ul {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1.8em;
-  list-style: none;
 }
 #footerVisitor .footer-social a {
-  margin: 0.5em;
+  margin: 1em;
   font-size: 1.5em;
 }
-#footerVisitor .copyright {
+
+.copyright {
   text-align: center;
   font-size: 0.8em;
+  color: #FFF;
 }
+
 @media (min-width: 768px) {
   #footerVisitor {
     flex-direction: row;
     text-align: center;
   }
+  #footerVisitor .footer-social ul {
+    justify-content: center;
+  }
   #footerVisitor .copyright {
     position: absolute;
-    bottom: 2em;
-    font-size: 1.8em;
+    bottom: 1.5em;
+    font-size: 1.6em;
     left: 0;
     right: 0;
     text-align: center;
   }
 }
-
 body,
 p {
   font-family: "Lexend", sans-serif;
@@ -2241,7 +2227,7 @@ html {
   color: #FFF;
   padding: 2em 1em;
   display: flex;
-  min-height: 20vh;
+  min-height: 200px;
   flex-direction: column;
   text-align: center;
 }
@@ -2255,14 +2241,16 @@ html {
   font-weight: bold;
 }
 #footerUser nav ul {
+  list-style: none;
   padding: 0;
 }
 #footerUser nav ul li {
   margin: 0.5em 0;
 }
 #footerUser nav ul li a {
-  font-size: 1.8em;
+  text-decoration: none;
   color: #FFF;
+  font-size: 1.8em;
 }
 #footerUser nav ul li a:hover {
   text-decoration: underline;
@@ -2271,22 +2259,21 @@ html {
 #footerUser .footer-social ul {
   display: flex;
   justify-content: center;
-  flex-direction: row;
   align-items: center;
+  text-align: center;
   font-size: 1.8em;
 }
 #footerUser .footer-social a {
   margin: 1em;
   font-size: 1.5em;
 }
-#footerUser .footer-social h3 {
-  color: #FFF;
-}
-#footerUser .copyright {
+
+.copyright {
   text-align: center;
   font-size: 0.8em;
   color: #FFF;
 }
+
 @media (min-width: 768px) {
   #footerUser {
     flex-direction: row;
@@ -2304,7 +2291,6 @@ html {
     text-align: center;
   }
 }
-
 body,
 p {
   font-family: "Lexend", sans-serif;
@@ -2346,12 +2332,6 @@ html {
   flex-direction: column;
   text-align: center;
 }
-@media (min-width: 768px) {
-  #footerAdmin {
-    flex-direction: row;
-    text-align: center;
-  }
-}
 #footerAdmin nav {
   flex: 1;
   margin-bottom: 1em;
@@ -2360,7 +2340,6 @@ html {
   margin-bottom: 0.5em;
   font-size: 2em;
   font-weight: bold;
-  text-decoration: underline;
 }
 #footerAdmin nav ul {
   list-style: none;
@@ -2389,16 +2368,21 @@ html {
   margin: 1em;
   font-size: 1.5em;
 }
+
+.copyright {
+  text-align: center;
+  font-size: 0.8em;
+  color: #FFF;
+}
+
 @media (min-width: 768px) {
+  #footerAdmin {
+    flex-direction: row;
+    text-align: center;
+  }
   #footerAdmin .footer-social ul {
     justify-content: center;
   }
-}
-#footerAdmin .copyright {
-  text-align: center;
-  font-size: 0 0.8em;
-}
-@media (min-width: 768px) {
   #footerAdmin .copyright {
     position: absolute;
     bottom: 1.5em;
@@ -2408,7 +2392,6 @@ html {
     text-align: center;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -2813,8 +2796,8 @@ button,
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("../../images/background-road2.png");
-  background-size: 100% 100%;
+  background-image: url("../../images/bouteille-mer1.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 20px;
@@ -2845,7 +2828,7 @@ button,
   color: #FFF;
 }
 #createMessage p {
-  margin-bottom: 20px;
+  margin-bottom: 2em;
 }
 #createMessage form {
   display: flex;
@@ -2862,7 +2845,7 @@ button,
 #createMessage form fieldset {
   width: 100%;
   border: none;
-  margin-bottom: 20px;
+  margin-bottom: 2em;
   position: relative;
 }
 #createMessage form fieldset label {
@@ -2876,17 +2859,18 @@ button,
   padding: 10px;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.5em;
-  color: #FFF;
-  background: transparent;
-  margin-top: 10px;
+  font-size: 1.4em;
+  color: #000;
+  background: white;
+  opacity: 0.7;
+  margin-top: 1em;
 }
 #createMessage form fieldset input[type=submit] {
   width: 100%;
   border: none;
   border-radius: 40px;
-  background: #e67e22;
-  color: #FFF;
+  background: #FFF;
+  color: #000;
   font-size: 1.5em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -2906,9 +2890,9 @@ button,
 
 .confirmation-message {
   padding: 15px;
-  border: 1px solid #FFF;
-  background-color: #2ecc71;
-  color: #3498db;
+  border: 1px solid #3498db;
+  background-color: #FFF;
+  color: #000;
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 20px;
@@ -3972,7 +3956,7 @@ html {
 #faq .container-faq {
   background-color: #F6F6F6;
   opacity: 0.9;
-  margin: 6em 2em 0 2em;
+  margin: 0em 2em 0 2em;
   padding: 1em;
   font-size: 1.4em;
   line-height: 1.3;
@@ -4014,6 +3998,7 @@ html {
   margin-left: 1em;
   font-size: 1.3em;
 }
+
 @media (min-width: 768px) {
   #faq {
     font-size: 1.6em;
@@ -4044,7 +4029,6 @@ html {
     font-size: 1.6em;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -4089,7 +4073,7 @@ button,
 #legalNotice .container-legal-notice {
   background-color: #F6F6F6;
   opacity: 0.9;
-  margin: 6em 2em 0 2em;
+  margin: 0em 2em 0 2em;
   padding: 1em;
   font-size: 1.4em;
   line-height: 1.6;
@@ -4113,6 +4097,7 @@ button,
 #legalNotice p {
   margin-bottom: 1.2em;
 }
+
 @media (min-width: 768px) {
   #legalNotice {
     font-size: 1.6em;
@@ -4120,6 +4105,7 @@ button,
   #legalNotice .container-legal-notice {
     font-size: 1.6em;
     margin: 0;
+    margin: 0 2em 0 2em;
   }
   #legalNotice h1 {
     font-size: 2.5em;
@@ -4135,6 +4121,7 @@ button,
   }
   #legalNotice .container-legal-notice {
     font-size: 1.6em;
+    margin: 0 3em 0 2em;
   }
   #legalNotice h1 {
     font-size: 3em;

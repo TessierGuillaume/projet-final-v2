@@ -15,12 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar_admin');
   const containerEl = document.getElementById('external-events');
   const checkbox = document.getElementById('drop-remove');
-
+  // Récupération des événements depuis un serveur
   fetch('event_index', {})
     .then(response => response.json())
     .then(eventList => {
 
+      // Initialisation de l'instance du calendrier
       calendar = new FullCalendar.Calendar(calendarEl, {
+        // Configuration du calendrier ici...
         initialView: window.innerWidth < 480 ? 'timeGridWeek' : 'dayGridMonth',
         hiddenDays: window.innerWidth < 480 ? [0, 6] : [],
         contentHeight: 'auto',
@@ -42,15 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
         selectable: true,
         editable: true,
         nowIndicator: true,
-
+        // Fonction appelée lors de la sélection d'une plage de temps ou d'une date
         select: async function(start, end, allDay) {
-
+          // Logique pour ajouter un nouvel événement
           const defaultStart = moment(start).set({ 'hour': 8, 'minute': 0, 'second': 0 });
           const defaultEnd = moment(start).set({ 'hour': 18, 'minute': 0, 'second': 0 });
 
           const { value: formValues } = await Swal.fire({
             title: 'Ajouter un événement',
-            width: '50em', // Agrandit la largeur de la modale
+            width: '50em',
             padding: '1em',
             confirmButtonText: 'Envoyer',
             cancelButtonText: 'Quitter',
@@ -112,11 +114,12 @@ document.addEventListener('DOMContentLoaded', function() {
           swalStartInput.value = defaultStart.format('YYYY-MM-DDTHH:mm:ss');
           swalEndInput.value = defaultEnd.format('YYYY-MM-DDTHH:mm:ss');
 
-          // ... Le reste de votre code ...
+
 
         },
         eventClick: function(info) {
-          // Code pour gérer le clic sur un événement existant
+          // Logique pour gérer le clic sur un événement existant
+
           info.jsEvent.preventDefault();
 
           const eventId = info.event.id;
@@ -126,10 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
           showEditForm(eventId);
         },
 
-        // ... (le reste de votre code)
+
 
       });
-
+      // Fonction asynchrone pour supprimer un événement
       async function deleteEvent(eventId) {
         const response = await fetch('/projet-final-v2/delete_event&id=' + eventId, {
           method: 'DELETE'
@@ -150,4 +153,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.addEventListener('resize', adjustCalendarView); // Ajustez la vue lors du redimensionnement de la fenêtre
+window.addEventListener('resize', adjustCalendarView);
+// Ajustez la vue lors du redimensionnement de la fenêtre

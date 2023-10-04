@@ -32,7 +32,7 @@
         .logo {
             display: flex;
             align-items: center;
-            margin: 1em 0 0 1em;
+            margin: 1em 0 0 4em;
 
 
 
@@ -130,9 +130,9 @@
     .social-icons-mobile {
         display: flex;
         position: relative;
-        top: 3em;
+        top: 8em;
         z-index: 3;
-
+        margin-left: 5em;
         a {
             margin: 20px;
         }

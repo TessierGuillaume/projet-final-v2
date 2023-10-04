@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return day >= 1 && day <= 5; // 1 pour lundi, 5 pour vendredi
     }
 
-    // Empêcher la soumission du formulaire si la date sélectionnée n'est pas un jour de semaine
+    // Ajouter un écouteur d'événement 'submit' au formulaire
     document.querySelector('form').addEventListener('submit', function (event) {
         const selectedDate = new Date(appointmentDateInput.value);
 

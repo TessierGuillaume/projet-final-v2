@@ -8,7 +8,7 @@
     color: $color-white;
     padding: 2em 1em;
     display: flex;
-    min-height: 20vh;
+    min-height: 200px;
     flex-direction: column;
     text-align: center;
 
@@ -20,17 +20,20 @@
             margin-bottom: 0.5em;
             font-size: 2em;
             font-weight: bold;
+
         }
 
         ul {
+            list-style: none;
             padding: 0;
 
             li {
                 margin: 0.5em 0;
 
                 a {
-                    font-size: 1.8em;
+                    text-decoration: none;
                     color: $color-white;
+                    font-size: 1.8em;
 
                     &:hover {
                         text-decoration: underline;
@@ -45,8 +48,8 @@
         ul {
             display: flex;
             justify-content: center;
-            flex-direction: row;
             align-items: center;
+            text-align: center;
             font-size: 1.8em;
         }
 
@@ -54,19 +57,19 @@
             margin: 1em;
             font-size: 1.5em;
         }
-
-        h3 {
-            color: $color-white;
-        }
     }
+}
 
-    .copyright {
-        text-align: center;
-        font-size: 0.8em;
-        color: $color-white;
-    }
+.copyright {
+    text-align: center;
+    font-size: 0.8em;
+    color: $color-white;
+}
 
-    @media (min-width: 768px) {
+// pour tablette et ordinateur
+@media (min-width: 768px) {
+    #footerUser {
+
         flex-direction: row;
         text-align: center;
 
