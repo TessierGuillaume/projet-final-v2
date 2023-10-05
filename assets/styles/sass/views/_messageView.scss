@@ -120,7 +120,7 @@
             a {
                 color: $color-blue;
                 font-size: 1.8em;
-                background-color: $color-orange;
+                background-color: $color-white;
                 border: 1px solid $color-blue;
                 padding: 0.5em;
                 text-align: center;
@@ -133,7 +133,7 @@
                 background-color: $color-green;
             }
         }
-    } // Styles pour tablettes et desktop
+    } // Styles pour tablettes
     @media screen and (min-width: 481px) {
 
         .form-container {

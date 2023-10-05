@@ -12,16 +12,19 @@ abstract class AbstractManager
 
 
   function __construct()
-    {
-        $dbInfo = $this->getDatabaseInfo();
+    {        // Récupère les informations de la base de données
 
+        $dbInfo = $this->getDatabaseInfo();
+// Construction de la chaîne de connexion
         $connexion =
             "mysql:host=" .
             $dbInfo["host"] .
             ";port=3306;charset=utf8;dbname=" .
             $dbInfo["db_name"];
+        // Initialisation de la connexion à la base de données
         $this->db = new PDO($connexion, $dbInfo["user"], $dbInfo["password"]);
     }
+    // Méthode pour obtenir les informations de la base de données
 
     protected function getDatabaseInfo(): array
     {
@@ -31,7 +34,8 @@ abstract class AbstractManager
 
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
-                if ($lineNbr === 0) {
+// Stocke les informations dans le tableau $info en fonction du numéro de ligne
+                 if ($lineNbr === 0) {
                     $info["user"] = trim($line);
                 } elseif ($lineNbr === 1) {
                     $info["password"] = trim($line);
@@ -41,12 +45,12 @@ abstract class AbstractManager
                     $info["db_name"] = trim($line);
                 }
 
-                $lineNbr++;
+                $lineNbr++;// Incrémente le numéro de ligne
             }
 
-            fclose($handle);
+            fclose($handle);// Ferme le fichier
         }
-
+ // Retourne le tableau d'informations
         return $info;
     }
 }

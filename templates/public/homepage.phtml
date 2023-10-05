@@ -1,151 +1,143 @@
 
-<main id="homepage" >
-    <!--<h1>Homepage </h1>-->
+    <main id="homepage" >
+        <!--<h1>Homepage </h1>-->
+        
+         <section id="slider-promo-section">
     
-     <section id="slider-promo-section">
-
-        <section class="slider">
-             <?php if (isset($_SESSION['user_id'])): ?> <!--affiche le lien que si l'utilisateur est connecté-->
-            <a href="/projet-final-v2/calendar_user" class="btn-appointment">Prendre un rendez-vous</a>
-            <?php endif; ?>
-                <h1 class="slider-title">Contrôle Technique de Qualité à Pont-Péan</h1>
-                <img src="assets/images/femme-contente.jpg" alt="Femme contente après contrôle technique" class="img_slider active">
-                <img src="assets/images/homme-tablette.jpg" alt="homme qui contrôle une voiture" class="img_slider">
-                <img src="assets/images/bureau.jpg" alt="accueil de l'entreprise" class="img_slider">
-                <div class="suivant"><i class="fa-sharp fa-solid fa-circle-right"></i></div>
-                <div class="precedent"><i class="fa-sharp fa-solid fa-circle-left"></i></div>
-               
-</section>
-
+            <section class="slider">
+                 <?php if (isset($_SESSION['user_id'])): ?> <!--affiche le lien que si l'utilisateur est connecté-->
+                <a href="/projet-final-v2/calendar_user" class="btn-appointment">Prendre un rendez-vous</a>
+                <?php endif; ?>
+                    <h1 class="slider-title">Contrôle Technique de Qualité à Pont-Péan</h1>
+                    <img src="assets/images/femme-contente.jpg" alt="Femme contente après contrôle technique" class="img_slider active">
+                    <img src="assets/images/homme-tablette.jpg" alt="homme qui contrôle une voiture" class="img_slider">
+                    <img src="assets/images/bureau.jpg" alt="accueil de l'entreprise" class="img_slider">
+                    <div class="suivant"><i class="fa-sharp fa-solid fa-circle-right"></i></div>
+                    <div class="precedent"><i class="fa-sharp fa-solid fa-circle-left"></i></div>
+            </section>
     <aside id="promo-october">
-    <h2>Offre Spéciale Octobre !</h2>
-    <p>20% de réduction sur nos services de contrôle technique et contre-visite.</p>
-    <h3>Détails de l'offre:</h3>
-    <ul>
-        <li>Économisez 15 € sur le contrôle technique.</li>
-        <li>Économisez 10 € sur la contre-visite.</li>
-    </ul>
-   
-    <h3>Comment en profiter?</h3>
-    <ul>
-        <li>Sur place ou en prenant rendez-vous en ligne.</li>
-    </ul>
-    <p>Offre valable uniquement en octobre.</p>
-</aside>
-
-
-    </section>
-    
-
-   
-    <article id="schedule-section">
-      <div class="container-homepage">   
-    <table id="schedule-table">
-        <thead>
-            <tr>
-                <th>Jour</th>
-                <th>Heures d'ouverture</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="open">
-                <td>Lundi</td>
-                <td>8h00 - 18h00</td>
-            </tr>
-            <tr class="open">
-                <td>Mardi</td>
-                <td>8h00 - 18h00</td>
-            </tr>
-            <tr class="open">
-                <td>Mercredi</td>
-                <td>8h00 - 18h00</td>
-            </tr>
-            <tr class="open">
-                <td>Jeudi</td>
-                <td>8h00 - 18h00</td>
-            </tr>
-            <tr class="open">
-                <td>Vendredi</td>
-                <td>8h00 - 18h00</td>
-            </tr>
-            <tr class="closed">
-                <td>Samedi</td>
-                <td>Fermé</td>
-            </tr>
-            <tr class="closed">
-                <td>Dimanche</td>
-                <td>Fermé</td>
-            </tr>
-        </tbody>
-    </table>
-   <address>
-    <fieldset>
-        <legend>nous trouver</legend>
-        
-        <section>
-            <h3>Adresse :</h3>
-            <a href="https://www.google.com/maps/search/?api=1&query=Za+le+Pont+Mahaud,+5+b+rue+du+Pont+Mahaud,+35131+Pont-Péan" target="_blank">
-                <p id="address"><i class="fa-solid fa-location-dot"></i>Za le Pont Mahaud, 5 b rue du Pont Mahaud, 35131 Pont-Péan</p>
-            </a>
-        </section>
-        
-        <section>
-            <h3>Téléphone :</h3>
-            <p id="phone"><a href="tel:+330290014415"><i class="fa-solid fa-phone"></i>0290014415</a></p>
-        </section>
-        
-        <section>
-            <h3>Email :</h3>
-            <p id="email"><a href="mailto:email@faux.com"><i class="fa-solid fa-envelope"></i>email@faux.com</a></p>
-        </section>
-    </fieldset>
-</address>
-
-    </div>
-    <div class="map-and-testimonials">
-    <div class="map-container">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.2924184035996!2d-1.700159823885021!3d48.00806016016948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480f1f8822f2a4cd%3A0x441fdd0a972258b7!2sContr%C3%B4le%20technique%20Pont%20P%C3%A9an%20Diagnosur!5e0!3m2!1sfr!2sfr!4v1693817963456!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
- <section id="testimonials">
-  <h2>Témoignages de nos clients</h2>
-  <div class="testimonial-card">
-    <p>"J'ai utilisé leurs services pour la première fois et je suis extrêmement satisfait. Le personnel est professionnel et sympathique."</p>
-    <span>- Jean Dupont</span>
-     <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-  </div>
-  <div class="testimonial-card">
-    <p>"Service rapide et efficace. Je recommande fortement cette entreprise pour tous vos besoins en contrôle technique."</p>
-    <span>- Marie Martin</span>
-    <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-  </div>
-  <div class="testimonial-card">
-    <p>"Je n'ai jamais eu une expérience aussi agréable pour un contrôle technique. Le personnel est compétent et les prix sont raisonnables."</p>
-    <span>- Ahmed Benali</span>
-    <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-    </div>
-  </div>
+        <h2>Offre Spéciale Octobre !</h2>
+        <p>20% de réduction sur nos services de contrôle technique et contre-visite.</p>
+        <h3>Détails de l'offre:</h3>
+        <ul>
+            <li>Économisez 15 € sur le contrôle technique.</li>
+            <li>Économisez 10 € sur la contre-visite.</li>
+        </ul>
+       
+        <h3>Comment en profiter?</h3>
+        <ul>
+            <li>Sur place ou en prenant rendez-vous en ligne.</li>
+        </ul>
+        <p>Offre valable uniquement en octobre.</p>
+    </aside>
 </section>
-</div>
- 
-
-    <!-- Slider et Promotions -->
-   
+        <section class="container-homepage">
+          <div class="schedule-section">   
+        <table id="schedule-table">
+            <thead>
+                <tr>
+                    <th>Jour</th>
+                    <th>Heures d'ouverture</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="open">
+                    <td>Lundi</td>
+                    <td>8h00 - 18h00</td>
+                </tr>
+                <tr class="open">
+                    <td>Mardi</td>
+                    <td>8h00 - 18h00</td>
+                </tr>
+                <tr class="open">
+                    <td>Mercredi</td>
+                    <td>8h00 - 18h00</td>
+                </tr>
+                <tr class="open">
+                    <td>Jeudi</td>
+                    <td>8h00 - 18h00</td>
+                </tr>
+                <tr class="open">
+                    <td>Vendredi</td>
+                    <td>8h00 - 18h00</td>
+                </tr>
+                <tr class="closed">
+                    <td>Samedi</td>
+                    <td>Fermé</td>
+                </tr>
+                <tr class="closed">
+                    <td>Dimanche</td>
+                    <td>Fermé</td>
+                </tr>
+            </tbody>
+        </table>
+       <address>
+        <fieldset>
+            <legend>nous trouver</legend>
+            
+            <section>
+                <h3>Adresse :</h3>
+                <a href="https://www.google.com/maps/search/?api=1&query=Za+le+Pont+Mahaud,+5+b+rue+du+Pont+Mahaud,+35131+Pont-Péan" target="_blank">
+                    <p id="address"><i class="fa-solid fa-location-dot"></i>Za le Pont Mahaud, 5 b rue du Pont Mahaud, 35131 Pont-Péan</p>
+                </a>
+            </section>
+            
+            <section>
+                <h3>Téléphone :</h3>
+                <p id="phone"><a href="tel:+330290014415"><i class="fa-solid fa-phone"></i>0290014415</a></p>
+            </section>
+            
+            <section>
+                <h3>Email :</h3>
+                <p id="email"><a href="mailto:email@faux.com"><i class="fa-solid fa-envelope"></i>email@faux.com</a></p>
+            </section>
+        </fieldset>
+    </address>
+    
+        </div>
+        
+    
+        <div class="map-and-testimonials">
+        <div class="map-container">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.2924184035996!2d-1.700159823885021!3d48.00806016016948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480f1f8822f2a4cd%3A0x441fdd0a972258b7!2sContr%C3%B4le%20technique%20Pont%20P%C3%A9an%20Diagnosur!5e0!3m2!1sfr!2sfr!4v1693817963456!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+     <section id="testimonials">
+      <h2>Témoignages de nos clients</h2>
+      <div class="testimonial-card">
+        <p>"J'ai utilisé leurs services pour la première fois et je suis extrêmement satisfait. Le personnel est professionnel et sympathique."</p>
+        <span>- Jean Dupont</span>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Service rapide et efficace. Je recommande fortement cette entreprise pour tous vos besoins en contrôle technique."</p>
+        <span>- Marie Martin</span>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Je n'ai jamais eu une expérience aussi agréable pour un contrôle technique. Le personnel est compétent et les prix sont raisonnables."</p>
+        <span>- Ahmed Benali</span>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+         </div>
+       </div>
+     </section>
+   </div>
+   </section>
 </main>
- <script src="assets/js/homepage.js"></script>
+     <script src="assets/js/homepage.js"></script>

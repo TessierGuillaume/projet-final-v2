@@ -27,5 +27,5 @@ class Role
     {
         $this->roleName = $roleName;
     }
-    // Getters et setters ici...
+    
 }

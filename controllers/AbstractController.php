@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 abstract class AbstractController
 {
     public function render(string $template, array $data = [])
@@ -10,9 +7,6 @@ abstract class AbstractController
         // Extraire les variables du tableau de données afin qu'elles puissent être utilisées directement dans le template
         extract($data);
         
-        
-        
-
         // Inclure le fichier de layout principal
         require 'templates/layout.phtml';
     }

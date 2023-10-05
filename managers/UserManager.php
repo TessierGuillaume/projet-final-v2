@@ -1,7 +1,7 @@
 <?php
 
 class UserManager extends AbstractManager
-{
+{   // Récupère un utilisateur par son ID
     public function getUserById(int $id): ?User
     {
         // Requête SQL pour récupérer toutes les informations d'un utilisateur et son rôle associé en utilisant l'ID de l'utilisateur. 
@@ -20,7 +20,7 @@ class UserManager extends AbstractManager
 
         return null;
     }
-
+    // Récupère un utilisateur par son adresse email
     public function getUserByEmail(string $email): ?User
     {
         $query = $this->db->prepare("SELECT user.*, role.Role_Name FROM user JOIN role ON user.Role_ID = role.Role_ID WHERE user.email = :email");
@@ -47,7 +47,7 @@ class UserManager extends AbstractManager
         return null;
     }
 
-
+    // Crée un nouvel utilisateur et retourne cet utilisateur
     public function createUser(User $user): ?User
     {
         $query = $this->db->prepare("INSERT INTO user(Email, Password, Last_name, First_name, Role_ID) VALUES (:email, :password, :Last_name, :First_name, :Role_ID)");
@@ -64,7 +64,7 @@ class UserManager extends AbstractManager
         $user->setId($this->db->lastInsertId());
         return $user;
     }
-
+    // Supprime un utilisateur par son ID
     public function deleteUser(int $id): void
     {
         // Suppression des messages associés à l'utilisateur
@@ -77,7 +77,7 @@ class UserManager extends AbstractManager
         $query->bindParam(':userId', $id, PDO::PARAM_INT);
         $query->execute();
     }
-
+    // Récupère tous les utilisateurs
     public function getAllUsers(): array
     {
         $query = $this->db->prepare("SELECT user.*, role.Role_Name FROM user JOIN role ON user.Role_ID = role.Role_ID");
@@ -97,10 +97,10 @@ class UserManager extends AbstractManager
             $user->setId($result["User_ID"]);
             $users[] = $user;
         }
-
+        // Retourne un tableau d'objets User
         return $results;
     }
-
+    // Met à jour les informations d'un utilisateur
     public function editUser(User $user): bool
     {
         $sql = "UPDATE user SET Email = :email, Last_name = :lastName, First_name = :firstName, Role_ID = :roleId WHERE User_ID = :id";
@@ -112,7 +112,8 @@ class UserManager extends AbstractManager
         $stmt->bindValue(':id', $user->getId(), PDO::PARAM_INT);
         return $stmt->execute();
     }
-    
+        // Met à jour les informations d'un utilisateur (méthode semblable à editUser)
+
     public function updateUser(User $user): bool
     {
         $sql = "UPDATE user SET Email = :email, Last_name = :lastName, First_name = :firstName, Role_ID = :roleId WHERE User_ID = :id";
@@ -125,12 +126,13 @@ class UserManager extends AbstractManager
         $stmt->bindValue(':id', $user->getId(), PDO::PARAM_INT);
         return $stmt->execute();
     }
-    
+    // Recherche des utilisateurs en fonction d'un mot-clé
   public function searchUsers(string $search): array
 {
     $search = "%$search%";
     $stmt = $this->db->prepare("SELECT * FROM user WHERE First_name LIKE ? OR Last_name LIKE ? OR Email LIKE ?");
     $stmt->execute([$search, $search, $search]);
+    // Retourne un tableau d'objets User
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 

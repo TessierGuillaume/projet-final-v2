@@ -26,5 +26,5 @@ class Vehicle
     {
         $this->typeDeVehicle = $typeDeVehicle;
     }
-    // Getters et setters ici...
+    
 }

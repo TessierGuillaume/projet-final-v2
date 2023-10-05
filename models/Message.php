@@ -60,5 +60,5 @@ class Message
     {
         $this->messageDatetime = $messageDatetime;
     }
-    // Getters et setters ici...
+    
 }

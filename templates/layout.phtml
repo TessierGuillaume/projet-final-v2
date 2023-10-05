@@ -18,15 +18,17 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js' defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" defer></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
     <nav>
         <?php
-        if (isset($_SESSION["user_id"], $_SESSION["role"])) //* Control des variables de sessions pour l'acces users et admin
+                // Gestion de l'accès en fonction du rôle utilisateur (admin, user, visiteur)
+            if (isset($_SESSION["user_id"], $_SESSION["role"])) 
         {
-            if ($_SESSION["role"] === "admin") //* Accès admin
+            if ($_SESSION["role"] === "admin") 
             {
                 require 'partials/header_admin.phtml';
             } else //* accès users
@@ -40,13 +42,14 @@
         ?>
     </nav>
     <?php
-    require $template;
+    require $template;// Inclusion du template en fonction de la page
     ?>
     
    
     <footer>
         <?php
-        if (isset($_SESSION["user_id"], $_SESSION["role"])) {
+           // Gestion du footer en fonction du rôle utilisateur (admin, user, visiteur)
+            if (isset($_SESSION["user_id"], $_SESSION["role"])) {
             if ($_SESSION["role"] === "admin") {
                 require 'partials/footer_admin.phtml';
             } else {

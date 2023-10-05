@@ -9,12 +9,12 @@
     width: 100vw;
     padding: 1em;
     background-color: $color-grey;
+    margin-top: 4em;
 
     h1 {
         text-align: center;
         margin-bottom: 0.5em;
         color: $color-blue;
-        font-weight: bold;
         font-size: 2em;
         padding: 0.5em;
         border: 1px solid $color-blue;
@@ -64,7 +64,7 @@
                 padding: 0.5em 2em;
                 border-radius: 5px;
                 font-weight: bold;
-                background-color: $color-orange;
+                background-color: $color-white;
                 color: $color-blue;
 
                 &:hover {
@@ -102,8 +102,15 @@
                 }
             }
         }
-    } // Styles pour desktop
-    @media screen and (min-width: 769px) {
+    }
+
+} // Styles pour desktop
+@media screen and (min-width: 769px) {
+
+    #editUser {
+
+        margin-top: 0;
+
         h1 {
             font-size: 3em;
         }

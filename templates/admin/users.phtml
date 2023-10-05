@@ -24,6 +24,7 @@ if (isset($_SESSION['success_message'])) {
             </tr>
         </thead>
         <tbody>
+               <!-- Boucle pour afficher chaque utilisateur -->
             <?php foreach ($users as $user) : ?>
                 <tr>
                     <td><?= $user['User_ID'] ?></td>

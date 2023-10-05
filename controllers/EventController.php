@@ -7,20 +7,21 @@ class EventController extends AbstractController
     {
         $this->eventManager = new EventManager();
     }
-
-    public function eventIndex()
+    // Méthode pour récupérer tous les événements et les renvoyer au format JSON
+     public function eventIndex()
     {
         $events = $this->eventManager->getAllEvents();
 
         header('Content-Type: application/json'); // Ajout de l'en-tête pour le contenu JSON
         echo json_encode($events);
     }
+         // Méthode pour afficher la liste des événements
     public function listEvents()
     {
         $events = $this->eventManager->getAllEvents(); // Utilisation de la propriété $eventManager
         $this->render('public/calendar/calendar.phtml', ['events' => $events]);
     }
-
+            // Méthode pour afficher un événement spécifique
     public function viewEvent(int $eventId)
     {
         $event = $this->eventManager->getEventById($eventId); // Utilisation de la propriété $eventManager
@@ -28,10 +29,11 @@ class EventController extends AbstractController
         if ($event) {
             $this->render('public/calendar/calendar.phtml', ['event' => $event]);
         } else {
-            // Gérer le cas où l'événement n'est pas trouvé
+                   $this->render('public/error/error.phtml', ['message' => "Événement non trouvé"]);
+
         }
     }
-
+        // Méthode pour créer un nouvel événement
     public function createEvent()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -74,6 +76,7 @@ class EventController extends AbstractController
             }
         }
     }
+    // Méthode pour supprimer un événement spécifique
     public function deleteEvent(int $eventId)
     {
         // Supprimer l'événement de la base de données en utilisant votre méthode deleteEventById
@@ -94,6 +97,7 @@ class EventController extends AbstractController
             exit;
         }
     }
+        // Méthode pour récupérer tous les événements pour un utilisateur spécifique
     public function getEvents()
     {
         $events = [];
@@ -133,6 +137,7 @@ class EventController extends AbstractController
         header('Content-Type: application/json'); // Ajout de l'en-tête pour le contenu JSON
         echo json_encode($events);
     }
+        // Méthode pour récupérer les créneaux horaires disponibles pour un utilisateur spécifique
     public function getEventsUser()
     {
         $events = [];
@@ -165,6 +170,8 @@ class EventController extends AbstractController
         }
         return $this->render('public/calendar/calendar_user.phtml', ['events' => $events]);
     }
+    
+        // Méthode pour créer un nouvel événement pour un utilisateur spécifique
     public function createEventUser()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -208,8 +215,10 @@ class EventController extends AbstractController
             }
         }
     }
+    // Méthode pour récupérer tous les services
     public function getServices() {
     $services = $this->serviceManager->getAllServices();
     echo json_encode($services);
-}
+    }
+
 }

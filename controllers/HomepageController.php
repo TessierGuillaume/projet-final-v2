@@ -2,21 +2,25 @@
 
 class HomepageController extends AbstractController
 {
+        // Méthode pour afficher la page d'accueil
+
     public function index()
     {
         // Pas besoin de vérifier si l'utilisateur est connecté pour afficher la page d'accueil
         $this->render('public/homepage.phtml', []);
     }
+    // Méthode pour afficher la page des services
 
     public function services()
     {
         // Récupération des services de la base de données
-        $serviceManager = new ServiceManager(); // Assumer que vous avez une classe pour gérer les services
+        $serviceManager = new ServiceManager(); 
         $services = $serviceManager->getAllServices();
 
-        // Transmettre les services à la vue
+        
         $this->render('public/services/services.phtml', ['services' => $services]);
     }
+        // Méthode pour gérer la page de contact
 
     public function contact()
     {
@@ -31,10 +35,10 @@ class HomepageController extends AbstractController
                 $user_id = $_SESSION['user_id'];
 
                 // Insérer le message dans la base de données
-                $messageManager = new MessageManager(); // Assumer que vous avez une classe pour gérer les messages
+                $messageManager = new MessageManager(); 
                 $messageManager->createMessage($user_id, $name, $email, $message_body);
 
-                // Rediriger vers une page de confirmation ou de remerciement
+               
                 header('Location:/projet-final-v2/contact_thank_you');
                 exit();
             }
@@ -45,12 +49,12 @@ class HomepageController extends AbstractController
     }
     
     
-        
+        // Méthode pour afficher les mentions légales
     public function legalNotice()
 {
    $this->render('templates/public/legal_notice/legal_notice.phtml');
 }
-    
+    // Méthode pour afficher la FAQ
     public function faq()
 {
    $this->render('templates/public/faq/faq.phtml');

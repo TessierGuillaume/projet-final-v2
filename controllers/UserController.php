@@ -8,13 +8,14 @@ class UserController extends AbstractController
     {
         $this->manager = new UserManager();
     }
+    // Fonction pour enregistrer un nouvel utilisateur
 
     public function register(): void
     {
         if (isset($_POST["form-name"]) && $_POST["form-name"] === "register") {
-            $roleManager = new RoleManager(); // Créez une instance de RoleManager
-            $userRole = $roleManager->getRoleByName("user"); // Récupérez le rôle "user"
-
+            $roleManager = new RoleManager(); 
+            $userRole = $roleManager->getRoleByName("user"); 
+    // Gestion de l'enregistrement d'un utilisateur
             if ($userRole) {
                 if (isset($_POST["register-email"], $_POST["register-lastName"], $_POST["register-firstName"], $_POST["register-password"], $_POST["register-confirm-password"])) {
                     if ($this->manager->getUserByEmail($_POST["register-email"]) === null) {
@@ -56,7 +57,7 @@ class UserController extends AbstractController
         }
     }
 
-
+// Fonction pour se connecter
    public function login(): void
 {
     if (isset($_POST["form-name"]) && $_POST["form-name"] === "login") {
@@ -88,18 +89,20 @@ class UserController extends AbstractController
 }
 
 
-
+// Fonction pour rendre le header utilisateur
     private function renderUserHeader(): void
     {
-        // Assurez-vous que le chemin vers le fichier header_user.phtml est correct
         require 'templates/partials/header_user.phtml';
     }
+    // Fonction pour gérer les utilisateurs (pour l'admin)
 
     public function manageUsers(): void
     {
         $users = $this->manager->getAllUsers();
         $this->render("admin/users.phtml", ["users" => $users]);
     }
+        // Fonction pour mettre à jour le profil utilisateur
+
    public function updateUserProfile()
 {
     // Vérifier si l'utilisateur est connecté
@@ -141,7 +144,7 @@ class UserController extends AbstractController
 }
 
 
-
+// Fonction pour se déconnecter
 
     public function logout(): void
     {

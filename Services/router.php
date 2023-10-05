@@ -4,7 +4,7 @@ class Router
 {
     private UserController $userController;
     private HomepageController $homepageController;
-    private MessageController $messageController; // Ajout pour le contrôleur de messages
+    private MessageController $messageController; 
     private AdminController $adminController;
     private EventController $eventController;
     private ServiceController $serviceController;
@@ -14,7 +14,7 @@ class Router
         $this->userController = new UserController();
         $this->homepageController = new HomepageController();
         $this->messageController = new MessageController();
-        $this->adminController = new AdminController(); // Initialisation du contrôleur de messages
+        $this->adminController = new AdminController(); 
         $this->eventController = new EventController();
         $this->serviceController = new ServiceController();
     }
@@ -91,7 +91,7 @@ public function checkRoute($route): void
     }elseif ($routeParts[0] === 'faq') {
          $this->homepageController->faq();
     } else {
-            // handle the case where no route matches
+            
         $this->homepageController->index();
         }
     }

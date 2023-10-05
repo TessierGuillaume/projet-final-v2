@@ -1,5 +1,3 @@
-
-
 @import '../general/_vars.scss';
 
 
@@ -84,10 +82,20 @@
         color: white;
 
     }
+
+    button[type="submit"] {
+        background-color: $color-white;
+        color: $color-blue;
+        border: 1px solid black;
+        padding: 0.5em;
+        margin: 1em;
+        transition: background-color 0.3s ease;
+
+    }
+
 }
 
 // pour les écrans plus larges 
-
 @media (min-width: 800px) {
 
     #services {
@@ -97,9 +105,7 @@
         .container {
             width: 95vw;
             margin: 0 auto;
-        }
-
-        // Afficher la quatrième colonne (Coût) et l'en-tête correspondant 
+        } 
         .container td:nth-child(4),
         .container th:nth-child(4) {
             display: table-cell;

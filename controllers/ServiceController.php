@@ -9,8 +9,8 @@ class ServiceController extends AbstractController
         $this->serviceManager = new ServiceManager(); // Ou toute autre logique d'initialisation nécessaire
     }
 
-    
-public function getAllServicesJson()
+    // Méthode pour récupérer tous les services au format JSON
+    public function getAllServicesJson()
 {
     try {
         $services = $this->serviceManager->getAllServices();
@@ -22,22 +22,23 @@ public function getAllServicesJson()
         echo json_encode(['error' => 'Une erreur est survenue']);
     }
 }
-public function listServices() 
+// Méthode pour lister tous les services
+    public function listServices() 
     {
         $services = $this->serviceManager->getAllServices(); // Utilisation de la propriété $eventManager
         $this->render('public/calendar/calendar.phtml', ['service_list' => $services]);
     }
     
-    
-public function showServicesPage()
+    // Méthode pour afficher la page des services
+    public function showServicesPage()
 {
     $services = $this->serviceManager->getAllServices();
     $this->render('public/services/services.phtml', ['services' => $services]);
 
 }
 
-
-public function updateServices() {
+ // Méthode pour mettre à jour un service
+    public function updateServices() {
     try {
         // Vérification de l'authentification et de l'autorisation
         if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
@@ -73,14 +74,14 @@ public function updateServices() {
                 $vehicle_type = htmlspecialchars($_POST['Vehicle_type']);
 
                 $this->serviceManager->updateService($id, $name, $cost, $vehicle_type);
-                header('Location: /projet-final-v2/services'); // Redirection
+                header('Location: /projet-final-v2/services');
                 exit();
             } else {
                 throw new Exception("Données POST incomplètes.");
             }
         }
 
-        // Affichage de la vue
+        
         $this->render('public/services/services.phtml', ['service' => $service]);
     } catch (Exception $e) {
         // Gestion des erreurs

@@ -47,7 +47,7 @@ class AdminController extends AbstractController
 }
 
 
-    // Fonction pour modifier un utilisateur (comme exemple)
+    // Fonction pour modifier un utilisateur 
  public function editUser(int $id)
 {
     $user = $this->userManager->getUserById($id);
@@ -76,7 +76,7 @@ class AdminController extends AbstractController
     }
 }
 
-
+// Méthode pour supprimer un utilisateur
     public function deleteUser(int $userId): void
     {
         $this->userManager->deleteUser($userId);
@@ -86,7 +86,7 @@ class AdminController extends AbstractController
         exit();
     }
 
-   
+   // Méthode pour mettre à jour un utilisateur
     public function updateUser(int $userId): void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

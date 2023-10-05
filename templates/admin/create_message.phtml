@@ -1,7 +1,7 @@
 <main id="createMessage">
 <?php
 if (isset($_SESSION['confirmation_message'])) {
-    echo '<div class="confirmation-message">' . $_SESSION['confirmation_message'] . '</div>';
+    echo '<div class="confirmation-message">' . htmlspecialchars($_SESSION['confirmation_message']) . '</div>';
     unset($_SESSION['confirmation_message']); // Supprimez le message de la session après l'affichage
 }
 ?>
@@ -28,7 +28,7 @@ if (isset($_SESSION['confirmation_message'])) {
     </fieldset>
     <fieldset>
         <label for="fichiers">Ajouter des fichiers (PDF, JPG, PNG) :</label>
-        <input type="file" id="fichiers" name="fichiers[]" accept=".pdf,.jpg,.png" multiple>    </fieldset>
+        <input type="file" id="fichiers" name="fichiers[]" accept=".pdf,.jpg,.png" multiple onchange="checkFileSize(this)">    </fieldset>
     <fieldset>
         <input type="submit" value="Créer">
     </fieldset>
@@ -37,3 +37,4 @@ if (isset($_SESSION['confirmation_message'])) {
 
 
 </main>
+<script type="text/javascript" src="createMessage.js"></script>

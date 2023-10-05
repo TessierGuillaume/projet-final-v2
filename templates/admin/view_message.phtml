@@ -1,4 +1,5 @@
 <?php
+// Définition du chemin de base pour les uploads
 define('BASE_UPLOAD_PATH', '/projet-final-v2/assets/images/uploads/');
 ?>
 <main id="messageView">
@@ -6,7 +7,7 @@ define('BASE_UPLOAD_PATH', '/projet-final-v2/assets/images/uploads/');
     <h2><span class="label">Titre du message :</span> <span class="content"><?= $message['Subject']; ?></span></h2>
     <h2><span class="label">Message :</span> <span class="content"><?= $message['Message_body']; ?></span></h2>
 
-   
+   <!-- Section pour afficher les images uploadées -->
     <div class="uploaded-images">
         <h2>Images uploadées</h2>
         <?php if(!empty($uploads)): ?>

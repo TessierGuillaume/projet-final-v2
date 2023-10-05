@@ -86,8 +86,8 @@ public function getAllMessages(): array
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         return $stmt->execute();
     }
-    
- public function searchMessages(string $search): array
+    // Recherche des messages
+    public function searchMessages(string $search): array
 {
     $search = "%$search%";
     $stmt = $this->db->prepare("
@@ -111,7 +111,7 @@ public function getAllMessages(): array
 }
 
 
-public function uploadFiles($message_id, $uploads, $user_id)
+    public function uploadFiles($message_id, $uploads, $user_id)
 {
     foreach ($uploads as $file) {
         // Obtenez le nom du fichier à partir de $_FILES
@@ -139,8 +139,8 @@ public function uploadFiles($message_id, $uploads, $user_id)
         $stmt->execute();
     }
 }
-
-public function getMessageWithUploads($messageId)
+// Télécharge des fichiers
+    public function getMessageWithUploads($messageId)
 {
     $stmt = $this->db->prepare("SELECT * FROM uploads WHERE Message_ID = :Message_ID");
     $stmt->bindValue(':Message_ID', $messageId, PDO::PARAM_INT);

@@ -19,7 +19,6 @@
     <select name="role" id="role">
         <option value="user" <?= $user->getRole()->getRoleName() == 'user' ? 'selected' : '' ?>>User</option>
         <option value="admin" <?= $user->getRole()->getRoleName() == 'admin' ? 'selected' : '' ?>>Admin</option>
-        <!-- Add more roles if needed -->
     </select>
     </fieldset>
     <fieldset>
