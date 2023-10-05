@@ -1,6 +1,5 @@
 @import '../general/_vars.scss';
-@import '../general/style.scss';
-@import '../general/typography.scss';
+
 
 #login {
     display: flex;
@@ -29,13 +28,12 @@
         color: $color-white;
         border-radius: 10px;
         padding: 30px 40px;
-        font-family: $font-button;
+
 
         h2 {
             font-size: 3em;
             text-align: center;
             margin-bottom: 20px;
-            font-family: $font-button;
             text-transform: uppercase;
         }
 

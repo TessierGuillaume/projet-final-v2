@@ -1,6 +1,6 @@
-@import '../general/_typography.scss';
 @import '../general/_vars.scss';
-@import '../general/_style.scss';
+
+
 
 #updateProfil {
 
@@ -45,7 +45,6 @@
         text-transform: uppercase;
         font-size: 2.1em;
         padding: 0.5em;
-        font-family: $font-title;
         border: 1px solid $color-blue;
         border-radius: 5px;
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),

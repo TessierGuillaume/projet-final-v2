@@ -2,7 +2,7 @@ let calendar; // Déclarez une variable pour stocker l'instance de votre calendr
 // Ajuste la vue du calendrier en fonction de la taille de l'écran
 function adjustCalendarView() {
   if (window.innerWidth < 480) {
-    calendar.changeView('timeGridWeek');
+    // calendar.changeView('timeGridWeek');
     calendar.setOption('hiddenDays', [0, 6]); // Masquer le dimanche (0) et le samedi (6)
   }
   else {
@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        right: 'dayGridMonth'
+        // ,timeGridWeek,timeGridDay'
       },
       buttonText: {
         today: "Aujourd'hui",

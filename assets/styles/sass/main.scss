@@ -1,14 +1,13 @@
+@use 'views/_reset.scss';
 @use 'general/style.scss';
 @use 'general/_typography.scss';
 @use 'general/_vars.scss';
-@use 'views/_homepage.scss';
 @use 'views/_messages.scss';
 @use 'views/_planingUser.scss';
 @use 'views/_planingAdmin.scss';
 @use 'views/_headerAdmin.scss';
 @use 'views/_headerUser.scss';
 @use 'views/_headerVisitor.scss';
-@use 'views/_reset.scss';
 @use 'views/_services.scss';
 @use 'views/_footerVisitor.scss';
 @use 'views/_footerUser.scss';
@@ -24,3 +23,4 @@
 @use 'views/_editUser.scss';
 @use 'views/_faq.scss';
 @use 'views/_legalNotice.scss';
+@use 'views/_homepage.scss';

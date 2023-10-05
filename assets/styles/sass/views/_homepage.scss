@@ -1,6 +1,4 @@
 @import '../general/_vars.scss';
-@import '../general/_typography.scss';
-
 #homepage {
     margin-right: 0.5em;
     .btn-appointment {
@@ -60,7 +58,7 @@
             height: 400px;
             position: relative;
             text-align: center;
-            margin: 2em 2em 0 2em;
+            margin: 5em 2em 0 2em;
 
             .slider-title {
                 position: absolute;
@@ -409,43 +407,33 @@ address {
     }
 }
 
-@media (min-width: 768px) {
-    #homepage {
+// media entre 601 px et 1024px
+@media screen and (min-width: 601px) {
 
+    #homepage {
         #slider-promo-section .slider {
-            margin: 2em 2em 0 2em;
-            height: auto;
+            height: 300px;
+            margin: 2em 3em 0 2em;
         }
 
         #slider-promo-section .slider .slider-title {
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
         .container-homepage {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+
             .schedule-container,
             .map-container,
             address,
             #testimonials {
-                flex: 1 0 calc(50% - 10px); // 50% de la largeur totale moins 10px pour les marges
+                flex: 1 0 calc(50% - 10px);
                 margin: 5px;
-
             }
         }
-    }
 
-}
-
-@media screen and (min-width: 601px) {
-
-    #homepage {
-
-        #slider-promo-section .slider .slider-title {
-            font-size: 2.5em;
-        }
-        #slider-promo-section .slider {
-            height: auto;
-            margin: 2em 2em 0 2em;
-        }
         #testimonials {
             order: 2;
         }
@@ -468,12 +456,6 @@ address {
             }
         }
 
-        #schedule-section .container-homepage {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: stretch;
-        }
-
         #schedule-section .schedule-container,
         #schedule-section address {
             width: 45%;
@@ -487,25 +469,7 @@ address {
 
         #schedule-section .map-container iframe {
             width: 100%;
-            height: 450px;
-        }
-
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    #homepage {
-
-
-        #slider-promo-section .slider {
-            height: 400px;
-            margin: 2em 2em 0 2em;
-        }
-
-
-        #slider-promo-section .slider .slider-title {
-            font-size: 3em;
+            height: 100%;
         }
     }
 }

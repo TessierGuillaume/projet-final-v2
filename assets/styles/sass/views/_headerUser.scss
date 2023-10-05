@@ -1,15 +1,11 @@
-@import '../general/_typography.scss';
 @import '../general/_vars.scss';
-@import '../general/style.scss';
-
-
 #headerUser {
 
 
 
     .user-barre {
-        background: #000;
-        color: #FFF;
+        background: $color-black;
+        color: $color-white;
         padding: 0 2em;
         margin-top: 4em;
         text-align: right;
@@ -23,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #fff; // Ajout d'un fond blanc
+        background-color: $color-white; 
         padding: 0.5em;
         position: fixed;
         width: 100%;
@@ -169,8 +165,19 @@
                 }
             }
         }
-    }
+    } // Ce media s'appliquera uniquement aux écrans dont la largeur est inférieure ou égale à 800px. 
+    @media screen and (max-width: 800px) {
 
+
+        .navbar-desktop {
+            display: none;
+        }
+        .navbar-mobile {
+            display: block;
+            top: 0;
+        }
+    }
+// media pour tablette etdesktop
     @media screen and (min-width: 801px) {
 
         .social-icons-desktop {
@@ -181,7 +188,7 @@
                 }
 
                 i {
-                    transition: color 0.3s ease, transform 0.3s ease; // Ajoutez transform ici
+                    transition: color 0.3s ease, transform 0.3s ease; 
                 }
                 &:hover {
                     i.twitter-icon,
@@ -331,20 +338,5 @@
             display: none;
         }
     }
-    @media screen and (max-width: 800px) {
-
-
-        .navbar-desktop {
-            display: none;
-        }
-        .navbar-mobile {
-            display: block;
-            top: 0;
-        }
-    }
-
-
-
-
 
 }

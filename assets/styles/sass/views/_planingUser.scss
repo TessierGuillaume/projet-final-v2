@@ -1,5 +1,4 @@
 @import '../general/_vars.scss';
-@import '../general/_typography.scss';
 
 
 
@@ -49,7 +48,7 @@
     padding: 10px;
     background-color: $color-grey;
     margin: 4em 0 3em 2em;
-    width: 96%;
+    width: 90%;
 
 
 
@@ -92,16 +91,21 @@
         color: $color-white;
         background-color: $color-blue;
         border-color: $color-white;
-        font-size: 1em; // Taille de police initiale réduite pour les mobiles
+        font-size: 1em;
     }
 
     .fc-day {
-        font-size: 1.2em; // Taille de police initiale réduite pour les mobiles
-        font-family: $font-button;
+        // font-size: 1.5em;
         color: $color-black;
 
 
     }
+    .fc .fc-daygrid-day-number {
+        padding: 2em;
+
+
+    }
+
 
     .fc-toolbar-title {
         color: $color-blue;

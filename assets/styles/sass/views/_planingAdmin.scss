@@ -1,5 +1,5 @@
 @import '../general/_vars.scss';
-@import '../general/_typography.scss';
+
 
 
 //les modification en scss n'étaient pas prix en charges à l'interieur de #planing-user obliger de mettre le style à l'extérieur
@@ -88,7 +88,6 @@
 
     .fc-day {
         font-size: 1.2em;
-        font-family: $font-button;
         color: $color-blue;
 
 

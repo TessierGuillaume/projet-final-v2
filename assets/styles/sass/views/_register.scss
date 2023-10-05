@@ -1,7 +1,4 @@
 @import '../general/_vars.scss';
-@import '../general/style.scss';
-@import '../general/typography.scss';
-
 #register {
     display: flex;
     justify-content: center;
@@ -10,7 +7,7 @@
     background-image: url("../../images/background-road.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center ;
+    background-position: center;
     animation: backgroundGrow 20s infinite alternate;
     @keyframes backgroundGrow {
         0% {
@@ -22,7 +19,7 @@
     }
 
     .wrapper {
-        width: 520px; // Modification ici pour cohérence
+        width: 520px; 
         background: transparent;
         border: 2px solid rgba(255, 255, 255, .2);
         box-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -30,12 +27,11 @@
         border-radius: 10px;
         padding: 1em;
         margin: 1.5em;
-        font-family: $font-button; // Ajout pour cohérence
+
         h2 {
             font-size: 3em;
             text-align: center;
             margin-bottom: 20px;
-            font-family: $font-button;
             text-transform: uppercase;
         }
 
@@ -49,7 +45,7 @@
             width: 100%;
             position: relative;
             margin-top: 20px;
-            font-size: 2em; // Modification ici pour cohérence
+            font-size: 2em; 
             label {
                 position: absolute;
                 top: 50%;
@@ -95,7 +91,7 @@
         .remember-forgot {
             display: flex;
             justify-content: space-between;
-            font-size: 1.8em; // Modification ici pour cohérence
+            font-size: 1.8em; 
             margin: 15px 5px 15px;
 
             label input {

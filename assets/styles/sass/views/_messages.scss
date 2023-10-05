@@ -1,17 +1,14 @@
-@import '../general/typography.scss';
 @import '../general/vars.scss';
 #view-message {
 
     h1,
     h2 {
         margin-bottom: 15px;
-        font-family: $font-title;
         color: $color-blue;
     }
 
     p {
         margin-bottom: 20px;
-        font-family: $font-body;
         color: $color-grey;
     }
 
@@ -22,7 +19,7 @@
         border: 1px solid $color-grey;
         text-decoration: none;
         color: $color-orange;
-        font-family: $font-button;
+
     } // Styles pour tablettes et ordinateurs
     @media screen and (min-width: 768px) {
         body {

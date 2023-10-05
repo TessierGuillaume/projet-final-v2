@@ -1,66 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -92,438 +154,13 @@ button,
   font-family: "Oswald", sans-serif;
 }
 
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-#homepage {
-  margin-right: 0.5em;
-}
-#homepage .btn-appointment {
-  background-color: #FFF;
-  color: #000;
-  font-weight: 900;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 1.8em;
-  text-align: center;
-  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  z-index: 10;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 12px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-#homepage .btn-appointment:hover {
-  background-color: #2ecc71;
-  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
-  transform: translate(-50%, -54%);
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
-@keyframes hide-cursor {
-  to {
-    border-color: transparent;
-  }
-}
-#homepage #slider-promo-section .slider {
-  height: 400px;
-  position: relative;
-  text-align: center;
-  margin: 2em 2em 0 2em;
-}
-#homepage #slider-promo-section .slider .slider-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -300%);
-  color: #FFF;
-  z-index: 2;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.3em 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid white;
-  animation: typing 6s steps(50, end) forwards, blink-caret 0.75s step-end 6s, hide-cursor 0.1s step-end 6s forwards;
-}
-#homepage img {
-  object-fit: cover;
-  object-position: top 45%;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.5s;
-  border-radius: 30px;
-}
-#homepage img.active {
-  opacity: 1;
-}
-
-#schedule-section {
-  margin: 2em;
-}
-#schedule-section .container-homepage {
-  display: flex;
-  background-color: #FFF;
-  flex-direction: column;
-  align-items: stretch;
-  margin-bottom: 2em;
-}
-#schedule-section .schedule-container,
-#schedule-section address {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  margin-top: 1em;
-}
-#schedule-section .map-container {
-  width: 100%;
-}
-
-#schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1.3em;
-  text-align: left;
-  margin: 0.4em 0.8em 0.4em 0;
-  border-radius: 30px;
-  overflow: hidden;
-  -webkit-box-shadow: 3px 5px 13px -2px #000000;
-  box-shadow: 3px 5px 13px -2px #000000;
-}
-#schedule-table th,
-#schedule-table td {
-  border: 1px solid #FFF;
-  padding: 1.5em;
-}
-#schedule-table th {
-  background-color: #333333;
-  color: #FFF;
-}
-#schedule-table tr:nth-child {
-  background-color: #f2f2f2;
-}
-#schedule-table .open {
-  background-color: #F6F6F6;
-}
-#schedule-table .closed {
-  background-color: #f6ceab;
-}
-
-address {
-  background-color: #F6F6F6;
-  -webkit-box-shadow: 3px 5px 13px -2px #000000;
-  box-shadow: 3px 5px 13px -2px #000000;
-}
-address fieldset {
-  text-align: center;
-  padding: 0.5em;
-  font-size: 1.5em;
-  margin-top: 0.5em;
-}
-address fieldset legend {
-  color: #000;
-  margin-bottom: 1.5em;
-  padding: 1em;
-  font-size: 1.7em;
-  text-transform: uppercase;
-}
-address fieldset section {
-  margin-bottom: 5em;
-}
-address fieldset .fa-solid {
-  margin-right: 0.5em;
-}
-address fieldset span .icon {
-  color: red;
-}
-address fieldset h3 {
-  color: #000;
-  font-size: 1.3em;
-}
-address fieldset label {
-  display: block;
-  margin-bottom: 1em;
-  color: #000;
-  font-size: 1.5em;
-  text-decoration: underline;
-}
-address fieldset p {
-  margin: 1em;
-  font-size: 1.3em;
-}
-address fieldset a {
-  color: #000;
-  text-decoration: none;
-}
-address fieldset a:hover {
-  color: #3498db;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-.map-and-testimonials {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-items: stretch;
-}
-
-.map-container {
-  flex: 1;
-  order: 2;
-  width: 100%;
-  -webkit-box-shadow: 3px 5px 13px -2px #000000;
-  box-shadow: 3px 5px 13px -2px #000000;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.map-container iframe {
-  width: 100%;
-  min-width: 100%;
-}
-
-#testimonials {
-  flex: 1;
-  order: 1;
-  background: #F6F6F6;
-  padding: 0.5em;
-  border-radius: 30px;
-  -webkit-box-shadow: 3px 5px 13px -2px #000000;
-  box-shadow: 3px 5px 13px -2px #000000;
-  margin-top: 2em;
-}
-#testimonials h2 {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-#testimonials p {
-  font-size: 1.8em;
-}
-#testimonials span {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.8em;
-  text-align: center;
-}
-#testimonials .testimonial-card {
-  margin: 3em;
-}
-#testimonials .stars {
-  display: flex;
-  margin-top: 10px;
-}
-#testimonials .fas.fa-star {
-  color: gold;
-  margin-right: 5px;
-  font-size: 2em;
-}
-
-#promo-october {
-  position: fixed;
-  top: 30%;
-  right: 12%;
-  width: 300px;
-  background-color: #262626;
-  padding: 20px;
-  border-radius: 10px 0 0 10px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
-#promo-october .close-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 3px;
-  right: 3px;
-}
-#promo-october .close-button i.fa-solid {
-  color: red;
-  font-size: 24px;
-}
-#promo-october h2 {
-  color: #2ecc71;
-  font-weight: 500;
-  font-size: 2em;
-  text-shadow: 2px 2px 4px #000000;
-  animation: bounce 2s infinite;
-  text-align: center;
-}
-#promo-october h3 {
-  color: #FFF;
-  font-size: 1.8em;
-  padding: 0.5em;
-}
-#promo-october p {
-  color: #FFF;
-  font-size: 2em;
-  padding: 0.5em;
-  line-height: 1.5;
-  font-weight: 400;
-}
-#promo-october ul {
-  color: #FFF;
-  font-size: 1.2em;
-}
-#promo-october ul {
-  padding-left: 20px;
-}
-#promo-october ul li {
-  margin-bottom: 10px;
-  font-size: 1.3em;
-}
-
-@media (min-width: 768px) {
-  #homepage #slider-promo-section .slider {
-    margin: 2em 2em 0 2em;
-    height: auto;
-  }
-  #homepage #slider-promo-section .slider .slider-title {
-    font-size: 2.5em;
-  }
-  #homepage .container-homepage .schedule-container,
-  #homepage .container-homepage .map-container,
-  #homepage .container-homepage address,
-  #homepage .container-homepage #testimonials {
-    flex: 1 0 calc(50% - 10px);
-    margin: 5px;
-  }
-}
-@media screen and (min-width: 601px) {
-  #homepage #slider-promo-section .slider .slider-title {
-    font-size: 2.5em;
-  }
-  #homepage #slider-promo-section .slider {
-    height: auto;
-    margin: 2em 2em 0 2em;
-  }
-  #homepage #testimonials {
-    order: 2;
-  }
-  #homepage .map-and-testimonials {
-    flex-direction: row;
-  }
-  #homepage .map-container {
-    order: 1;
-    width: auto;
-    margin: 2em 1em 0 0;
-    border-radius: 30px;
-    overflow: hidden;
-  }
-  #homepage .map-container iframe {
-    width: 100%;
-    min-width: 100%;
-    height: 100%;
-  }
-  #homepage #schedule-section .container-homepage {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-  #homepage #schedule-section .schedule-container,
-  #homepage #schedule-section address {
-    width: 45%;
-    margin-left: 1em;
-    height: auto;
-  }
-  #homepage #schedule-section .map-container {
-    width: 45%;
-  }
-  #homepage #schedule-section .map-container iframe {
-    width: 100%;
-    height: 450px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #homepage #slider-promo-section .slider {
-    height: 400px;
-    margin: 2em 2em 0 2em;
-  }
-  #homepage #slider-promo-section .slider .slider-title {
-    font-size: 3em;
-  }
-}
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
 #view-message h1,
 #view-message h2 {
   margin-bottom: 15px;
-  font-family: "Lato", sans-serif;
   color: #3498db;
 }
 #view-message p {
   margin-bottom: 20px;
-  font-family: "Lexend", sans-serif;
   color: #F6F6F6;
 }
 #view-message a {
@@ -533,7 +170,6 @@ button,
   border: 1px solid #F6F6F6;
   text-decoration: none;
   color: #e67e22;
-  font-family: "Oswald", sans-serif;
 }
 @media screen and (min-width: 768px) {
   #view-message body {
@@ -579,25 +215,6 @@ button,
   }
 }
 
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
 .swal2-popup {
   background-color: #F6F6F6;
 }
@@ -636,7 +253,7 @@ button,
   padding: 10px;
   background-color: #F6F6F6;
   margin: 4em 0 3em 2em;
-  width: 96%;
+  width: 90%;
 }
 #planing-user h1 {
   font-size: 1.23em;
@@ -669,9 +286,10 @@ button,
   font-size: 1em;
 }
 #planing-user .fc-day {
-  font-size: 1.2em;
-  font-family: "Oswald", sans-serif;
   color: #000;
+}
+#planing-user .fc .fc-daygrid-day-number {
+  padding: 2em;
 }
 #planing-user .fc-toolbar-title {
   color: #3498db;
@@ -723,25 +341,6 @@ button,
     text-transform: uppercase;
     border: 1px solid #3498db;
   }
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
 }
 
 .swal2-popup {
@@ -815,7 +414,6 @@ button,
 }
 #planing-admin .fc-day {
   font-size: 1.2em;
-  font-family: "Oswald", sans-serif;
   color: #3498db;
 }
 #planing-admin .fc-toolbar-title {
@@ -887,37 +485,6 @@ button,
   }
 }
 
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #headerAdmin .user-barre {
   background: #000;
   color: #FFF;
@@ -932,7 +499,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #FFF;
   padding: 0.5em;
   position: fixed;
   width: 100%;
@@ -1050,6 +617,15 @@ html {
   color: #e67e22;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
+}
+@media screen and (max-width: 800px) {
+  #headerAdmin .navbar-desktop {
+    display: none;
+  }
+  #headerAdmin .navbar-mobile {
+    display: block;
+    top: 0;
+  }
 }
 @media screen and (min-width: 801px) {
   #headerAdmin .social-icons-desktop a i {
@@ -1209,46 +785,6 @@ html {
     display: none;
   }
 }
-@media screen and (max-width: 800px) {
-  #headerAdmin .navbar-desktop {
-    display: none;
-  }
-  #headerAdmin .navbar-mobile {
-    display: block;
-    top: 0;
-  }
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
 
 #headerUser .user-barre {
   background: #000;
@@ -1265,7 +801,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #FFF;
   padding: 0.5em;
   position: fixed;
   width: 100%;
@@ -1383,6 +919,15 @@ html {
   color: #e67e22;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
+}
+@media screen and (max-width: 800px) {
+  #headerUser .navbar-desktop {
+    display: none;
+  }
+  #headerUser .navbar-mobile {
+    display: block;
+    top: 0;
+  }
 }
 @media screen and (min-width: 801px) {
   #headerUser .social-icons-desktop a .fa-user {
@@ -1526,46 +1071,6 @@ html {
     display: none;
   }
 }
-@media screen and (max-width: 800px) {
-  #headerUser .navbar-desktop {
-    display: none;
-  }
-  #headerUser .navbar-mobile {
-    display: block;
-    top: 0;
-  }
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
 
 #headerVisitor .banniere-titre {
   margin-bottom: 1em;
@@ -1574,8 +1079,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 0.5em;
+  background-color: #FFF;
   position: fixed;
   width: 100%;
   height: 5em;
@@ -1699,6 +1203,15 @@ html {
   color: #e67e22;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: -2px;
+}
+@media screen and (max-width: 800px) {
+  #headerVisitor .navbar-desktop {
+    display: none;
+  }
+  #headerVisitor .navbar-mobile {
+    display: block;
+    top: 0;
+  }
 }
 @media screen and (min-width: 801px) {
   #headerVisitor .social-icons-desktop a i {
@@ -1826,185 +1339,6 @@ html {
     display: none;
   }
 }
-@media screen and (max-width: 800px) {
-  #headerVisitor .navbar-desktop {
-    display: none;
-  }
-  #headerVisitor .navbar-mobile {
-    display: block;
-    top: 0;
-  }
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
 
 #services {
   display: flex;
@@ -2088,37 +1422,6 @@ html {
     display: table-cell;
   }
 }
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #footerVisitor {
   position: relative;
   background-color: #2B2B2B;
@@ -2190,37 +1493,6 @@ html {
     text-align: center;
   }
 }
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #footerUser {
   position: relative;
   background-color: #2B2B2B;
@@ -2291,37 +1563,6 @@ html {
     text-align: center;
   }
 }
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #footerAdmin {
   position: relative;
   background-color: #2B2B2B;
@@ -2392,37 +1633,6 @@ html {
     text-align: center;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
 #login {
   display: flex;
   justify-content: center;
@@ -2450,13 +1660,11 @@ button,
   color: #FFF;
   border-radius: 10px;
   padding: 30px 40px;
-  font-family: "Oswald", sans-serif;
 }
 #login .wrapper h2 {
   font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 #login .wrapper .input-box {
@@ -2575,37 +1783,6 @@ button,
     padding-left: 90px;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
 #register {
   display: flex;
   justify-content: center;
@@ -2634,13 +1811,11 @@ button,
   border-radius: 10px;
   padding: 1em;
   margin: 1.5em;
-  font-family: "Oswald", sans-serif;
 }
 #register .wrapper h2 {
   font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 #register .wrapper .form-errors {
@@ -2759,37 +1934,6 @@ button,
     padding-left: 90px;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
 #createMessage {
   display: flex;
   flex-direction: column;
@@ -2946,8 +2090,7 @@ button,
   height: 100vh;
   width: 100vw;
   overflow: auto;
-  margin: 0;
-  padding: 0;
+  margin: 4em 0 0 0;
 }
 #messageslist h1 {
   padding: 10px;
@@ -2956,7 +2099,6 @@ button,
   color: #FFF;
   font-size: 1.8em;
   text-transform: uppercase;
-  margin-top: 4em;
 }
 #messageslist form {
   display: flex;
@@ -3084,88 +2226,43 @@ button,
 }
 
 @media screen and (max-width: 600px) {
-  th,
-  td {
+  #messagesList th,
+  #messagesList td {
     display: block;
     width: 100%;
     border: none;
   }
-  tr {
+  #messagesList tr {
     display: block;
     margin-bottom: 0.625rem;
   }
-  thead {
+  #messagesList thead {
     display: none;
   }
-  td {
+  #messagesList td {
     margin-bottom: 0.3em;
   }
 }
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
+  #messagesList {
+    margin: 0;
+  }
   #messagesList h1 {
     margin-top: 0;
   }
-  table {
+  #messagesList table {
     display: table;
   }
-  table th,
-  table td {
+  #messagesList table th,
+  #messagesList table td {
     padding: 1em;
     font-size: 1em;
   }
-  table a {
+  #messagesList table a {
     padding: 0.7em;
     font-size: 1.5em;
   }
 }
-@media screen and (min-width: 1025px) {
-  h1 {
-    margin-top: 0;
-  }
-  table {
-    display: table;
-  }
-  table th,
-  table td {
-    padding: 1em;
-    font-size: 1.2em;
-  }
-  table a {
-    padding: 0.8em;
-    font-size: 1em;
-  }
-}
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #messageView {
   display: flex;
   flex-direction: column;
@@ -3174,12 +2271,14 @@ html {
   width: 100vw;
   padding: 1em;
   background-color: #F6F6F6;
+  margin-top: 4em;
 }
 #messageView h1 {
   margin-bottom: 0.5em;
   color: #3498db;
   border: 1px solid #3498db;
   border-radius: 5px;
+  font-size: 1.6em;
   padding: 0.5em;
   font-weight: bold;
   max-width: 70%;
@@ -3198,17 +2297,16 @@ html {
 }
 #messageView h2 .label,
 #messageView p .label {
-  text-decoration: underline;
   color: #3498db;
   border-radius: 5px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
 }
 #messageView h2 .content,
 #messageView p .content {
-  color: #2ecc71;
+  color: #000;
   margin-top: 1em;
-  font-size: 1.8em;
+  font-size: 1.2em;
   text-align: center;
 }
 #messageView form {
@@ -3228,14 +2326,13 @@ html {
 }
 #messageView form fieldset legend {
   color: #3498db;
-  font-weight: bold;
   padding: 0 0.5em;
+  font-size: 0.8em;
 }
 #messageView form fieldset button {
   padding: 0.5em 1em;
-  font-weight: bold;
   color: #3498db;
-  background-color: #e67e22;
+  background-color: #FFF;
   border: 1px solid #3498db;
   border-radius: 5px;
   cursor: pointer;
@@ -3250,8 +2347,6 @@ html {
   color: #3498db;
   text-align: center;
   font-size: 2em;
-  font-weight: bold;
-  text-decoration: underline;
 }
 #messageView .uploaded-images .uploaded-image {
   margin: 10px;
@@ -3306,6 +2401,9 @@ html {
   }
 }
 @media screen and (min-width: 769px) {
+  #messageView {
+    margin-top: 0;
+  }
   #messageView h1 {
     font-size: 3.2em;
   }
@@ -3320,37 +2418,6 @@ html {
   }
 }
 
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #messagesEdit {
   display: flex;
   flex-direction: column;
@@ -3359,6 +2426,7 @@ html {
   width: 100vw;
   padding: 1em;
   background-color: #F6F6F6;
+  margin-top: 4em;
 }
 #messagesEdit h1 {
   text-align: center;
@@ -3407,8 +2475,7 @@ html {
   width: auto;
   padding: 0.5em 2em;
   border-radius: 5px;
-  font-weight: bold;
-  background-color: #e67e22;
+  background-color: #FFF;
   color: #3498db;
 }
 #messagesEdit form fieldset input[type=submit]:hover {
@@ -3418,7 +2485,7 @@ html {
   margin-top: 1em;
   color: #3498db;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.6em;
   text-decoration: underline;
 }
 #messagesEdit a:hover {
@@ -3436,7 +2503,11 @@ html {
     font-size: 1.2em;
   }
 }
+
 @media screen and (min-width: 769px) {
+  #messagesEdit {
+    margin: 0;
+  }
   #messagesEdit h1 {
     font-size: 3em;
   }
@@ -3448,38 +2519,6 @@ html {
     font-size: 1.5em;
   }
 }
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #updateProfil {
   background-image: url("../../images/homme-tablette.jpg");
   background-size: cover;
@@ -3520,7 +2559,6 @@ html {
   text-transform: uppercase;
   font-size: 2.1em;
   padding: 0.5em;
-  font-family: "Lato", sans-serif;
   border: 1px solid #3498db;
   border-radius: 5px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3);
@@ -3783,37 +2821,6 @@ html {
     font-size: 1em;
   }
 }
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #editUser {
   display: flex;
   flex-direction: column;
@@ -3912,37 +2919,6 @@ html {
   }
 }
 
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
 #faq {
   background-image: url("../../images/femme-contente.jpg");
   background-size: cover;
@@ -4029,37 +3005,6 @@ html {
     font-size: 1.6em;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  font-size: 62.5%;
-  /* 1rem = 10px*/
-}
-
-body,
-p {
-  font-family: "Lexend", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lato", sans-serif;
-}
-
-button,
-.cta {
-  font-family: "Oswald", sans-serif;
-}
-
 #legalNotice {
   background-image: url("../../images/femme-contente.jpg");
   background-size: cover;
@@ -4128,6 +3073,373 @@ button,
   }
   #legalNotice h2 {
     font-size: 2.3em;
+  }
+}
+#homepage {
+  margin-right: 0.5em;
+}
+#homepage .btn-appointment {
+  background-color: #FFF;
+  color: #000;
+  font-weight: 900;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.8em;
+  text-align: center;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+#homepage .btn-appointment:hover {
+  background-color: #2ecc71;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -54%);
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+@keyframes hide-cursor {
+  to {
+    border-color: transparent;
+  }
+}
+#homepage #slider-promo-section .slider {
+  height: 400px;
+  position: relative;
+  text-align: center;
+  margin: 5em 2em 0 2em;
+}
+#homepage #slider-promo-section .slider .slider-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  color: #FFF;
+  z-index: 2;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.3em 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid white;
+  animation: typing 6s steps(50, end) forwards, blink-caret 0.75s step-end 6s, hide-cursor 0.1s step-end 6s forwards;
+}
+#homepage img {
+  object-fit: cover;
+  object-position: top 45%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 30px;
+}
+#homepage img.active {
+  opacity: 1;
+}
+
+#schedule-section {
+  margin: 2em;
+}
+#schedule-section .container-homepage {
+  display: flex;
+  background-color: #FFF;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 2em;
+}
+#schedule-section .schedule-container,
+#schedule-section address {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  margin-top: 1em;
+}
+#schedule-section .map-container {
+  width: 100%;
+}
+
+#schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.3em;
+  text-align: left;
+  margin: 0.4em 0.8em 0.4em 0;
+  border-radius: 30px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 5px 13px -2px #000000;
+  box-shadow: 3px 5px 13px -2px #000000;
+}
+#schedule-table th,
+#schedule-table td {
+  border: 1px solid #FFF;
+  padding: 1.5em;
+}
+#schedule-table th {
+  background-color: #333333;
+  color: #FFF;
+}
+#schedule-table tr:nth-child {
+  background-color: #f2f2f2;
+}
+#schedule-table .open {
+  background-color: #F6F6F6;
+}
+#schedule-table .closed {
+  background-color: #f6ceab;
+}
+
+address {
+  background-color: #F6F6F6;
+  -webkit-box-shadow: 3px 5px 13px -2px #000000;
+  box-shadow: 3px 5px 13px -2px #000000;
+}
+address fieldset {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+address fieldset legend {
+  color: #000;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+address fieldset section {
+  margin-bottom: 5em;
+}
+address fieldset .fa-solid {
+  margin-right: 0.5em;
+}
+address fieldset span .icon {
+  color: red;
+}
+address fieldset h3 {
+  color: #000;
+  font-size: 1.3em;
+}
+address fieldset label {
+  display: block;
+  margin-bottom: 1em;
+  color: #000;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+address fieldset p {
+  margin: 1em;
+  font-size: 1.3em;
+}
+address fieldset a {
+  color: #000;
+  text-decoration: none;
+}
+address fieldset a:hover {
+  color: #3498db;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.map-and-testimonials {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: stretch;
+}
+
+.map-container {
+  flex: 1;
+  order: 2;
+  width: 100%;
+  -webkit-box-shadow: 3px 5px 13px -2px #000000;
+  box-shadow: 3px 5px 13px -2px #000000;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.map-container iframe {
+  width: 100%;
+  min-width: 100%;
+}
+
+#testimonials {
+  flex: 1;
+  order: 1;
+  background: #F6F6F6;
+  padding: 0.5em;
+  border-radius: 30px;
+  -webkit-box-shadow: 3px 5px 13px -2px #000000;
+  box-shadow: 3px 5px 13px -2px #000000;
+  margin-top: 2em;
+}
+#testimonials h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+#testimonials p {
+  font-size: 1.8em;
+}
+#testimonials span {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  text-align: center;
+}
+#testimonials .testimonial-card {
+  margin: 3em;
+}
+#testimonials .stars {
+  display: flex;
+  margin-top: 10px;
+}
+#testimonials .fas.fa-star {
+  color: gold;
+  margin-right: 5px;
+  font-size: 2em;
+}
+
+#promo-october {
+  position: fixed;
+  top: 30%;
+  right: 12%;
+  width: 300px;
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#promo-october .close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+#promo-october .close-button i.fa-solid {
+  color: red;
+  font-size: 24px;
+}
+#promo-october h2 {
+  color: #2ecc71;
+  font-weight: 500;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px #000000;
+  animation: bounce 2s infinite;
+  text-align: center;
+}
+#promo-october h3 {
+  color: #FFF;
+  font-size: 1.8em;
+  padding: 0.5em;
+}
+#promo-october p {
+  color: #FFF;
+  font-size: 2em;
+  padding: 0.5em;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#promo-october ul {
+  color: #FFF;
+  font-size: 1.2em;
+}
+#promo-october ul {
+  padding-left: 20px;
+}
+#promo-october ul li {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 601px) {
+  #homepage #slider-promo-section .slider {
+    height: 300px;
+    margin: 2em 3em 0 2em;
+  }
+  #homepage #slider-promo-section .slider .slider-title {
+    font-size: 2em;
+  }
+  #homepage .container-homepage {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #homepage .container-homepage .schedule-container,
+  #homepage .container-homepage .map-container,
+  #homepage .container-homepage address,
+  #homepage .container-homepage #testimonials {
+    flex: 1 0 calc(50% - 10px);
+    margin: 5px;
+  }
+  #homepage #testimonials {
+    order: 2;
+  }
+  #homepage .map-and-testimonials {
+    flex-direction: row;
+  }
+  #homepage .map-container {
+    order: 1;
+    width: auto;
+    margin: 2em 1em 0 0;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  #homepage .map-container iframe {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+  #homepage #schedule-section .schedule-container,
+  #homepage #schedule-section address {
+    width: 45%;
+    margin-left: 1em;
+    height: auto;
+  }
+  #homepage #schedule-section .map-container {
+    width: 45%;
+  }
+  #homepage #schedule-section .map-container iframe {
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -1,20 +1,15 @@
-@import '../general/_typography.scss';
 @import '../general/_vars.scss';
-@import '../general/style.scss';
-
-
 #headerVisitor {
 
     .banniere-titre {
         margin-bottom: 1em;
     }
     .navbar-mobile {
-        // display: none;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #fff; // Ajout d'un fond blanc
-        padding: 0.5em;
+        background-color: $color-white; 
         position: fixed;
         width: 100%;
         height: 5em;
@@ -165,7 +160,16 @@
             }
         }
     }
-
+    // Ce media s'appliquera uniquement aux écrans dont la largeur est inférieure ou égale à 800px. 
+    @media screen and (max-width: 800px) {
+        .navbar-desktop {
+            display: none;
+        }
+        .navbar-mobile {
+            display: block;
+            top: 0;
+        }
+    } // Ce media s'appliquera uniquement aux écrans dont la largeur est supérieur ou égale à 800px. 
     @media screen and (min-width: 801px) {
 
 
@@ -174,162 +178,148 @@
 
                 i {
                     transition: color 0.3s ease, transform 0.3s ease;
-                    
+
                 }
-                    &:hover {
-                        i.twitter-icon,
-                        i.facebook-icon,
-                        i.instagram-icon {
-                            color: blue;
-                            transform: rotate(45deg);
+                &:hover {
+                    i.twitter-icon,
+                    i.facebook-icon,
+                    i.instagram-icon {
+                        color: blue;
+                        transform: rotate(45deg);
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        .navbar-mobile,
+        .navbar-desktop {
+            ul.navbar-mobile-list,
+            ul {
+                li.logo {
+                    a {
+                        letter-spacing: -1px;
+                        span.drive {
+                            color: $color-blue;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            margin-right: -2px;
+                        }
+                        span.safe {
+                            color: $color-green;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            margin-right: -2px;
+
+                        }
+                        span.control {
+                            color: $color-orange;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            margin-right: -2px;
                         }
 
+                        span {
+                            position: relative;
+                            right: -100%;
+                            opacity: 0; // Animation
+                            animation: slide-in 1s ease-out forwards;
+                        }
 
+                        span.drive {
+                            animation-delay: 1s;
+                        }
+
+                        span:nth-child(2) {
+                            animation-delay: 2s;
+                        }
+
+                        span.control {
+                            animation-delay: 3s;
+                        }
                     }
                 }
             }
-
-
-
-            .navbar-mobile,
-            .navbar-desktop {
-                ul.navbar-mobile-list,
-                ul {
-                    li.logo {
-                        a {
-                            letter-spacing: -1px;
-                            span.drive {
-                                color: $color-blue;
-                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                                margin-right: -2px;
-                            }
-                            span.safe {
-                                color: $color-green;
-                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                                margin-right: -2px;
-
-                            }
-                            span.control {
-                                color: $color-orange;
-                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                                margin-right: -2px;
-                            }
-
-                            span {
-                                position: relative;
-                                right: -100%;
-                                opacity: 0; // Animation
-                                animation: slide-in 1s ease-out forwards;
-                            }
-
-                            span.drive {
-                                animation-delay: 1s;
-                            }
-
-                            span:nth-child(2) {
-                                animation-delay: 2s;
-                            }
-
-                            span.control {
-                                animation-delay: 3s;
-                            }
-                        }
-                    }
-                }
-            } // Définition de l'animation
-            @keyframes slide-in {
-                to {
-                    right: 0; // Position finale
-                    opacity: 1; // Rendre complètement visible
-                }
+        } // Définition de l'animation
+        @keyframes slide-in {
+            to {
+                right: 0; // Position finale
+                opacity: 1; // Rendre complètement visible
             }
+        }
 
-            .navbar-desktop {
+        .navbar-desktop {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            background-color: $color-white;
+            height: 10em;
+            align-items: center;
+            border-bottom: solid 3px $color-blue;
+
+
+            ul {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
+                width: 100%;
+                margin: 0;
                 padding: 0;
-                background-color: $color-white;
-                height: 10em;
-                align-items: center;
-                border-bottom: solid 3px $color-blue;
+                position: relative;
 
 
-                ul {
-                    display: flex;
-                    justify-content: space-around;
-                    width: 100%;
-                    margin: 0;
-                    padding: 0;
-                    position: relative;
-
-
-
-
-                }
-
-                li {
-                    position: relative;
-                    z-index: 1;
-                }
-
-                .indicator {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    height: 3px; // Hauteur de l'indicateur
-                    width: 0;
-                    background-color: $color-blue; // Couleur de l'indicateur
-                    transition: all 0.5s ease; // Animation
-                }
-
-
-
-                a {
-                    color: #000;
-                    font-weight: 300;
-                    font-size: 2em;
-                    text-transform: uppercase;
-
-
-                    transition: color 0.3s ease, background-color 0.3s ease;
-                }
 
 
             }
 
-            .social-icons-desktop {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                li {
-                    margin: 0 2em;
-                }
+            li {
+                position: relative;
+                z-index: 1;
+            }
 
-                a {
-                    font-size: 2.5em;
-                }
+            .indicator {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px; // Hauteur de l'indicateur
+                width: 0;
+                background-color: $color-blue; // Couleur de l'indicateur
+                transition: all 0.5s ease; // Animation
             }
 
 
-            .navbar-mobile {
-                display: none;
+
+            a {
+                color: #000;
+                font-weight: 300;
+                font-size: 2em;
+                text-transform: uppercase;
+
+
+                transition: color 0.3s ease, background-color 0.3s ease;
             }
+
 
         }
 
-        @media screen and (max-width: 800px) {
-            .navbar-desktop {
-                display: none;
+        .social-icons-desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            li {
+                margin: 0 2em;
             }
-            .navbar-mobile {
-                display: block;
-                top: 0;
+
+            a {
+                font-size: 2.5em;
             }
         }
 
 
-
-
+        .navbar-mobile {
+            display: none;
+        }
 
     }
+
+}
